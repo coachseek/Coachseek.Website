@@ -1,0 +1,43 @@
+.ir{
+	display: block;
+	text-indent: -9999px;
+	text-transform: capitalize;
+}
+
+.fouc{
+	visibility: hidden;
+}
+.flexslider{
+	max-width: 1440px;
+	height: 440px;
+}
+
+.business{
+	background: url('/images/home--business.png') no-repeat scroll center center;
+	margin-bottom: 80px;
+	height: 400px;
+}
+.property{
+	background: url('/images/home--property.png') no-repeat scroll center center;
+	margin-bottom: 80px;
+	height: 400px;
+}
+.court{
+	background: url('/images/home--court2.png') no-repeat scroll center center;
+	margin-bottom: 80px;
+	height: 400px;
+}
+.family{
+	background: url('/images/home--family.png') no-repeat scroll center center;
+	margin-bottom: 80px;
+	height: 400px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+
+
