@@ -686,9 +686,6 @@ footer ul li a {
   padding: 10px 40px;
   border-radius: 4px;
   margin: 0 auto;
-  -webkit-box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.4);
 }
 /* line 28, ../scss/views/_home.scss */
 .landing--home-bg .row--full a.landing--home-tryfree:hover {

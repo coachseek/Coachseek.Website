@@ -2,14 +2,6 @@
 <?php remove_shortcode( 'mokaine_team_member_sc' ); 
 add_action( 'after_setup_theme', 'coachseek_childtheme_setup' );
 
-///* Enqueue scripts and styles */
-//function coachseek_scripts() {
-//	wp_enqueue_style( 'coachseek-style', get_stylesheet_uri() );
-//}
-//
-//add_action( 'wp_enqueue_scripts', 'coachseek_scripts' );
-
-
 function coachseek_childtheme_setup() {
    remove_shortcode( 'team_member' );
    add_shortcode( 'team_member', 'team_member_sc' );
@@ -78,9 +70,6 @@ function team_member_sc( $atts ) {
 	return str_replace( '\r\n', '', $output );
 
 }
-
-//define('THEMEROOT',get_stylesheet_directory_uri());
-
 
 /*function my_ag_divider( $atts, $content = null ) {
     extract(shortcode_atts(array(
