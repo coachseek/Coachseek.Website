@@ -51,38 +51,15 @@ Template Name: Main Features Page Template
             </div>
 		</header>
    
-       <div class="landing--home-bg">
+       <div class="mainfea--home-bg">
            <div class="row--full">
                <h1>helping sports coaches Focus on what they love</h1>
                <p>Online booking - Scheduling - Accept Payments - Mobile</p>
-               <a class="landing--home-tryfree" href="">Try for free</a>
+        
            </div>
        </div>
        
-       <div class="landing--home-desc">
-           <div class="row">
-                <img class="computer-center" src="<?php echo get_stylesheet_directory_uri();?>/images/computer.png" alt="">
-               <div class="col-3-12">
-                   <h5>Online Booking</h5>
-                   <p>Allow your clients to book with you at any time, even when you are busy coaching</p>
-               </div>
-               <div class="col-3-12">
-                   <h5>Online Booking</h5>
-                   <p>Allow your clients to book with you at any time, even when you are busy coaching</p>
-               </div>
-               <div class="col-3-12">
-                   <h5>Online Booking</h5>
-                   <p>Allow your clients to book with you at any time, even when you are busy coaching</p>
-               </div>
-               <div class="col-3-12">
-                   <h5>Online Booking</h5>
-                   <p>Allow your clients to book with you at any time, even when you are busy coaching</p>
-               </div>
-           </div>
-           <div class="row--full">
-               <a href=""></a>
-           </div>
-       </div>
+
        
        <div class="landing--home-quote">
            <div class="landing--home-overlap"></div>

@@ -767,3 +767,27 @@ footer ul li a {
   opacity: 0.7;
   transition: all ease .8s;
 }
+
+/* line 1, ../scss/views/_main-features.scss */
+.mainfea--home-bg {
+  position: relative;
+  height: 524px;
+  background: url("../images/landing-home-bg.png") center center no-repeat;
+  background-size: cover;
+  display: block;
+}
+/* line 7, ../scss/views/_main-features.scss */
+.mainfea--home-bg .row--full {
+  text-align: center;
+}
+/* line 9, ../scss/views/_main-features.scss */
+.mainfea--home-bg .row--full h1 {
+  padding-top: 140px;
+  width: 530px;
+  margin: 0 auto;
+}
+/* line 14, ../scss/views/_main-features.scss */
+.mainfea--home-bg .row--full p {
+  width: 400px;
+  margin: 0 auto;
+}

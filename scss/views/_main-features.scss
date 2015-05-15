@@ -1,0 +1,19 @@
+.mainfea--home-bg{
+    position: relative;
+    height: 524px;
+    background: url('../images/landing-home-bg.png') center center no-repeat;
+    background-size: cover;
+    display: block;
+     .row--full{  
+        text-align: center;
+        h1{
+            padding-top: 140px;
+            width: 530px;
+            margin: 0 auto;
+        }
+        p{
+            width: 400px;
+            margin: 0 auto;
+        }
+     }
+}
