@@ -58,11 +58,24 @@ Template Name: Main Features Page Template
         
            </div>
        </div>
+
+       <div class="mainfea--home-feature">
+          <div class="row">
+            <div class="col-6-12 mainfea--home-feature-desc">
+              <h5>Designed for Sports Coaches</h5>
+              <p>At Coachseek we are crazy about sport. We are a group of coaches that were tired of having
+              to use software built for other industries so built Coachseek from the ground up to meet the special needs of coaches. </p>
+            </div>
+             <div class="col-6-12 mainfea--home-feature-img">
+              <img src="" alt="">
+            </div>
+          </div>   
+       </div>
        
 
        
-       <div class="landing--home-quote">
-           <div class="landing--home-overlap"></div>
+       <div class="mainfea--home-quote">
+           <div class="mainfea--home-overlap"></div>
            <div class="row--full">
                <h3>"Coachseek has allowed me to focus on my customers and my business is running more efficiently than ever before"</h3>
                <p>"- Bob Dylan"</p>
