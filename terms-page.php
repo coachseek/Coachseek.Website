@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Landing Page Template
+Template Name: Terms Page Template
 * Version: 1.0
 */
 ?>
@@ -40,69 +40,27 @@ Template Name: Landing Page Template
             <div class="row--full">
                <div class="col-6-12 landing--header-logo">
                   <a href="<?php echo site_url(); ?>">
-                    <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo.png" alt="">
-                  </a>   
+                      <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo.png" alt="">
+                  </a>                
                </div>
                <div class="col-6-12 landing--header-nav">
                    <ul>
-                       <li><a href="/main-features">Features</a></li>
-                       <li><a href="/blog">Blog</a></li>
-                       <li><a class="landing--header-signin" href="http://app.coachseek.com">Sign In</a></li>
+                       <li><a href="">Features</a></li>
+                       <li><a href="">Blog</a></li>
+                       <li><a class="landing--header-signin" href="">Sign In</a></li>
                    </ul>
                </div>               
             </div>
 		</header>
-    <?php if( get_field('header-image') ): ?>
-       <div class="landing--home-bg" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat; background-size: cover;">
-        <?php endif; ?>
-          <div class="landing-home-bg-overlap"></div>
-           <div class="row--full">
-               <h1><?php the_field('title'); ?></h1>
-               <p class="subtitle"><?php the_field('description'); ?></p>
-               <a class="landing--home-tryfree" href="">Try for free</a>
-               <p class="sublabel">14 day trial, no credit card required</p>
-           </div>
-       </div>
-       
-       <div class="landing--home-desc">
-           <div class="row">
-                <img class="computer-center" src="<?php echo get_stylesheet_directory_uri();?>/images/computer.png" alt="">
-                <?php
-                // check if the repeater field has rows of data
-                if( have_rows('features') ):
+       <div class="terms container"> 
+        <div class="row">
+           <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+        the_content();
+        endwhile; else: ?>
+        <p>Sorry, no posts matched your criteria.</p>
+        <?php endif; ?>   
 
-                  // loop through the rows of data
-                    while ( have_rows('features') ) : the_row();
-                        ?>
-                        <div class="col-3-12">
-                           <h5><?php the_sub_field('title');?></h5>
-                           <p><?php the_sub_field('description');?></p>
-                        </div>
-                        <?php
-
-                    endwhile;
-
-                else :
-
-                    // no rows found
-
-                endif;
-
-                ?>
-           </div>
-           <div class="row--full">
-               <a href="">View Features</a>
-           </div>
-       </div>
-      <?php if( get_field('quote-image') ): ?>
-       <div class="landing--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
-       <?php endif; ?>
-           <div class="landing--home-overlap"></div>
-           <div class="row--full">
-               <h3><?php the_field('quote-title'); ?></h3>
-               <p><?php the_field('quote-name'); ?></p>
-               <a href="">View Features</a>
-           </div>
+        </div>   
        </div>
        
        

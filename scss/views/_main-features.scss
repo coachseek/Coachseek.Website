@@ -1,7 +1,6 @@
 .mainfea--home-bg{
     position: relative;
     height: 524px;
-    background: url('../images/main-features-header.png') center bottom no-repeat;
     background-size: cover;
     display: block;
     z-index: 0;
@@ -58,9 +57,7 @@
 }
 
 .mainfea--home-quote{
-    position: relative;
-    background: url('../images/quote.png') center center no-repeat;
-    background-size: cover;
+    position: relative;  
     width: 100%;
     height: 330px;
     z-index: 0;
@@ -75,7 +72,9 @@
         text-align: center;
         z-index: 2;
         h3{
-            padding-top: 80px;
+            font-family: 'lato-semi-bold';
+            font-size: 30px;
+            padding-top: 130px;
             width: 800px;
             margin: 0 auto;
         }
@@ -89,7 +88,7 @@
         }
         a{
             position: relative;
-            top: 100px;
+            top: 50px;
             font-family: 'lato-regular';
             font-size: 14px;
             color: $green;

@@ -39,7 +39,9 @@ Template Name: Main Features Page Template
         <header>
             <div class="row--full">
                <div class="col-6-12 landing--header-logo">
-                   <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo.png" alt="">
+                  <a href="<?php echo site_url(); ?>">
+                      <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo.png" alt="">
+                  </a>                
                </div>
                <div class="col-6-12 landing--header-nav">
                    <ul>
@@ -50,12 +52,13 @@ Template Name: Main Features Page Template
                </div>               
             </div>
 		</header>
-   
-       <div class="mainfea--home-bg">
+      <?php if( get_field('header-image') ): ?>
+       <div class="mainfea--home-bg" style="background: url('<?php the_field('header-image'); ?>') center bottom no-repeat; background-size: cover;">
+          <?php endif; ?>
           <div class="landing-home-bg-overlap"></div>
            <div class="row--full">
-               <h1>" exercitatidut lt dolore magnam alris ure do"</h1>
-               <p>ra incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,</p>
+               <h1><?php the_field('title'); ?></h1>
+               <p><?php the_field('description'); ?></p>
         
            </div>
        </div>
@@ -111,9 +114,9 @@ Template Name: Main Features Page Template
         ?>           
        </div>
        
-
-       
-       <div class="mainfea--home-quote">
+       <?php if( get_field('quote-image') ): ?>
+       <div class="mainfea--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
+        <?php endif; ?>
            <div class="mainfea--home-overlap"></div>
            <div class="row--full">
                <h3>Interested in Coachseek ?</h3>

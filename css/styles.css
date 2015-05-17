@@ -553,6 +553,11 @@ p {
   /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 @font-face {
+  font-family: 'lato-medium';
+  src: url("../fonts/lato/Lato-Medium.ttf") format("truetype");
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+@font-face {
   font-family: 'lato-light';
   src: url("../fonts/lato/Lato-Light.ttf") format("truetype");
   /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
@@ -655,7 +660,7 @@ footer ul li a {
 }
 
 /* views */
-/* line 1, ../scss/views/_home.scss */
+/* line 1, ../scss/views/_landing-page.scss */
 .landing--home-bg {
   position: relative;
   height: 611px;
@@ -664,7 +669,7 @@ footer ul li a {
   display: block;
   z-index: 0;
 }
-/* line 8, ../scss/views/_home.scss */
+/* line 8, ../scss/views/_landing-page.scss */
 .landing--home-bg .landing-home-bg-overlap {
   position: absolute;
   background: url("../images/overlap-black.png") center center;
@@ -672,32 +677,32 @@ footer ul li a {
   width: 100%;
   height: 100%;
 }
-/* line 15, ../scss/views/_home.scss */
+/* line 15, ../scss/views/_landing-page.scss */
 .landing--home-bg .row--full {
   z-index: 2;
   text-align: center;
 }
-/* line 18, ../scss/views/_home.scss */
+/* line 18, ../scss/views/_landing-page.scss */
 .landing--home-bg .row--full h1 {
   padding-top: 180px;
   width: 530px;
   margin: 0 auto;
 }
-/* line 23, ../scss/views/_home.scss */
+/* line 23, ../scss/views/_landing-page.scss */
 .landing--home-bg .row--full p {
   width: 400px;
   margin: 0 auto;
 }
-/* line 26, ../scss/views/_home.scss */
+/* line 26, ../scss/views/_landing-page.scss */
 .landing--home-bg .row--full p.subtitle {
   padding-bottom: 50px;
 }
-/* line 29, ../scss/views/_home.scss */
+/* line 29, ../scss/views/_landing-page.scss */
 .landing--home-bg .row--full p.sublabel {
   padding-top: 25px;
   font-size: 14px;
 }
-/* line 34, ../scss/views/_home.scss */
+/* line 34, ../scss/views/_landing-page.scss */
 .landing--home-bg .row--full a.landing--home-tryfree {
   position: relative;
   width: 148px;
@@ -708,31 +713,31 @@ footer ul li a {
   border-radius: 4px;
   margin: 0 auto 20px auto;
 }
-/* line 44, ../scss/views/_home.scss */
+/* line 44, ../scss/views/_landing-page.scss */
 .landing--home-bg .row--full a.landing--home-tryfree:hover {
   background-color: #00BF8C;
   transition: all ease .8s;
 }
 
-/* line 54, ../scss/views/_home.scss */
+/* line 54, ../scss/views/_landing-page.scss */
 .landing--home-desc {
   background-color: #EDEDED;
 }
-/* line 57, ../scss/views/_home.scss */
+/* line 57, ../scss/views/_landing-page.scss */
 .landing--home-desc .row {
   margin-bottom: 10px;
 }
-/* line 58, ../scss/views/_home.scss */
+/* line 58, ../scss/views/_landing-page.scss */
 .landing--home-desc .row img {
   position: relative;
   top: -150px;
   margin-bottom: 10px;
 }
-/* line 66, ../scss/views/_home.scss */
+/* line 66, ../scss/views/_landing-page.scss */
 .landing--home-desc .row--full {
   text-align: center;
 }
-/* line 69, ../scss/views/_home.scss */
+/* line 69, ../scss/views/_landing-page.scss */
 .landing--home-desc .row--full a {
   position: relative;
   top: -50px;
@@ -744,28 +749,28 @@ footer ul li a {
   border-radius: 4px;
   margin: 0 auto;
 }
-/* line 79, ../scss/views/_home.scss */
+/* line 79, ../scss/views/_landing-page.scss */
 .landing--home-desc .row--full a:hover {
   background-color: #00BF8C;
   transition: all ease .8s;
 }
-/* line 85, ../scss/views/_home.scss */
+/* line 85, ../scss/views/_landing-page.scss */
 .landing--home-desc .col-3-12 {
   position: relative;
   top: -100px;
   left: 3%;
   color: #4D4D4D;
 }
-/* line 90, ../scss/views/_home.scss */
+/* line 90, ../scss/views/_landing-page.scss */
 .landing--home-desc .col-3-12 h5 {
   padding-bottom: 12px;
 }
-/* line 94, ../scss/views/_home.scss */
+/* line 94, ../scss/views/_landing-page.scss */
 .landing--home-desc .col-3-12 p {
   width: 180px;
 }
 
-/* line 99, ../scss/views/_home.scss */
+/* line 99, ../scss/views/_landing-page.scss */
 .landing--home-quote {
   position: relative;
   background: url("../images/quote.png") center center no-repeat;
@@ -774,7 +779,7 @@ footer ul li a {
   height: 330px;
   z-index: 0;
 }
-/* line 106, ../scss/views/_home.scss */
+/* line 106, ../scss/views/_landing-page.scss */
 .landing--home-quote .landing--home-overlap {
   position: absolute;
   background: url("../images/overlap.png") center center;
@@ -782,18 +787,19 @@ footer ul li a {
   width: 100%;
   height: 100%;
 }
-/* line 113, ../scss/views/_home.scss */
+/* line 113, ../scss/views/_landing-page.scss */
 .landing--home-quote .row--full {
   text-align: center;
   z-index: 2;
 }
-/* line 116, ../scss/views/_home.scss */
+/* line 116, ../scss/views/_landing-page.scss */
 .landing--home-quote .row--full h3 {
+  font-family: lato-light;
   padding-top: 80px;
   width: 730px;
   margin: 0 auto;
 }
-/* line 121, ../scss/views/_home.scss */
+/* line 122, ../scss/views/_landing-page.scss */
 .landing--home-quote .row--full p {
   position: relative;
   top: 40px;
@@ -802,7 +808,7 @@ footer ul li a {
   font-size: 18px;
   font-style: italic;
 }
-/* line 129, ../scss/views/_home.scss */
+/* line 130, ../scss/views/_landing-page.scss */
 .landing--home-quote .row--full a {
   position: relative;
   top: 100px;
@@ -813,22 +819,31 @@ footer ul li a {
   border-radius: 4px;
   padding: 12px 27px;
 }
-/* line 138, ../scss/views/_home.scss */
+/* line 139, ../scss/views/_landing-page.scss */
 .landing--home-quote .row--full a:hover {
   opacity: 0.7;
   transition: all ease .8s;
+}
+
+/* line 1, ../scss/views/_terms-page.scss */
+.terms {
+  background-color: #EDEDED;
+  color: #4E4E4E;
+}
+/* line 4, ../scss/views/_terms-page.scss */
+.terms .row {
+  padding-top: 70px;
 }
 
 /* line 1, ../scss/views/_main-features.scss */
 .mainfea--home-bg {
   position: relative;
   height: 524px;
-  background: url("../images/main-features-header.png") center bottom no-repeat;
   background-size: cover;
   display: block;
   z-index: 0;
 }
-/* line 8, ../scss/views/_main-features.scss */
+/* line 7, ../scss/views/_main-features.scss */
 .mainfea--home-bg .landing-home-bg-overlap {
   position: absolute;
   background: url("../images/overlap-black.png") center center;
@@ -836,36 +851,36 @@ footer ul li a {
   width: 100%;
   height: 100%;
 }
-/* line 15, ../scss/views/_main-features.scss */
+/* line 14, ../scss/views/_main-features.scss */
 .mainfea--home-bg .row--full {
   z-index: 2;
   text-align: center;
   padding-top: 50px;
 }
-/* line 19, ../scss/views/_main-features.scss */
+/* line 18, ../scss/views/_main-features.scss */
 .mainfea--home-bg .row--full h1 {
   padding-top: 140px;
   width: 530px;
   margin: 0 auto;
 }
-/* line 24, ../scss/views/_main-features.scss */
+/* line 23, ../scss/views/_main-features.scss */
 .mainfea--home-bg .row--full p {
   padding-top: 20px;
   width: 400px;
   margin: 0 auto;
 }
 
-/* line 32, ../scss/views/_main-features.scss */
+/* line 31, ../scss/views/_main-features.scss */
 .mainfea--home-feature {
   position: relative;
   background-color: #EDEDED;
   color: #4E4E4E;
 }
-/* line 36, ../scss/views/_main-features.scss */
+/* line 35, ../scss/views/_main-features.scss */
 .mainfea--home-feature .row {
   padding: 70px 0px;
 }
-/* line 38, ../scss/views/_main-features.scss */
+/* line 37, ../scss/views/_main-features.scss */
 .mainfea--home-feature .row .mainfea--home-feature-desc {
   display: flex;
   justify-content: center;
@@ -873,31 +888,29 @@ footer ul li a {
   height: 241px;
   padding-left: 40px;
 }
-/* line 44, ../scss/views/_main-features.scss */
+/* line 43, ../scss/views/_main-features.scss */
 .mainfea--home-feature .row .mainfea--home-feature-desc h5 {
   padding-bottom: 10px;
 }
-/* line 48, ../scss/views/_main-features.scss */
+/* line 47, ../scss/views/_main-features.scss */
 .mainfea--home-feature .row .mainfea--home-feature-img {
   height: 241px;
   border: 1px solid #333;
 }
-/* line 52, ../scss/views/_main-features.scss */
+/* line 51, ../scss/views/_main-features.scss */
 .mainfea--home-feature .row .mainfea--home-feature-img img {
   max-width: 431px;
   max-height: 241px;
 }
 
-/* line 60, ../scss/views/_main-features.scss */
+/* line 59, ../scss/views/_main-features.scss */
 .mainfea--home-quote {
   position: relative;
-  background: url("../images/quote.png") center center no-repeat;
-  background-size: cover;
   width: 100%;
   height: 330px;
   z-index: 0;
 }
-/* line 67, ../scss/views/_main-features.scss */
+/* line 64, ../scss/views/_main-features.scss */
 .mainfea--home-quote .mainfea--home-overlap {
   position: absolute;
   background: url("../images/overlap.png") center center;
@@ -905,18 +918,20 @@ footer ul li a {
   width: 100%;
   height: 100%;
 }
-/* line 74, ../scss/views/_main-features.scss */
+/* line 71, ../scss/views/_main-features.scss */
 .mainfea--home-quote .row--full {
   text-align: center;
   z-index: 2;
 }
-/* line 77, ../scss/views/_main-features.scss */
+/* line 74, ../scss/views/_main-features.scss */
 .mainfea--home-quote .row--full h3 {
-  padding-top: 80px;
+  font-family: 'lato-semi-bold';
+  font-size: 30px;
+  padding-top: 130px;
   width: 800px;
   margin: 0 auto;
 }
-/* line 82, ../scss/views/_main-features.scss */
+/* line 81, ../scss/views/_main-features.scss */
 .mainfea--home-quote .row--full p {
   position: relative;
   top: 40px;
@@ -925,10 +940,10 @@ footer ul li a {
   font-size: 18px;
   font-style: italic;
 }
-/* line 90, ../scss/views/_main-features.scss */
+/* line 89, ../scss/views/_main-features.scss */
 .mainfea--home-quote .row--full a {
   position: relative;
-  top: 100px;
+  top: 50px;
   font-family: 'lato-regular';
   font-size: 14px;
   color: #00A478;
@@ -936,7 +951,7 @@ footer ul li a {
   border-radius: 4px;
   padding: 12px 27px;
 }
-/* line 99, ../scss/views/_main-features.scss */
+/* line 98, ../scss/views/_main-features.scss */
 .mainfea--home-quote .row--full a:hover {
   opacity: 0.7;
   transition: all ease .8s;

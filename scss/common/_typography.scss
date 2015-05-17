@@ -76,6 +76,11 @@ p{
 }
 
 @font-face {
+  font-family: 'lato-medium';
+  src: url('../fonts/lato/Lato-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
   font-family: 'lato-light';
   src: url('../fonts/lato/Lato-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
