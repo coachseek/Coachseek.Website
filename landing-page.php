@@ -54,8 +54,8 @@ Template Name: Landing Page Template
        <div class="landing--home-bg">
           <div class="landing-home-bg-overlap"></div>
            <div class="row--full">
-               <h1>better sport coaching</h1>
-               <p class="subtitle">Online booking - Scheduling - Accept Payments - Mobile</p>
+               <h1><?php the_field('title'); ?></h1>
+               <p class="subtitle"><?php the_field('description'); ?></p>
                <a class="landing--home-tryfree" href="">Try for free</a>
                <p class="sublabel">14 day trial, no credit card required</p>
            </div>
@@ -64,22 +64,28 @@ Template Name: Landing Page Template
        <div class="landing--home-desc">
            <div class="row">
                 <img class="computer-center" src="<?php echo get_stylesheet_directory_uri();?>/images/computer.png" alt="">
-               <div class="col-3-12">
-                   <h5>Online Booking</h5>
-                   <p>Allow your clients to book with you at any time, even when you are busy coaching</p>
-               </div>
-               <div class="col-3-12">
-                   <h5>Online Booking</h5>
-                   <p>Allow your clients to book with you at any time, even when you are busy coaching</p>
-               </div>
-               <div class="col-3-12">
-                   <h5>Online Booking</h5>
-                   <p>Allow your clients to book with you at any time, even when you are busy coaching</p>
-               </div>
-               <div class="col-3-12">
-                   <h5>Online Booking</h5>
-                   <p>Allow your clients to book with you at any time, even when you are busy coaching</p>
-               </div>
+                <?php
+                // check if the repeater field has rows of data
+                if( have_rows('features') ):
+
+                  // loop through the rows of data
+                    while ( have_rows('features') ) : the_row();
+                        ?>
+                        <div class="col-3-12">
+                           <h5><?php the_sub_field('title');?></h5>
+                           <p><?php the_sub_field('description');?></p>
+                        </div>
+                        <?php
+
+                    endwhile;
+
+                else :
+
+                    // no rows found
+
+                endif;
+
+                ?>
            </div>
            <div class="row--full">
                <a href="">View Features</a>
@@ -89,8 +95,8 @@ Template Name: Landing Page Template
        <div class="landing--home-quote">
            <div class="landing--home-overlap"></div>
            <div class="row--full">
-               <h3>"Coachseek has allowed me to focus on my customers and my business is running more efficiently than ever before"</h3>
-               <p>"- Sheridan Adams"</p>
+               <h3><?php the_field('quote-title'); ?></h3>
+               <p><?php the_field('quote-name'); ?></p>
                <a href="">View Features</a>
            </div>
        </div>
