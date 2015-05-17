@@ -17,6 +17,10 @@ header{
                     a{
                         font-size: 14px;
                         color: $text-dark-grey;
+                        &:hover{
+                            color:$green;
+                            transition: all ease .6s;
+                        }
                         &.landing--header-signin{
                             background: $green;
                             color: #fff;

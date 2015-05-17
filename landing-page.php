@@ -55,9 +55,9 @@ Template Name: Landing Page Template
           <div class="landing-home-bg-overlap"></div>
            <div class="row--full">
                <h1>better sport coaching</h1>
-               <p>Online booking - Scheduling - Accept Payments - Mobile</p>
+               <p class="subtitle">Online booking - Scheduling - Accept Payments - Mobile</p>
                <a class="landing--home-tryfree" href="">Try for free</a>
-               <p>14 day trial, no credit card required</p>
+               <p class="sublabel">14 day trial, no credit card required</p>
            </div>
        </div>
        
