@@ -52,24 +52,63 @@ Template Name: Main Features Page Template
 		</header>
    
        <div class="mainfea--home-bg">
+          <div class="landing-home-bg-overlap"></div>
            <div class="row--full">
-               <h1>helping sports coaches Focus on what they love</h1>
-               <p>Online booking - Scheduling - Accept Payments - Mobile</p>
+               <h1>" exercitatidut lt dolore magnam alris ure do"</h1>
+               <p>ra incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,</p>
         
            </div>
        </div>
 
-       <div class="mainfea--home-feature">
-          <div class="row">
-            <div class="col-6-12 mainfea--home-feature-desc">
-              <h5>Designed for Sports Coaches</h5>
-              <p>At Coachseek we are crazy about sport. We are a group of coaches that were tired of having
-              to use software built for other industries so built Coachseek from the ground up to meet the special needs of coaches. </p>
-            </div>
-             <div class="col-6-12 mainfea--home-feature-img">
-              <img src="" alt="">
-            </div>
-          </div>   
+       <div class="mainfea--home-feature">       
+        <?php
+
+        // check if the flexible content field has rows of data
+        if( have_rows('features') ):
+
+             // loop through the rows of data
+            while ( have_rows('features') ) : the_row();
+                if( get_row_layout() == 'features-left' ):
+                    ?>
+                      <div class="row">
+                         <div class="col-6-12 mainfea--home-feature-img">
+                          <?php 
+                            $image = get_sub_field('image');
+                            echo ' <img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />'    
+                          ?>          
+                        </div>
+                        <div class="col-6-12 mainfea--home-feature-desc">
+                          <h5><?php  the_sub_field('title');?></h5>
+                          <p><?php  the_sub_field('desc');?></p>
+                        </div>
+                      </div>   
+              <?php
+                endif;
+                 if( get_row_layout() == 'features-right' ):
+                ?>
+                     <div class="row">
+                         <div class="col-6-12 mainfea--home-feature-desc">
+                            <h5><?php  the_sub_field('title');?></h5>
+                            <p><?php  the_sub_field('desc');?></p>
+                         </div>
+                         <div class="col-6-12 mainfea--home-feature-img">
+                          <?php 
+                            $image = get_sub_field('image');
+                            echo ' <img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />'    
+                          ?>          
+                        </div>
+                      </div>   
+                <?php
+                endif;              
+            endwhile;
+
+        else :
+
+            // no layouts found
+
+        endif;
+
+        ?>           
        </div>
        
 
@@ -77,9 +116,9 @@ Template Name: Main Features Page Template
        <div class="mainfea--home-quote">
            <div class="mainfea--home-overlap"></div>
            <div class="row--full">
-               <h3>"Coachseek has allowed me to focus on my customers and my business is running more efficiently than ever before"</h3>
-               <p>"- Bob Dylan"</p>
-               <a href="">View Features</a>
+               <h3>Interested in Coachseek ?</h3>
+
+               <a href="">try for free</a>
            </div>
        </div>
        

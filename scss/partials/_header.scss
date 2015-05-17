@@ -4,9 +4,7 @@ header{
     width: 100%;
     z-index: 1;
     background: #fff;
-    -webkit-box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.4);
-    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.4);
+    border-bottom: 1px solid #ccc;
     .row--full{
         .landing--header-nav{
             padding-top: 9px;

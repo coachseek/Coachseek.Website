@@ -52,10 +52,12 @@ Template Name: Landing Page Template
 		</header>
    
        <div class="landing--home-bg">
+          <div class="landing-home-bg-overlap"></div>
            <div class="row--full">
-               <h1>helping sports coaches Focus on what they love</h1>
+               <h1>better sport coaching</h1>
                <p>Online booking - Scheduling - Accept Payments - Mobile</p>
                <a class="landing--home-tryfree" href="">Try for free</a>
+               <p>14 day trial, no credit card required</p>
            </div>
        </div>
        
@@ -80,7 +82,7 @@ Template Name: Landing Page Template
                </div>
            </div>
            <div class="row--full">
-               <a href=""></a>
+               <a href="">View Features</a>
            </div>
        </div>
        
@@ -88,7 +90,7 @@ Template Name: Landing Page Template
            <div class="landing--home-overlap"></div>
            <div class="row--full">
                <h3>"Coachseek has allowed me to focus on my customers and my business is running more efficiently than ever before"</h3>
-               <p>"- Bob Dylan"</p>
+               <p>"- Sheridan Adams"</p>
                <a href="">View Features</a>
            </div>
        </div>

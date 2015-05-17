@@ -1,17 +1,28 @@
 .mainfea--home-bg{
     position: relative;
     height: 524px;
-    background: url('../images/landing-home-bg.png') center center no-repeat;
+    background: url('../images/main-features-header.png') center bottom no-repeat;
     background-size: cover;
     display: block;
+    z-index: 0;
+    .landing-home-bg-overlap{
+        position: absolute;
+        background: url("../images/overlap-black.png") center center;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+     }
      .row--full{  
+        z-index: 2; 
         text-align: center;
+        padding-top: 50px;
         h1{
             padding-top: 140px;
             width: 530px;
             margin: 0 auto;
         }
         p{
+            padding-top: 20px;
             width: 400px;
             margin: 0 auto;
         }
@@ -22,12 +33,27 @@
     position: relative;
     background-color: $background-mid-grey;
     color: $text-dark;
-    .mainfea--home-feature-desc{
-        width: 340px;
-    }
-    .mainfea--home-feature-img{
-        width: 454px;
-        height: 241px;
+    .row{
+         padding: 70px 0px;
+        .mainfea--home-feature-desc{       
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 241px;
+            padding-left: 40px;
+            h5{
+                padding-bottom: 10px;
+            }
+        }
+        .mainfea--home-feature-img{
+//            max-width: 431px;
+            height: 241px;
+            border: 1px solid #333;
+            img{
+                max-width: 431px;
+                max-height: 241px;
+            }
+        }
     }
 }
 

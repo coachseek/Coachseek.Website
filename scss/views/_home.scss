@@ -4,7 +4,16 @@
     background: url('../images/landing-home-bg.png') center center no-repeat;
     background-size: cover;
     display: block;
+    z-index: 0;
+    .landing-home-bg-overlap{
+        position: absolute;
+        background: url("../images/overlap-black.png") center center;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
     .row--full{  
+        z-index: 2;
         text-align: center;
         h1{
             padding-top: 140px;
