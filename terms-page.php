@@ -52,16 +52,17 @@ Template Name: Terms Page Template
                </div>               
             </div>
 		</header>
-       <div class="terms container"> 
-        <div class="row">
-           <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-        the_content();
-        endwhile; else: ?>
-        <p>Sorry, no posts matched your criteria.</p>
-        <?php endif; ?>   
+       <div class="container"> 
+         <div class="terms">
+          <div class="row">
+             <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+          the_content();
+          endwhile; else: ?>
+          <p>Sorry, no posts matched your criteria.</p>
+          <?php endif; ?>   
 
-        </div>   
-       </div>
+          </div>   
+        </div>
        
        
        <footer>

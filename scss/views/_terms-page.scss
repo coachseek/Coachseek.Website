@@ -2,7 +2,34 @@
 	background-color: $background-mid-grey;
 	color: $text-dark;
 	.row{
-		padding-top: 70px;
+		max-width: 768px;
+		padding-top: 100px;
+		padding-bottom: 50px;
+		h3{
+			font-family: lato-medium;
+			font-size: 24px;
+			padding-bottom: 30px;
+			font-weight: 300;
+		}
+		h5{
+			font-family: lato-medium;
+			font-size: 16px;
+			padding-bottom: 20px;
+			font-weight: 300;
+		}
+		p{
+			font-size: 13px;
+		}
+		li{
+			font-size: 13px;
+			padding: 10px 0;
+			list-style-type: disc;
+			margin-left: 25px;
+		}
+		a{
+			color: $text-dark;
+			text-decoration: underline;
+		}
 
 	}
 }
