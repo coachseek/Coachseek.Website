@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Main Features Page Template
+Template Name: Team Page Template
 * Version: 1.0
 */
 ?>
@@ -56,69 +56,12 @@ Template Name: Main Features Page Template
                </div>               
             </div>
     </header>
-      <?php if( get_field('header-image') ): ?>
-       <div class="mainfea--home-bg" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat; background-size: cover;">
-          <?php endif; ?>
-          <div class="landing-home-bg-overlap"></div>
-           <div class="row--full">
-               <h1><?php the_field('title'); ?></h1>
-               <p><?php the_field('description'); ?></p>
-        
-           </div>
-       </div>
+    <div class="container">
+      
+    </div>
 
-       <div class="mainfea--home-feature">       
-        <?php
 
-        // check if the flexible content field has rows of data
-        if( have_rows('features') ):
-
-             // loop through the rows of data
-            while ( have_rows('features') ) : the_row();
-                if( get_row_layout() == 'features-left' ):
-                    ?>
-                      <div class="row">
-                          <div class="col-6-12 mainfea--home-feature-desc push-6">
-                          <h5><?php  the_sub_field('title');?></h5>
-                          <p><?php  the_sub_field('desc');?></p>
-                        </div>
-                         <div class="col-6-12 mainfea--home-feature-img pull-6">
-                          <?php 
-                            $image = get_sub_field('image');
-                            echo ' <img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />'    
-                          ?>          
-                        </div>
-                    
-                      </div>   
-              <?php
-                endif;
-                 if( get_row_layout() == 'features-right' ):
-                ?>
-                     <div class="row">
-                         <div class="col-6-12 mainfea--home-feature-desc ">
-                            <h5><?php  the_sub_field('title');?></h5>
-                            <p><?php  the_sub_field('desc');?></p>
-                         </div>
-                         <div class="col-6-12 mainfea--home-feature-img ">
-                          <?php 
-                            $image = get_sub_field('image');
-                            echo ' <img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />'    
-                          ?>          
-                        </div>                     
-                      </div>   
-                <?php
-                endif;              
-            endwhile;
-
-        else :
-
-            // no layouts found
-
-        endif;
-
-        ?>           
-       </div>
-       
+      
        <?php if( get_field('quote-image') ): ?>
        <div class="mainfea--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
         <?php endif; ?>

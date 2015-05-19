@@ -400,7 +400,7 @@ body {
   margin-right: 0%;
 }
 
-/* line 74, ../scss/common/_layout.scss */
+/* line 75, ../scss/common/_layout.scss */
 .col-7-12 {
   *zoom: 1;
   float: left;
@@ -426,7 +426,7 @@ body {
   margin-right: 0%;
 }
 
-/* line 80, ../scss/common/_layout.scss */
+/* line 81, ../scss/common/_layout.scss */
 .col-8-12 {
   *zoom: 1;
   float: left;
@@ -452,7 +452,7 @@ body {
   margin-right: 0%;
 }
 
-/* line 86, ../scss/common/_layout.scss */
+/* line 87, ../scss/common/_layout.scss */
 .col-9-12 {
   *zoom: 1;
   float: left;
@@ -478,8 +478,8 @@ body {
   margin-right: 0%;
 }
 
-@media (max-width: 768px) {
-  /* line 92, ../scss/common/_layout.scss */
+@media (max-width: 767px) {
+  /* line 94, ../scss/common/_layout.scss */
   .col-3-12 {
     *zoom: 1;
     float: left;
@@ -505,7 +505,7 @@ body {
     margin-right: 0%;
   }
 
-  /* line 95, ../scss/common/_layout.scss */
+  /* line 97, ../scss/common/_layout.scss */
   .col-6-12 {
     *zoom: 1;
     float: left;
@@ -528,6 +528,72 @@ body {
   }
   /* line 48, ../scss/jeet/_grid.scss */
   .col-6-12:last-child {
+    margin-right: 0%;
+  }
+  /* line 99, ../scss/common/_layout.scss */
+  .col-6-12.push-6 {
+    position: static;
+    left: 0;
+  }
+  /* line 104, ../scss/common/_layout.scss */
+  .col-6-12.pull-6 {
+    position: static;
+    left: 0;
+  }
+}
+@media (min-width: 768px) {
+  /* line 117, ../scss/common/_layout.scss */
+  .col-6-12.push-6 {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: 51.5%;
+  }
+  /* line 204, ../scss/jeet/_grid.scss */
+  .col-6-12.push-6:before, .col-6-12.push-6:after {
+    content: '';
+    display: table;
+  }
+  /* line 208, ../scss/jeet/_grid.scss */
+  .col-6-12.push-6:after {
+    clear: both;
+  }
+  /* line 48, ../scss/jeet/_grid.scss */
+  .col-6-12.push-6:last-child {
+    margin-right: 0%;
+  }
+  /* line 124, ../scss/common/_layout.scss */
+  .col-6-12.pull-6 {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: -51.5%;
+  }
+  /* line 204, ../scss/jeet/_grid.scss */
+  .col-6-12.pull-6:before, .col-6-12.pull-6:after {
+    content: '';
+    display: table;
+  }
+  /* line 208, ../scss/jeet/_grid.scss */
+  .col-6-12.pull-6:after {
+    clear: both;
+  }
+  /* line 48, ../scss/jeet/_grid.scss */
+  .col-6-12.pull-6:last-child {
     margin-right: 0%;
   }
 }
@@ -1111,6 +1177,16 @@ footer .row ul li a {
   text-decoration: underline;
 }
 
+@media (max-width: 767px) {
+  /* line 37, ../scss/views/_terms-page.scss */
+  .terms {
+    padding: 0 25px;
+  }
+  /* line 39, ../scss/views/_terms-page.scss */
+  .terms .row {
+    padding-top: 70px;
+  }
+}
 /* line 1, ../scss/views/_main-features.scss */
 .mainfea--home-bg {
   position: relative;
@@ -1250,8 +1326,9 @@ footer .row ul li a {
   /* line 117, ../scss/views/_main-features.scss */
   .mainfea--home-bg .row--full h1 {
     width: 100%;
+    padding-top: 80px;
   }
-  /* line 120, ../scss/views/_main-features.scss */
+  /* line 121, ../scss/views/_main-features.scss */
   .mainfea--home-bg .row--full p {
     width: 100%;
   }

@@ -70,6 +70,7 @@ body {
 }
 .col-6-12{
     @include column(6/12);
+
 }
 .col-7-12{
     @include column(7/12);
@@ -88,17 +89,45 @@ body {
 }
 
 
-@media (max-width : 768px)  {   
+
+@media (max-width : 767px)  {   
     .col-3-12{
          @include column(12/12);  
     }
-     .col-6-12{
-         @include column(12/12);  
+      .col-6-12{
+          @include column(12/12);  
+             &.push-6 {
+               @include unshift();
+             
+            }
+
+            &.pull-6 {
+                 @include unshift();
+             
+            }
+ 
     }
+     
+
 }
 
-@media (max-width: 414px) {
-  
+@media (min-width: 768px) {
+  .col-6-12{
+         
+            &.push-6 {
+            
+                @include column(6/12);
+                @include shift(6/12);
+             
+            }
+
+            &.pull-6 {
+                @include column(6/12);
+                @include shift(-6/12);
+             
+            }
+ 
+    }
   
 }
 

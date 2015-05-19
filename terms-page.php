@@ -36,25 +36,26 @@ Template Name: Terms Page Template
 
     <body>
     <div class="container">
-        <header>
+       <header>
             <div class="row--full">
                <div class="col-6-12 landing--header-logo">
                   <a href="<?php echo site_url(); ?>">
-                      <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo.png" alt="">
-                  </a>                
+                    <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo.png" alt="">
+                  </a>   
                </div>
                <div class="col-6-12 landing--header-nav">
-                   <ul>
+                   <div class="landing--header-nav-icon" href="">
+                     <i class="fa fa-bars fa-lg"></i>
+                   </div>
+                   <ul class="landing--header-nav-list">
                        <li><a href="/main-features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a class="landing--header-signin" href="http://app.coachseek.com">Sign In</a></li>
                    </ul>
-                    <a class="landing--header-nav-icon" href="">
-                     <i class="fa fa-bars fa-lg"></i>
-                   </a>
+              
                </div>               
             </div>
-		</header>
+    </header>
        <div class="container"> 
          <div class="terms">
           <div class="row">
@@ -112,7 +113,8 @@ Template Name: Terms Page Template
        </footer>
        
     </div>
-    
+      <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
     
     
     </body>
