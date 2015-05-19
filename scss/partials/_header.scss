@@ -7,9 +7,13 @@ header{
     border-bottom: 1px solid #ccc;
     .row--full{
         .landing--header-nav{
+            .landing--header-nav-icon{
+                display: none !important;
+            }
             padding-top: 9px;
             padding-right: 2%;
             ul{
+                display: block;
                 float: right;
                 li{
                     display: inline-block;
@@ -37,9 +41,66 @@ header{
         }
         .landing--header-logo{
             img{
+                max-width: 100%;
                 padding-left: 10%;
                 padding-top: 5px;
             }
         }
     }
+}
+@media (max-width: 767px){
+    header{
+    &.mobile-header{
+        position: relative;
+        height: 175px;
+    }    
+   
+        .row--full{
+            .landing--header-nav{
+                position: relative;
+                @include column(12/12);
+                ul{
+                    height: 134px;
+                    display: none;
+                    clear: both;
+                    width: 100%;
+                    background-color: #EDEDED;
+                    text-align: center;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    li{
+                        border-bottom: 1px solid #ccc;
+                        @include column(12/12);
+                        font-size: 16px;
+                        padding: 12px 0px;
+                        &:last-child{
+                            border-bottom:0px solid #ccc;
+                        }
+                        a{
+                            &.landing--header-signin{
+                                background-color: transparent;
+                                color: $green;
+                                font-family: 'lato-regular';
+                                &:hover{
+                                    background-color: transparent;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                .landing--header-nav-icon{
+                    display: block !important;
+                    position: absolute;
+                    right: 0;
+                    top:-30px;
+                    color: #333;
+                  
+                    padding-right: 10px;
+                    padding-top: 2px;
+                }
+            }
+        }
+    }
+
 }

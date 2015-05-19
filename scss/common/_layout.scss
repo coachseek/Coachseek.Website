@@ -88,3 +88,18 @@ body {
 }
 
 
+@media (max-width : 768px)  {   
+    .col-3-12{
+         @include column(12/12);  
+    }
+     .col-6-12{
+         @include column(12/12);  
+    }
+}
+
+@media (max-width: 414px) {
+  
+  
+}
+
+

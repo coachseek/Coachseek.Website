@@ -1,0 +1,196 @@
+.pricing--home-bg{
+    position: relative;
+    height: 302px;
+    display: block;
+    z-index: 0;
+    .pricing-home-bg-overlap{
+        position: absolute;
+        background: url("../images/overlap-black.png") center center;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+    .row--full{  
+        z-index: 2;
+        text-align: center;
+        h1{
+            padding-top: 100px;
+            width: 836px;
+            margin: 0 auto;
+            font-size: 36px;
+        }
+        p{
+            width: 560px;
+            margin: 0 auto;
+            &.subtitle{
+                padding-bottom: 50px;
+            }
+            &.sublabel{
+                padding-top: 25px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+.pricing--home-list{
+	background-color: $background-mid-grey;
+	color: $text-dark;
+	padding-bottom: 50px;
+	.row{
+		padding: 60px 0px 30px 0px;
+		max-width: 1027px;
+		.col-3-12{
+			position: relative;
+			height: 255px;
+			
+			.pricing--home-list-popular{
+				position:absolute;
+				top: -25px;
+				width: 100%;
+				height: 25px;
+				background: #F2784B;
+				color: #fff;
+				font-size: 14px;
+				text-align: center;
+				display: flex;
+	            justify-content: center;
+	            flex-direction: column;
+				-webkit-box-shadow: 0px -1px 20px 0px rgba(51,51,51,0.4);
+				-moz-box-shadow: 0px -1px 20px 0px rgba(51,51,51,0.4);
+				box-shadow: 0px -1px 20px 0px rgba(51,51,51,0.4);
+
+			}
+			.pricing--home-list-price{
+				color: #fff;
+				text-align: center;
+				height: 116px;
+				background-color: $background-price;
+				display: flex;
+	            justify-content: center;
+	            flex-direction: column;
+     			-webkit-box-shadow: 0px 0px 10px 0px rgba(51,51,51,0.4);
+				-moz-box-shadow: 0px 0px 10px 0px rgba(51,51,51,0.4);
+				box-shadow: 0px 0px 10px 0px rgba(51,51,51,0.4);
+				h5{
+					font-family: lato-medium;
+					font-size: 16px;
+					margin-bottom: 13px;
+				}
+				h2{
+					font-family: lato-medium;
+					font-size: 40px;
+
+					span{
+						font-size: 14px;
+						position: relative;
+						left: -10px;
+					}
+				}
+			}
+			.pricing--home-list-coach{
+				height: 140px;
+				border: 1px solid #ddd;
+				background-color: #fff;
+				
+				font-size: 16px;
+				text-align: center;
+				p{
+					position: relative;
+					margin:25px 0px 45px 0;
+					&.unlimited{
+						margin-bottom: 25px;
+					}
+				}
+				a{
+					position: relative;
+					font-family: lato-medium;
+					padding: 10px 30px;
+					background-color: $green;
+					border-radius: 4px;
+					&:hover{
+						background-color: $light-green;
+						transition: all ease 0.8s;
+					}
+				}
+			}
+		}
+	}
+	.pricing--home-list-desc{
+		padding: 10px 0 40px 0;
+		text-align: center;
+		font-family: 'lato-light-italic';
+		font-size: 18px;
+	}
+	.pricing--home-list-suitplan{
+		text-align: center;
+		background-color: #DCDCDC;
+		border: 1px solid #ccc;
+		padding: 20px 0;
+		font-size: 18px;
+		h5{
+			font-family: lato-medium;
+			font-weight: 300;
+		}
+		a{
+			color: $light-green;
+		}
+
+	}
+}
+
+@media (max-width : 767px)  {   
+    .pricing--home-bg {
+    	height: 310px;
+    	.row--full {
+    		h1{
+		        width: 100%;
+		        padding: 100px 10px 0 20px;
+		        font-size: 34px;
+		    }
+		    p.subtitle{
+		    	width: 100%;
+		    	padding: 0 18px;
+		    }
+		}
+	}
+    .pricing--home-list{
+    	padding-bottom: 0px;
+    	.pricing--home-list-desc{
+    		display: none !important;
+    	}
+    	.pricing--home-list-suitplan{
+			display: none !important;
+    	}
+        .row{
+        	padding: 30px 10px 0px 10px;
+            .col-3-12{
+            	text-align: center;
+                &:nth-child(2){
+                    margin-top:20px;
+                }
+                &:last-child{
+                    .unlimited{
+                        margin-bottom:18px !important;
+                    }
+                }
+                height:150px !important;
+                .pricing--home-list-price{
+                 @include span(6/12); 
+                }
+                .pricing--home-list-coach{
+                     @include span(6/12); 
+                     height:117px !important;
+                     p{
+                        margin-top:18px !important;
+                        margin-bottom:35px !important;
+                     }
+                }
+            }
+            
+        }
+  
+    }
+    .mainfea--home-quote .row--full h3{
+    	width: 100%;
+    }
+}

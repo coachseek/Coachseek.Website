@@ -45,10 +45,13 @@ Template Name: Terms Page Template
                </div>
                <div class="col-6-12 landing--header-nav">
                    <ul>
-                       <li><a href="">Features</a></li>
-                       <li><a href="">Blog</a></li>
-                       <li><a class="landing--header-signin" href="">Sign In</a></li>
+                       <li><a href="/main-features">Features</a></li>
+                       <li><a href="/blog">Blog</a></li>
+                       <li><a class="landing--header-signin" href="http://app.coachseek.com">Sign In</a></li>
                    </ul>
+                    <a class="landing--header-nav-icon" href="">
+                     <i class="fa fa-bars fa-lg"></i>
+                   </a>
                </div>               
             </div>
 		</header>
@@ -64,48 +67,45 @@ Template Name: Terms Page Template
           </div>   
         </div>
        
-       
-       <footer>
+        <footer>
            <div class="row">
                <div class="col-3-12">
                    <ul>
                        <li><h4>company</h4></li>
-                       <li><a href="">Team</a></li>
-                       <li><a href="">Blog</a></li>
-                       <li><a href="">Careers</a></li>
-                       <li><a href="">Terms & Privacy</a></li>
+                       <li><a href="/team">Team</a></li>
+                       <li><a href="/blog">Blog</a></li>
+                       <li><a href="/careers">Careers</a></li>
+                       <li><a href="/website-terms">Terms</a> & <a href="/privacy-policy"> Privacy</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
                    <ul>
                        <li><h4>product</h4></li>
-                       <li><a href="">Features</a></li>
-                       <li><a href="">Pricing</a></li>
-                       <li><a href="">FAQ's</a></li>
-                       <li><a href="">Roadmap</a></li>
-                       <li><a href="">Newsletter</a></li>
+                       <li><a href="/main-features">Features</a></li>
+                       <li><a href="/pricing">Pricing</a></li>
+                       <li><a href="/faq">FAQ's</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
                    <ul>
                        <li><h4>examples</h4></li>
-                       <li><a href="">Tennis</a></li>
-                       <li><a href="">Golf</a></li>
-                       <li><a href="">Swimming</a></li>
-                       <li><a href="">Fitness</a></li>
-                       <li><a href="">Equestrian</a></li>
-                       <li><a href="">Running</a></li>
-                       <li><a href="">Cricket</a></li>
+                       <li><a href="/tennis">Tennis</a></li>
+                       <li><a href="/golf">Golf</a></li>
+                       <li><a href="/swimming">Swimming</a></li>
+                       <li><a href="/fitness">Fitness</a></li>
+                       <li><a href="/equestrian">Equestrian</a></li>
+                       <li><a href="/running">Running</a></li>
+                       <li><a href="/cricket">Cricket</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
                    <ul>
                        <li><h4>contact</h4></li>
-                       <li><a href="">hello@coachseek.com</a></li>
-                       <li><a href="">support@coachseek.com</a></li>
-                       <li><a href="">Facebook</a></li>
-                       <li><a href="">Twitter</a></li>
-                       <li><a href="">Linkedin</a></li>
+                       <li><a href="mailto:hello@coachseek.com" target="_blank">hello@coachseek.com</a></li>
+                       <li><a href="mailto:support@coachseek.com" target="_blank">support@coachseek.com</a></li>
+                       <li><a href="https://www.facebook.com/Coachseek" target="_blank">Facebook</a></li>
+                       <li><a href="https://twitter.com/coachseek" target="_blank">Twitter</a></li>
+                       <li><a href="https://www.linkedin.com/company/coachseek" target="_blank" >Linkedin</a></li>
                    </ul>
                </div>
            </div>
