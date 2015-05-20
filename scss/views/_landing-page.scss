@@ -144,10 +144,17 @@
 
 @media (max-width: 767px){
     .landing--home-bg {
+        height:500px;
         .row--full 
         {
+            h1{
+                font-size: 36px;
+                padding-top: 130px;
+            }
             p.subtitle{
                 width: 100%;
+                padding-left: 17%;
+                padding-right: 17%;
             }
             p.sublabel{
                 width: 100%;
@@ -189,9 +196,11 @@
 
             }
             a{
+                width: 100%;
                 top:50px;
             }
             p{
+                width: 100%;
                 top:20px;
             }
         }

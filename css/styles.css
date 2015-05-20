@@ -506,6 +506,78 @@ body {
   }
 
   /* line 97, ../scss/common/_layout.scss */
+  .col-7-12 {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  /* line 204, ../scss/jeet/_grid.scss */
+  .col-7-12:before, .col-7-12:after {
+    content: '';
+    display: table;
+  }
+  /* line 208, ../scss/jeet/_grid.scss */
+  .col-7-12:after {
+    clear: both;
+  }
+  /* line 48, ../scss/jeet/_grid.scss */
+  .col-7-12:last-child {
+    margin-right: 0%;
+  }
+  /* line 99, ../scss/common/_layout.scss */
+  .col-7-12.push-7 {
+    position: static;
+    left: 0;
+  }
+  /* line 104, ../scss/common/_layout.scss */
+  .col-7-12.pull-7 {
+    position: static;
+    left: 0;
+  }
+
+  /* line 109, ../scss/common/_layout.scss */
+  .col-5-12 {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  /* line 204, ../scss/jeet/_grid.scss */
+  .col-5-12:before, .col-5-12:after {
+    content: '';
+    display: table;
+  }
+  /* line 208, ../scss/jeet/_grid.scss */
+  .col-5-12:after {
+    clear: both;
+  }
+  /* line 48, ../scss/jeet/_grid.scss */
+  .col-5-12:last-child {
+    margin-right: 0%;
+  }
+  /* line 111, ../scss/common/_layout.scss */
+  .col-5-12.push-5 {
+    position: static;
+    left: 0;
+  }
+  /* line 116, ../scss/common/_layout.scss */
+  .col-5-12.pull-5 {
+    position: static;
+    left: 0;
+  }
+
+  /* line 122, ../scss/common/_layout.scss */
   .col-6-12 {
     *zoom: 1;
     float: left;
@@ -530,19 +602,19 @@ body {
   .col-6-12:last-child {
     margin-right: 0%;
   }
-  /* line 99, ../scss/common/_layout.scss */
+  /* line 124, ../scss/common/_layout.scss */
   .col-6-12.push-6 {
     position: static;
     left: 0;
   }
-  /* line 104, ../scss/common/_layout.scss */
+  /* line 129, ../scss/common/_layout.scss */
   .col-6-12.pull-6 {
     position: static;
     left: 0;
   }
 }
 @media (min-width: 768px) {
-  /* line 117, ../scss/common/_layout.scss */
+  /* line 142, ../scss/common/_layout.scss */
   .col-6-12.push-6 {
     *zoom: 1;
     float: left;
@@ -569,7 +641,7 @@ body {
   .col-6-12.push-6:last-child {
     margin-right: 0%;
   }
-  /* line 124, ../scss/common/_layout.scss */
+  /* line 149, ../scss/common/_layout.scss */
   .col-6-12.pull-6 {
     *zoom: 1;
     float: left;
@@ -596,6 +668,116 @@ body {
   .col-6-12.pull-6:last-child {
     margin-right: 0%;
   }
+
+  /* line 158, ../scss/common/_layout.scss */
+  .col-7-12.push-7 {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 57.08333%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: 42.91667%;
+  }
+  /* line 204, ../scss/jeet/_grid.scss */
+  .col-7-12.push-7:before, .col-7-12.push-7:after {
+    content: '';
+    display: table;
+  }
+  /* line 208, ../scss/jeet/_grid.scss */
+  .col-7-12.push-7:after {
+    clear: both;
+  }
+  /* line 48, ../scss/jeet/_grid.scss */
+  .col-7-12.push-7:last-child {
+    margin-right: 0%;
+  }
+  /* line 165, ../scss/common/_layout.scss */
+  .col-7-12.pull-7 {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 57.08333%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: -42.91667%;
+  }
+  /* line 204, ../scss/jeet/_grid.scss */
+  .col-7-12.pull-7:before, .col-7-12.pull-7:after {
+    content: '';
+    display: table;
+  }
+  /* line 208, ../scss/jeet/_grid.scss */
+  .col-7-12.pull-7:after {
+    clear: both;
+  }
+  /* line 48, ../scss/jeet/_grid.scss */
+  .col-7-12.pull-7:last-child {
+    margin-right: 0%;
+  }
+
+  /* line 174, ../scss/common/_layout.scss */
+  .col-5-12.push-5 {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 39.91667%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: 60.08333%;
+  }
+  /* line 204, ../scss/jeet/_grid.scss */
+  .col-5-12.push-5:before, .col-5-12.push-5:after {
+    content: '';
+    display: table;
+  }
+  /* line 208, ../scss/jeet/_grid.scss */
+  .col-5-12.push-5:after {
+    clear: both;
+  }
+  /* line 48, ../scss/jeet/_grid.scss */
+  .col-5-12.push-5:last-child {
+    margin-right: 0%;
+  }
+  /* line 181, ../scss/common/_layout.scss */
+  .col-5-12.pull-5 {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: -60.08333%;
+  }
+  /* line 204, ../scss/jeet/_grid.scss */
+  .col-5-12.pull-5:before, .col-5-12.pull-5:after {
+    content: '';
+    display: table;
+  }
+  /* line 208, ../scss/jeet/_grid.scss */
+  .col-5-12.pull-5:after {
+    clear: both;
+  }
+  /* line 48, ../scss/jeet/_grid.scss */
+  .col-5-12.pull-5:last-child {
+    margin-right: 0%;
+  }
 }
 /* mobile + tablet */
 /* strictly mobile*/
@@ -611,31 +793,35 @@ h1 {
   font-family: 'lato-semi-bold';
   font-size: 36px;
   text-transform: uppercase;
+  font-weight: 300;
 }
 
-/* line 18, ../scss/common/_typography.scss */
+/* line 19, ../scss/common/_typography.scss */
 h3 {
   font-family: 'lato-regular';
   font-size: 24px;
+  font-weight: 300;
 }
-/* line 21, ../scss/common/_typography.scss */
+/* line 23, ../scss/common/_typography.scss */
 h3.white {
   color: #fff;
 }
 
-/* line 27, ../scss/common/_typography.scss */
+/* line 29, ../scss/common/_typography.scss */
 h4 {
   font-size: 16px;
   text-transform: uppercase;
   font-family: 'lato-light';
+  font-weight: 300;
 }
 
-/* line 33, ../scss/common/_typography.scss */
+/* line 36, ../scss/common/_typography.scss */
 h5 {
   font-family: 'lato-semi-bold';
+  font-weight: 300;
 }
 
-/* line 37, ../scss/common/_typography.scss */
+/* line 41, ../scss/common/_typography.scss */
 p {
   font-size: 16px;
 }
@@ -890,24 +1076,20 @@ footer .row ul li a {
 }
 
 @media (max-width: 767px) {
-  /* line 25, ../scss/partials/_footer.scss */
-  footer {
-    height: 100%;
-  }
-  /* line 28, ../scss/partials/_footer.scss */
+  /* line 27, ../scss/partials/_footer.scss */
   footer .row {
     padding-top: 25px;
   }
-  /* line 30, ../scss/partials/_footer.scss */
+  /* line 29, ../scss/partials/_footer.scss */
   footer .row ul {
     padding-left: 40px;
     margin-bottom: 22px;
   }
-  /* line 33, ../scss/partials/_footer.scss */
+  /* line 32, ../scss/partials/_footer.scss */
   footer .row ul li {
     margin: 5px 0;
   }
-  /* line 35, ../scss/partials/_footer.scss */
+  /* line 34, ../scss/partials/_footer.scss */
   footer .row ul li h4 {
     padding-bottom: 8px;
   }
@@ -1077,61 +1259,74 @@ footer .row ul li a {
 }
 
 @media (max-width: 767px) {
-  /* line 149, ../scss/views/_landing-page.scss */
+  /* line 146, ../scss/views/_landing-page.scss */
+  .landing--home-bg {
+    height: 500px;
+  }
+  /* line 150, ../scss/views/_landing-page.scss */
+  .landing--home-bg .row--full h1 {
+    font-size: 36px;
+    padding-top: 130px;
+  }
+  /* line 154, ../scss/views/_landing-page.scss */
   .landing--home-bg .row--full p.subtitle {
     width: 100%;
+    padding-left: 17%;
+    padding-right: 17%;
   }
-  /* line 152, ../scss/views/_landing-page.scss */
+  /* line 159, ../scss/views/_landing-page.scss */
   .landing--home-bg .row--full p.sublabel {
     width: 100%;
   }
 
-  /* line 158, ../scss/views/_landing-page.scss */
+  /* line 165, ../scss/views/_landing-page.scss */
   .landing--home-desc .row {
     padding-left: 20px;
     padding-right: 20px;
   }
-  /* line 161, ../scss/views/_landing-page.scss */
+  /* line 168, ../scss/views/_landing-page.scss */
   .landing--home-desc .row .col-3-12 {
     left: 0;
     text-align: center;
     padding-bottom: 30px;
   }
-  /* line 164, ../scss/views/_landing-page.scss */
+  /* line 171, ../scss/views/_landing-page.scss */
   .landing--home-desc .row .col-3-12 h5 {
     padding-bottom: 2px;
   }
-  /* line 167, ../scss/views/_landing-page.scss */
+  /* line 174, ../scss/views/_landing-page.scss */
   .landing--home-desc .row .col-3-12 p {
     width: 100%;
   }
-  /* line 170, ../scss/views/_landing-page.scss */
+  /* line 177, ../scss/views/_landing-page.scss */
   .landing--home-desc .row .col-3-12:last-child {
     padding-bottom: 0px;
   }
-  /* line 175, ../scss/views/_landing-page.scss */
+  /* line 182, ../scss/views/_landing-page.scss */
   .landing--home-desc .row img {
     max-width: 100%;
     top: -60px;
     padding-bottom: 70px;
   }
 
-  /* line 183, ../scss/views/_landing-page.scss */
+  /* line 190, ../scss/views/_landing-page.scss */
   .landing--home-quote .row {
     padding-left: 20px;
     padding-right: 20%;
   }
-  /* line 186, ../scss/views/_landing-page.scss */
+  /* line 193, ../scss/views/_landing-page.scss */
   .landing--home-quote .row h3 {
     width: 100%;
     padding-top: 30px;
   }
-  /* line 191, ../scss/views/_landing-page.scss */
+  /* line 198, ../scss/views/_landing-page.scss */
   .landing--home-quote .row a {
+    width: 100%;
     top: 50px;
   }
-  /* line 194, ../scss/views/_landing-page.scss */
+  /* line 202, ../scss/views/_landing-page.scss */
   .landing--home-quote .row p {
+    width: 100%;
     top: 20px;
   }
 }
@@ -1185,6 +1380,105 @@ footer .row ul li a {
   /* line 39, ../scss/views/_terms-page.scss */
   .terms .row {
     padding-top: 70px;
+  }
+}
+/* line 2, ../scss/views/_team-page.scss */
+.team--home .team--ceo {
+  padding: 130px 5% 10px 5%;
+  background-color: #EDEDED;
+  color: #4E4E4E;
+}
+/* line 8, ../scss/views/_team-page.scss */
+.team--home .team--ceo .col-7-12 h3 {
+  padding-bottom: 30px;
+  font-size: 30px;
+}
+/* line 12, ../scss/views/_team-page.scss */
+.team--home .team--ceo .col-7-12 h5 {
+  font-family: 'lato-regular';
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+/* line 18, ../scss/views/_team-page.scss */
+.team--home .team--ceo .col-5-12 {
+  text-align: center;
+  height: 298px;
+}
+/* line 19, ../scss/views/_team-page.scss */
+.team--home .team--ceo .col-5-12 img {
+  position: relative;
+  top: -40px;
+}
+/* line 32, ../scss/views/_team-page.scss */
+.team--home .team--member {
+  color: #4E4E4E;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 110px;
+  height: 100%;
+}
+/* line 38, ../scss/views/_team-page.scss */
+.team--home .team--member h3 {
+  padding-bottom: 5px;
+  font-size: 30px;
+}
+/* line 42, ../scss/views/_team-page.scss */
+.team--home .team--member p {
+  max-width: 418px;
+  margin: 0 auto;
+}
+/* line 46, ../scss/views/_team-page.scss */
+.team--home .team--member img {
+  height: 343px;
+  max-width: 848px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+/* line 52, ../scss/views/_team-page.scss */
+.team--home .team--member a {
+  position: relative;
+  top: 40px;
+  width: 148px;
+  font-family: 'lato-semi-bold';
+  font-size: 14px;
+  background-color: #00A478;
+  padding: 10px 45px;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+/* line 62, ../scss/views/_team-page.scss */
+.team--home .team--member a:hover {
+  background-color: #00BF8C;
+  transition: all ease .8s;
+}
+
+@media (max-width: 767px) {
+  /* line 72, ../scss/views/_team-page.scss */
+  .team--home .team--ceo {
+    padding-bottom: 50px;
+  }
+  /* line 75, ../scss/views/_team-page.scss */
+  .team--home .team--member {
+    padding-top: 30px;
+  }
+  /* line 77, ../scss/views/_team-page.scss */
+  .team--home .team--member h3 {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  /* line 80, ../scss/views/_team-page.scss */
+  .team--home .team--member h3.team-member-workwithus {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  /* line 86, ../scss/views/_team-page.scss */
+  .team--home .team--member p {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  /* line 90, ../scss/views/_team-page.scss */
+  .team--home .team--member img {
+    max-width: 100%;
   }
 }
 /* line 1, ../scss/views/_main-features.scss */
@@ -1274,8 +1568,9 @@ footer .row ul li a {
 .mainfea--home-quote .row--full {
   text-align: center;
   z-index: 2;
+  padding: 0 5%;
 }
-/* line 74, ../scss/views/_main-features.scss */
+/* line 75, ../scss/views/_main-features.scss */
 .mainfea--home-quote .row--full h3 {
   font-family: 'lato-semi-bold';
   font-size: 30px;
@@ -1283,7 +1578,7 @@ footer .row ul li a {
   width: 800px;
   margin: 0 auto;
 }
-/* line 81, ../scss/views/_main-features.scss */
+/* line 82, ../scss/views/_main-features.scss */
 .mainfea--home-quote .row--full p {
   position: relative;
   top: 40px;
@@ -1292,7 +1587,7 @@ footer .row ul li a {
   font-size: 18px;
   font-style: italic;
 }
-/* line 89, ../scss/views/_main-features.scss */
+/* line 90, ../scss/views/_main-features.scss */
 .mainfea--home-quote .row--full a {
   position: relative;
   top: 50px;
@@ -1303,34 +1598,42 @@ footer .row ul li a {
   border-radius: 4px;
   padding: 12px 27px;
 }
-/* line 98, ../scss/views/_main-features.scss */
+/* line 99, ../scss/views/_main-features.scss */
 .mainfea--home-quote .row--full a:hover {
   opacity: 0.7;
   transition: all ease .8s;
 }
 
 @media (max-width: 767px) {
-  /* line 106, ../scss/views/_main-features.scss */
+  /* line 107, ../scss/views/_main-features.scss */
   .mainfea--home-feature {
-    padding: 0 30px;
+    padding: 20px 30px 0px 30px;
   }
-  /* line 108, ../scss/views/_main-features.scss */
+  /* line 109, ../scss/views/_main-features.scss */
   .mainfea--home-feature .row {
     padding: 20px 0;
   }
   /* line 110, ../scss/views/_main-features.scss */
+  .mainfea--home-feature .row:last-child {
+    padding-bottom: 50px;
+  }
+  /* line 114, ../scss/views/_main-features.scss */
   .mainfea--home-feature .row .mainfea--home-feature-desc {
+    height: 100%;
+    padding-bottom: 30px;
     padding-left: 0px;
   }
 
-  /* line 117, ../scss/views/_main-features.scss */
+  /* line 123, ../scss/views/_main-features.scss */
   .mainfea--home-bg .row--full h1 {
     width: 100%;
     padding-top: 80px;
   }
-  /* line 121, ../scss/views/_main-features.scss */
+  /* line 127, ../scss/views/_main-features.scss */
   .mainfea--home-bg .row--full p {
     width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 /* line 1, ../scss/views/_pricing-page.scss */
@@ -1560,7 +1863,11 @@ footer .row ul li a {
   .pricing--home-list .row .col-3-12 .pricing--home-list-price:after {
     clear: both;
   }
-  /* line 180, ../scss/views/_pricing-page.scss */
+  /* line 179, ../scss/views/_pricing-page.scss */
+  .pricing--home-list .row .col-3-12 .pricing--home-list-price h5 {
+    padding-top: 20px;
+  }
+  /* line 183, ../scss/views/_pricing-page.scss */
   .pricing--home-list .row .col-3-12 .pricing--home-list-coach {
     *zoom: 1;
     float: left;
@@ -1582,15 +1889,121 @@ footer .row ul li a {
   .pricing--home-list .row .col-3-12 .pricing--home-list-coach:after {
     clear: both;
   }
-  /* line 183, ../scss/views/_pricing-page.scss */
+  /* line 186, ../scss/views/_pricing-page.scss */
   .pricing--home-list .row .col-3-12 .pricing--home-list-coach p {
     margin-top: 18px !important;
     margin-bottom: 35px !important;
   }
 
-  /* line 193, ../scss/views/_pricing-page.scss */
+  /* line 196, ../scss/views/_pricing-page.scss */
   .mainfea--home-quote .row--full h3 {
     width: 100%;
+  }
+}
+/* line 1, ../scss/views/_careers.scss */
+.careers--home {
+  color: #4E4E4E;
+}
+/* line 3, ../scss/views/_careers.scss */
+.careers--home .row--full {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  text-align: center;
+  background-color: #EDEDED;
+}
+/* line 9, ../scss/views/_careers.scss */
+.careers--home .row--full h3 {
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+/* line 13, ../scss/views/_careers.scss */
+.careers--home .row--full p {
+  position: relative;
+  width: 418px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+/* line 19, ../scss/views/_careers.scss */
+.careers--home .row--full img {
+  max-height: 342px;
+}
+/* line 23, ../scss/views/_careers.scss */
+.careers--home .row {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* line 26, ../scss/views/_careers.scss */
+.careers--home .row .col-6-12 {
+  position: relative;
+  background-color: #EDEDED;
+  padding: 20px 20px;
+  height: 313px;
+  text-align: center;
+}
+/* line 34, ../scss/views/_careers.scss */
+.careers--home .row .col-6-12 h3 {
+  font-size: 24px;
+  padding-bottom: 30px;
+  text-align: left;
+}
+/* line 39, ../scss/views/_careers.scss */
+.careers--home .row .col-6-12 p {
+  position: relative;
+  font-size: 18px;
+  text-align: left;
+  height: 160px;
+  padding-bottom: 20px;
+}
+/* line 46, ../scss/views/_careers.scss */
+.careers--home .row .col-6-12 a {
+  position: relative;
+  margin: 0 auto;
+  width: 148px;
+  font-family: 'lato-semi-bold';
+  font-size: 14px;
+  background-color: #00A478;
+  padding: 10px 45px;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+/* line 57, ../scss/views/_careers.scss */
+.careers--home .row .col-6-12 a:hover {
+  background-color: #00BF8C;
+  transition: all ease .8s;
+}
+
+@media (max-width: 767px) {
+  /* line 68, ../scss/views/_careers.scss */
+  .careers--home .row--full {
+    padding-bottom: 40px;
+  }
+  /* line 70, ../scss/views/_careers.scss */
+  .careers--home .row--full p {
+    width: 100%;
+    padding: 10px 14% 30px 15%;
+  }
+  /* line 74, ../scss/views/_careers.scss */
+  .careers--home .row--full img {
+    max-width: 100%;
+  }
+  /* line 78, ../scss/views/_careers.scss */
+  .careers--home .row {
+    padding: 5%;
+  }
+  /* line 80, ../scss/views/_careers.scss */
+  .careers--home .row .col-6-12 {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  /* line 84, ../scss/views/_careers.scss */
+  .careers--home .row .col-6-12 p {
+    height: 100%;
+    padding-bottom: 60px;
+  }
+  /* line 88, ../scss/views/_careers.scss */
+  .careers--home .row .col-6-12 a {
+    top: -15px;
   }
 }
 /* fontawesome */

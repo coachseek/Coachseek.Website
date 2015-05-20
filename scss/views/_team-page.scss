@@ -1,0 +1,96 @@
+.team--home{
+	.team--ceo{
+
+	padding: 130px 5% 10px 5%;
+	background-color: $background-mid-grey;
+	color: $text-dark;
+	.col-7-12{
+		h3{
+			padding-bottom: 30px;
+			font-size: 30px;
+		}
+		h5{
+			font-family: 'lato-regular';
+			padding-bottom: 10px;
+			font-size: 18px;
+		}
+	}
+	.col-5-12{
+		img{
+			position: relative;
+			top: -40px;
+		}
+	
+		text-align: center;
+		// border: 1px solid #333;
+		height: 298px;
+	}
+
+
+}
+
+	.team--member{
+		color: $text-dark;
+		text-align: center;
+		padding-top: 70px;
+		padding-bottom: 110px;
+		height: 100%;
+		h3{
+			padding-bottom: 5px;
+			font-size: 30px;
+		}
+		p{
+			max-width: 418px;
+			margin:0 auto;
+		}
+		img{
+			height: 343px;
+			max-width: 848px;
+			padding-top: 30px;
+			padding-bottom: 50px;
+		}
+		a{
+	            position: relative; 
+	            top:40px;
+	            width: 148px;
+	            font-family: 'lato-semi-bold';
+	            font-size: 14px;
+	            background-color: $green;
+	            padding: 10px 45px;
+	            border-radius: 4px;
+	            margin: 0 auto;
+	            &:hover{
+	                background-color:$light-green;
+	                transition: all ease .8s;
+	            }
+	     } 
+	}
+
+}
+@media (max-width: 767px ) {
+	.team--home{
+		.team--ceo{
+			padding-bottom: 50px;
+		}
+		.team--member{
+			padding-top: 30px;
+			h3{
+				padding-left: 3%;
+				padding-right: 3%;
+				&.team-member-workwithus{
+					padding-left: 20%;
+					padding-right: 20%;
+				}
+
+			}
+			p{
+				padding-left: 10%;
+				padding-right: 10%;
+			}
+			img{
+				  max-width: 100%;
+			}
+		}
+	}
+	
+}

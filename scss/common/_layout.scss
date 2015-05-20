@@ -94,6 +94,31 @@ body {
     .col-3-12{
          @include column(12/12);  
     }
+    .col-7-12{
+         @include column(12/12);  
+          &.push-7 {
+               @include unshift();
+             
+            }
+
+            &.pull-7 {
+                 @include unshift();
+             
+            }
+    }
+    .col-5-12{
+         @include column(12/12);  
+          &.push-5 {
+               @include unshift();
+             
+            }
+
+            &.pull-5 {
+                 @include unshift();
+             
+            }
+    }
+
       .col-6-12{
           @include column(12/12);  
              &.push-6 {
@@ -115,7 +140,7 @@ body {
   .col-6-12{
          
             &.push-6 {
-            
+
                 @include column(6/12);
                 @include shift(6/12);
              
@@ -124,6 +149,38 @@ body {
             &.pull-6 {
                 @include column(6/12);
                 @include shift(-6/12);
+             
+            }
+ 
+    }
+    .col-7-12{
+         
+            &.push-7 {
+
+                @include column(7/12);
+                @include shift(5/12);
+             
+            }
+
+            &.pull-7 {
+                @include column(7/12);
+                @include shift(-5/12);
+             
+            }
+ 
+    }
+      .col-5-12{
+         
+            &.push-5 {
+
+                @include column(5/12);
+                @include shift(7/12);
+             
+            }
+
+            &.pull-5 {
+                @include column(6/12);
+                @include shift(-7/12);
              
             }
  

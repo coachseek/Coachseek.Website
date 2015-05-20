@@ -144,7 +144,7 @@ BASED ON YOUR TEAM SIZE</h1>
                        <li><a href="/team">Team</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="/careers">Careers</a></li>
-                       <li><a href="/website-terms">Terms</a> & <a href="/privacy-policy"> Privacy</a></li>
+                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
                    </ul>
                </div>
                <div class="col-3-12">

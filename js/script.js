@@ -13,4 +13,10 @@
 					$('.landing--header-nav-list').hide();
 				}
 			});
+
+			$('.landing--header-nav-icon').click(function(){
+				$('html, body').animate({scrollTop : 0},400);
+				return false;
+			});
+	
 	});

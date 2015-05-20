@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Landing Page Template
+Template Name: Careers Page Template
 * Version: 1.0
 */
 ?>
@@ -35,7 +35,7 @@ Template Name: Landing Page Template
     </head>
 
     <body>
-       <div class="container">
+    <div class="container">
         <header>
             <div class="row--full">
                <div class="col-6-12 landing--header-logo">
@@ -55,63 +55,105 @@ Template Name: Landing Page Template
               
                </div>               
             </div>
-		</header>
+    </header>
+    <div class="careers--home">
+      <div class="row--full">
+      <?php
 
-    <?php if( get_field('header-image') ): ?>
-       <div class="landing--home-bg" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat; background-size: cover;">
+      // check if the flexible content field has rows of data
+      if( have_rows('careers-intro') ):
+
+           // loop through the rows of data
+          while ( have_rows('careers-intro') ) : the_row(); ?>
+
+
+          <h3><?php the_sub_field('title');?></h3>
+          <p><?php the_sub_field('description');?></p>
+          <img src="<?php the_sub_field('image');?>" alt="">
+
+           <?php endwhile;
+          else :
+              // no layouts found
+          endif;
+          ?>
+      </div>
+
+      <?php
+
+      // check if the flexible content field has rows of data
+      if( have_rows('careers-list') ):
+
+           // loop through the rows of data
+      while ( have_rows('careers-list') ) : the_row(); ?>
+
+       <div class="row">
+      <?php if( get_row_layout() == 'careers-list' ): 
+              if( have_rows('careers-list-left') ):
+              while ( have_rows('careers-list-left') ) : the_row();
+          ?>
+
+          <div class="col-6-12">
+            <h3><?php the_sub_field('title');?></h3>
+            <p><?php the_sub_field('description');?></p>
+            <a href="mailto:hello@coachseek.com">Apply</a>
+          </div>
+          <?php endwhile;
+
+            endif;
+
+          endif;
+
+          ?>
+
+        <?php if( get_row_layout() == 'careers-list' ): 
+              if( have_rows('careers-list-right') ):
+              while ( have_rows('careers-list-right') ) : the_row();
+          ?>
+
+          <div class="col-6-12">
+            <h3><?php the_sub_field('title');?></h3>
+            <p><?php the_sub_field('description');?></p>
+            <a href="mailto:hello@coachseek.com">Apply</a>
+          </div>
+          <?php endwhile;
+
+            endif;
+
+          endif;
+
+          ?>
+
+
+      </div>
+      <?
+        endwhile;
+
+        else :
+
+            // no layouts found
+
+        endif;
+      ?>
+
+
+      
+    </div>
+
+
+      
+       <?php if( get_field('quote-image') ): ?>
+       <div class="mainfea--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
         <?php endif; ?>
-          <div class="landing-home-bg-overlap"></div>
+           <div class="mainfea--home-overlap"></div>
            <div class="row--full">
-               <h1><?php the_field('title'); ?></h1>
-               <p class="subtitle"><?php the_field('description'); ?></p>
-               <a class="landing--home-tryfree" href="">Try for free</a>
-               <p class="sublabel">14 day trial, no credit card required</p>
-           </div>
-       </div>
-       
-       <div class="landing--home-desc">
-           <div class="row">
-                <img class="computer-center" src="<?php echo get_stylesheet_directory_uri();?>/images/computer.png" alt="">
-                <?php
-                // check if the repeater field has rows of data
-                if( have_rows('features') ):
+               <h3>Interested in Coachseek ?</h3>
 
-                  // loop through the rows of data
-                    while ( have_rows('features') ) : the_row();
-                        ?>
-                        <div class="col-3-12">
-                           <h5><?php the_sub_field('title');?></h5>
-                           <p><?php the_sub_field('description');?></p>
-                        </div>
-                        <?php
-
-                    endwhile;
-
-                else :
-
-                    // no rows found
-
-                endif;
-
-                ?>
-           </div>
-           <div class="row--full">
-               <a href="">View Features</a>
-           </div>
-       </div>
-      <?php if( get_field('quote-image') ): ?>
-       <div class="landing--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
-       <?php endif; ?>
-           <div class="landing--home-overlap"></div>
-           <div class="row">
-               <h3><?php the_field('quote-title'); ?></h3>
-               <p><?php the_field('quote-name'); ?></p>
-               <a href="">View Features</a>
+               <a href="">try for free</a>
            </div>
        </div>
        
        
-       <footer>
+           <footer>
            <div class="row">
                <div class="col-3-12">
                    <ul>
@@ -119,7 +161,7 @@ Template Name: Landing Page Template
                        <li><a href="/team">Team</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="/careers">Careers</a></li>
-                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
+                       <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -144,7 +186,7 @@ Template Name: Landing Page Template
                </div>
                <div class="col-3-12">
                    <ul>
-                     <li><h4>contact</h4></li>
+                       <li><h4>contact</h4></li>
                        <li><a href="mailto:hello@coachseek.com" target="_blank">hello@coachseek.com</a></li>
                        <li><a href="mailto:support@coachseek.com" target="_blank">support@coachseek.com</a></li>
                        <li><a href="https://www.facebook.com/Coachseek" target="_blank">Facebook</a></li>
@@ -154,10 +196,8 @@ Template Name: Landing Page Template
                </div>
            </div>
        </footer>
-       
-
-    
     </div>
+    
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
     

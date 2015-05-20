@@ -56,7 +56,57 @@ Template Name: Team Page Template
                </div>               
             </div>
     </header>
-    <div class="container">
+    <div class="team--home">
+      <div class="row--full team--ceo">
+        <div class="col-5-12 push-5">
+          <img src="<?php the_field('ceo-image'); ?>" alt="">
+        </div>
+        <div class="col-7-12 pull-7">
+        <?php
+          // check if the flexible content field has rows of data
+          if( have_rows('ceo') ):
+
+           // loop through the rows of data
+          while ( have_rows('ceo') ) : the_row(); ?>
+
+          <h3><?php the_sub_field('title');?></h3>
+          <h5><?php the_sub_field('name');?></h5>
+          <p><?php the_sub_field('description');?></p>
+
+          <?php endwhile;
+          else :
+              // no layouts found
+          endif;
+          ?>
+
+        </div>
+      </div>
+      <div class="row team--member">
+       <?php
+          // check if the flexible content field has rows of data
+          if( have_rows('team-intro') ):
+
+           // loop through the rows of data
+          while ( have_rows('team-intro') ) : the_row(); ?>
+
+
+        <h3><?php the_sub_field('title');?></h3>
+        <p><?php the_sub_field('description');?></p>
+          
+         <?php endwhile;
+          else :
+              // no layouts found
+          endif;
+          ?>
+
+
+
+        <img src="<?php the_field('team-image'); ?>" alt="">
+
+        <h3 class="team-member-workwithus"> Want to work with us?</h3>
+        <p>We are always looking for skilled people </p>
+        <a href="/careers">Careers</a>
+      </div>
       
     </div>
 
@@ -82,7 +132,7 @@ Template Name: Team Page Template
                        <li><a href="/team">Team</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="/careers">Careers</a></li>
-                       <li><a href="/website-terms">Terms</a> & <a href="/privacy-policy"> Privacy</a></li>
+                       <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
                    </ul>
                </div>
                <div class="col-3-12">

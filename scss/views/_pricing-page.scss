@@ -176,6 +176,9 @@
                 height:150px !important;
                 .pricing--home-list-price{
                  @include span(6/12); 
+                 h5{
+                 	padding-top: 20px;
+                 }
                 }
                 .pricing--home-list-coach{
                      @include span(6/12); 
