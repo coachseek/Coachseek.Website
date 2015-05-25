@@ -3,7 +3,7 @@ header{
     height: 42px;
     width: 100%;
     z-index: 1;
-    background: #fff;
+    background-color: rgba(255, 255, 255, 0.97);
     border-bottom: 1px solid #ccc;
     .row--full{
         .landing--header-nav{
@@ -40,11 +40,18 @@ header{
             }
         }
         .landing--header-logo{
-            img{
-                max-width: 100%;
-                padding-left: 10%;
-                padding-top: 5px;
-            }
+                margin-left: 5%;
+                width: 151px;
+                position: relative;
+
+                img{
+                    position: relative;
+                    max-width: 100%;
+                     // height: 31px;
+                   
+                    padding-top: 5px;
+                 }    
+            
         }
     }
 }

@@ -29,11 +29,12 @@
 }
 
 .mainfea--home-feature{
+    padding-top: 70px;
     position: relative;
     background-color: $background-mid-grey;
     color: $text-dark;
     .row{
-         padding: 70px 0px;
+         padding: 0px 0px 70px 0px;
         .mainfea--home-feature-desc{       
             display: flex;
             justify-content: center;
@@ -47,9 +48,10 @@
         .mainfea--home-feature-img{
 //            max-width: 431px;
             height: 241px;
-            border: 1px solid #333;
+            text-align: center;
+            // border: 1px solid #333;
             img{
-                max-width: 431px;
+                max-width: 100%;
                 max-height: 241px;
             }
         }
@@ -123,6 +125,8 @@
             h1{
                 width: 100%;
                 padding-top: 80px;
+                padding-left: 3%;
+                padding-right: 3%;
             }
             p{
                 width: 100%;

@@ -38,17 +38,19 @@ Template Name: Main Features Page Template
     <div class="container">
         <header>
             <div class="row--full">
-               <div class="col-6-12 landing--header-logo">
-                  <a href="<?php echo site_url(); ?>">
-                    <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo.png" alt="">
-                  </a>   
+               <div class="col-6-12 ">
+                 <div class="landing--header-logo">
+                    <a href="<?php echo site_url(); ?>">
+                      <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo-lg.png" alt="">
+                    </a>   
+                 </div>
                </div>
                <div class="col-6-12 landing--header-nav">
                    <div class="landing--header-nav-icon" href="">
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
                    <ul class="landing--header-nav-list">
-                       <li><a href="/main-features">Features</a></li>
+                       <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a class="landing--header-signin" href="http://app.coachseek.com">Sign In</a></li>
                    </ul>
@@ -126,7 +128,7 @@ Template Name: Main Features Page Template
            <div class="row--full">
                <h3>Interested in Coachseek ?</h3>
 
-               <a href="">try for free</a>
+               <a href="http://app.coachseek.com">Try for free</a>
            </div>
        </div>
        
@@ -145,7 +147,7 @@ Template Name: Main Features Page Template
                <div class="col-3-12">
                    <ul>
                        <li><h4>product</h4></li>
-                       <li><a href="/main-features">Features</a></li>
+                       <li><a href="/features">Features</a></li>
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                    </ul>

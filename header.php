@@ -43,6 +43,8 @@
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/footer.css">
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/header.css">
 
 		<!-- Favicon and iOS icons -->
 		<?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
@@ -62,23 +64,23 @@
 		<?php endif; ?>
 
 		<?php wp_head(); ?>
-				<script type="text/javascript">
-adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
-adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
-(function () {
-var oldonload = window.onload;
-window.onload = function(){
-   __adroll_loaded=true;
-   var scr = document.createElement("script");
-   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-   scr.setAttribute('async', 'true');
-   scr.type = "text/javascript";
-   scr.src = host + "/j/roundtrip.js";
-   ((document.getElementsByTagName('head') || [null])[0] ||
-    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-   if(oldonload){oldonload()}};
-}());
-</script>
+		<script type="text/javascript">
+		adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
+		adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
+		(function () {
+		var oldonload = window.onload;
+		window.onload = function(){
+		   __adroll_loaded=true;
+		   var scr = document.createElement("script");
+		   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+		   scr.setAttribute('async', 'true');
+		   scr.type = "text/javascript";
+		   scr.src = host + "/j/roundtrip.js";
+		   ((document.getElementsByTagName('head') || [null])[0] ||
+		    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+		   if(oldonload){oldonload()}};
+		}());
+		</script>
 
 	
       <script type="text/javascript">
@@ -91,71 +93,28 @@ window.onload = function(){
 
 	<body <?php body_class( $extra_body_class ); ?>>
 
-		<header id="masthead" class="site-header <?php echo $header_class; ?>" role="banner">
-
-			<div class="row">
-
-				<div class="nav-inner row-content buffer-left buffer-right even clear-after">
-
-					<div id="brand" class="site-branding">
-
-						<h1 class="site-title reset">
-
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" >
-
-								<?php if ( $logo_style == "logo-1" || $logo_style == "logo-3" ) : ?>
-
-									<?php bloginfo( 'name' ); ?>
-
-								<?php endif; ?>	
-
-								<?php if ( $logo_style == "logo-2" || $logo_style == "logo-3" ) : ?>
-
-									<?php if ( isset( $mokaine['logo-img']['url'] ) && $mokaine['logo-img']['url'] != '' ) : ?>
-									
-										
-											
-										
-										<img id="default-logo" src="<?php echo $mokaine['logo-img']['url']; ?>" alt="Brand Name">
-																				
-									
-								<?php endif; ?>
-
-									<?php if ( isset( $mokaine['logo-img-retina']['url'] ) && $mokaine['logo-img-retina']['url'] != '' ) : ?>
-
-										<img id="retina-logo" src="<?php echo $mokaine['logo-img-retina']['url']; ?>" alt="Brand Name">
-
-									<?php endif; ?>		
-
-								<?php endif; ?>		
-
-							</a>
-
-						</h1>
-					
-					</div><!-- brand -->
-
-					<a id="menu-toggle" href="#"><i class="icon-bars icon-lg"></i></a>
-
-					<nav id="site-navigation" role="navigation">
-
-						<?php if( has_nav_menu( 'primary' ) ) : ?>
-
-							<?php wp_nav_menu( array( 'walker' => new beetle_walker_menu, 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'reset' ) ); ?>
-
-						<?php else : ?>
-
-							<?php echo '<ul class="reset"><li><a href="'. admin_url( 'nav-menus.php' ) .'">' . __( 'No menu assigned', MOKAINE_THEME_NAME ) . '</a></li></ul>'; ?>
-
-						<?php endif; ?>
-					
-					</nav>
-
-				</div><!-- row-content -->	
-
-			</div><!-- row -->	
-
-		</header>
+		 <header>
+            <div class="row--full">
+               <div class="col-6-12 ">
+                 <div class="landing--header-logo">
+                    <a href="<?php echo site_url(); ?>">
+                      <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo-lg.png" alt="">
+                    </a>   
+                 </div>
+               </div>
+               <div class="col-6-12 landing--header-nav">
+                   <div class="landing--header-nav-icon" href="">
+                     <i class="fa fa-bars fa-lg"></i>
+                   </div>
+                   <ul class="landing--header-nav-list">
+                       <li><a href="/features">Features</a></li>
+                       <li><a href="/blog">Blog</a></li>
+                       <li><a class="landing--header-signin" href="http://app.coachseek.com">Sign In</a></li>
+                   </ul>
+              
+               </div>               
+            </div>
+    	</header>
 
 		<main class="site-main" role="main">
 

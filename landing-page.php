@@ -38,17 +38,19 @@ Template Name: Landing Page Template
        <div class="container">
         <header>
             <div class="row--full">
-               <div class="col-6-12 landing--header-logo">
-                  <a href="<?php echo site_url(); ?>">
-                    <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo.png" alt="">
-                  </a>   
+               <div class="col-6-12 ">
+                 <div class="landing--header-logo">
+                    <a href="<?php echo site_url(); ?>">
+                      <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo-lg.png" alt="">
+                    </a>   
+                 </div>
                </div>
                <div class="col-6-12 landing--header-nav">
                    <div class="landing--header-nav-icon" href="">
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
                    <ul class="landing--header-nav-list">
-                       <li><a href="/main-features">Features</a></li>
+                       <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a class="landing--header-signin" href="http://app.coachseek.com">Sign In</a></li>
                    </ul>
@@ -64,39 +66,53 @@ Template Name: Landing Page Template
            <div class="row--full">
                <h1><?php the_field('title'); ?></h1>
                <p class="subtitle"><?php the_field('description'); ?></p>
-               <a class="landing--home-tryfree" href="">Try for free</a>
-               <p class="sublabel">14 day trial, no credit card required</p>
+               <a class="landing--home-tryfree" href="http://app.coachseek.com">Try for free</a>
+               <p class="sublabel"><?php the_field('ps'); ?></p>
            </div>
+           <div class="landing-home-computer"><img src="<?php echo get_stylesheet_directory_uri();?>/images/laptop.png" alt=""></div>
        </div>
        
        <div class="landing--home-desc">
-           <div class="row">
-                <img class="computer-center" src="<?php echo get_stylesheet_directory_uri();?>/images/computer.png" alt="">
-                <?php
-                // check if the repeater field has rows of data
-                if( have_rows('features') ):
+            <h3>Getting started is easy</h3>
+             <?php
 
-                  // loop through the rows of data
-                    while ( have_rows('features') ) : the_row();
-                        ?>
-                        <div class="col-3-12">
-                           <h5><?php the_sub_field('title');?></h5>
-                           <p><?php the_sub_field('description');?></p>
-                        </div>
-                        <?php
+              // check if the flexible content field has rows of data
+              if( have_rows('features') ):
 
-                    endwhile;
+                   // loop through the rows of data
+                  while ( have_rows('features') ) : the_row();
+                  if( get_row_layout() == 'circle-row' ): 
+                   ?>                     
+                <div class="row--full">
+                <?php  if( have_rows('circle-row') ):
+                      while ( have_rows('circle-row') ) : the_row(); ?>
+                 <div class="col-3-12">
+                    <div class="landing--home-circle">
+                        <img src="<?php the_sub_field('image');?>" alt="">
+                     </div>
+                     <h5><?php the_sub_field('title');?></h5>
+                     <p><?php the_sub_field('description');?></p>
+                 </div>
+                 
+                 <?
+                  endwhile;
 
-                else :
+                  endif;
+                  endif;
+                 ?>
 
-                    // no rows found
+               </div>
+              <?php 
 
-                endif;
+              endwhile;
+              else :
+                  // no layouts found
+              endif;
+              ?>
 
-                ?>
-           </div>
+        
            <div class="row--full">
-               <a href="">View Features</a>
+               <a href="/features">View Features</a>
            </div>
        </div>
       <?php if( get_field('quote-image') ): ?>
@@ -106,7 +122,7 @@ Template Name: Landing Page Template
            <div class="row">
                <h3><?php the_field('quote-title'); ?></h3>
                <p><?php the_field('quote-name'); ?></p>
-               <a href="">View Features</a>
+               <a href="http://app.coachseek.com">Try for free</a>
            </div>
        </div>
        
@@ -125,7 +141,7 @@ Template Name: Landing Page Template
                <div class="col-3-12">
                    <ul>
                        <li><h4>product</h4></li>
-                       <li><a href="/main-features">Features</a></li>
+                       <li><a href="/features">Features</a></li>
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                    </ul>

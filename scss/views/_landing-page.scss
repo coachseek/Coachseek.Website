@@ -3,12 +3,27 @@
     height: 611px;
     display: block;
     z-index: 0;
+    .landing-home-computer{
+        text-align: center;
+        top:40px;
+        margin: 0 auto;
+        position: relative;
+        width: 711px;
+        height: 307px;
+        max-width: 100%;
+        z-index: 1;
+        img{
+            max-width: 100%;
+
+        }
+    }
     .landing-home-bg-overlap{
         position: absolute;
         background: url("../images/overlap-black.png") center center;
         z-index: 1;
         width: 100%;
         height: 100%;
+
     }
     .row--full{  
         z-index: 2;
@@ -53,15 +68,55 @@
     }
 }
 .landing--home-desc{
-    background-color: $background-mid-grey;
-    
-    .row{
-       img{
+    background-color: #F4F4F4;
+    padding-top: 220px;
+    padding-bottom: 100px;
+    h3{
+        text-align: center;
+        padding-bottom: 65px;
+        font-size: 30px;
+        color: $text-dark;
+        font-weight: 300;
+        font-family: 'lato-light';
+    }
+    .row--full{
+        padding: 0 7%;
+        .col-3-12{
+            text-align: center;
+
             position: relative;
-            top:-150px;
-           margin-bottom: 10px;
+            color: $text-dark-grey;
+            .landing--home-circle{
+                margin:0 auto;
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border-radius: 150px;
+                -webkit-border-radius: 150px;
+                -moz-border-radius: 150px;
+                // border: 1px solid #ddd;
+                box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+                -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+                -moz-box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+                img{
+                    width: 100%;
+
+
+                }
+    
+            }
+            h5{
+                padding-top: 30px;
+                padding-bottom: 12px;
+                font-weight: 300;
+                
+            }
+            p{
+                 width: 100%;
+                 margin:0 auto;
+                 padding-bottom: 40px;
+            }
         }
-        margin-bottom: 10px;
     }
     
     .row--full{
@@ -69,12 +124,12 @@
 
         a{
             position: relative;
-            top:-50px;
+            top:40px;
             width: 148px;
             font-family: 'lato-semi-bold';
             font-size: 14px;
             background-color: $green;
-            padding: 15px 35px;
+            padding: 10px 30px;
             border-radius: 4px;
             margin: 0 auto;
             &:hover{
@@ -83,20 +138,7 @@
             }
         } 
     }
-    .col-3-12{
-        position: relative;
-        top:-100px;
-        left: 3%;
-        color: $text-dark-grey;
-        h5{
-            padding-bottom: 12px;
-            font-weight: 300;
-            
-        }
-        p{
-             width: 180px;
-        }
-    }
+
 }
 .landing--home-quote{
     position: relative;
@@ -142,9 +184,19 @@
     }
 }
 
+
+@media (max-width: 400px){
+    .landing--home-desc{
+        padding-top: 150px;
+    }
+
+}
 @media (max-width: 767px){
     .landing--home-bg {
         height:500px;
+        .landing-home-computer{
+            top: 60px;
+        }
         .row--full 
         {
             h1{
@@ -162,10 +214,15 @@
         }
     }
     .landing--home-desc {
-        .row {
+        .row--full {
             padding-left: 20px;
             padding-right: 20px;
             .col-3-12{
+                .landing--home-circle{
+                     width: 230px;
+                    height: 230px;
+                }
+
                 left: 0;
                 text-align: center;
                 h5{

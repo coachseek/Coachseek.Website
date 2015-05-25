@@ -38,17 +38,19 @@ Template Name: Pricing Page Template
     <div class="container">
           <header>
             <div class="row--full">
-               <div class="col-6-12 landing--header-logo">
-                  <a href="<?php echo site_url(); ?>">
-                    <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo.png" alt="">
-                  </a>   
+               <div class="col-6-12 ">
+                 <div class="landing--header-logo">
+                    <a href="<?php echo site_url(); ?>">
+                      <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo-lg.png" alt="">
+                    </a>   
+                 </div>
                </div>
                <div class="col-6-12 landing--header-nav">
                    <div class="landing--header-nav-icon" href="">
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
                    <ul class="landing--header-nav-list">
-                       <li><a href="/main-features">Features</a></li>
+                       <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a class="landing--header-signin" href="http://app.coachseek.com">Sign In</a></li>
                    </ul>
@@ -59,69 +61,109 @@ Template Name: Pricing Page Template
     <?php if( get_field('header-image') ): ?>
        <div class="pricing--home-bg" style="background: url('<?php the_field('header-image'); ?>') center bottom no-repeat; background-size: cover;">
         <?php endif; ?>
-           <div class="row--full">
-               <h1>SIMPLE PRICING, <br>
-BASED ON YOUR TEAM SIZE</h1>
-               <p class="subtitle">No contracts - Free trial - No credit card required</p>
 
+           <div class="row--full">
+            <?php
+            // check if the flexible content field has rows of data
+            if( have_rows('price-page-description') ):
+
+             // loop through the rows of data
+            while ( have_rows('price-page-description') ) : the_row(); ?>
+               <h1><?php the_sub_field('title');?></h1>
+               <p class="subtitle"><?php the_sub_field('description');?></p>
+                    <?
+              endwhile;
+
+              else :
+
+                  // no layouts found
+
+              endif;
+            ?>
            </div>
        </div>
        <div class="pricing--home-list">
          <div class="row">
-          <div class="col-3-12">
-            <div class="pricing--home-list-price">
-              <h5>Solo coach</h5>
-              <h2>$20 <span>/mo</span></h2>
-            </div>
-            <div class="pricing--home-list-coach">
-              <p>1 coach</p>
-              <a href="">Free trial</a>
-            </div>
-          </div>
-         
-          <div class="col-3-12">  
-           <div class="pricing--home-list-popular">Popular</div>   
-              <div class="pricing--home-list-price">
-                <h5>Team</h5>
-                <h2>$35 <span>/mo</span></h2>
-              </div>
-              <div class="pricing--home-list-coach">
-                <p>Up to 5 coaches</p>
-                <a href="">Free trial</a>
-              </div>
-          </div>
+          <?php
+            // check if the flexible content field has rows of data
+            if( have_rows('price-page-plan') ):
+             // loop through the rows of data
+            while ( have_rows('price-page-plan') ) : the_row(); 
+            if( get_row_layout() == 'popular' ):
 
-          <div class="col-3-12">     
+            ?>
+            <div class="col-3-12">
+             <div class="pricing--home-list-popular">Popular</div>  
               <div class="pricing--home-list-price">
-                <h5>Pro</h5>
-                <h2>$60 <span>/mo</span></h2>
+                <h5><?php the_sub_field('plan-name');?></h5>
+                <h2>$<?php the_sub_field('price-number');?> <span>/mo</span></h2>
               </div>
               <div class="pricing--home-list-coach">
-                <p>Up to 10 coaches</p>
-                <a href="">Free trial</a>
+                <p><?php the_sub_field('coach-number');?></p>
+                <a href="http://app.coachseek.com">Free trial</a>
+              </div>
             </div>
-          </div>
+           <?php elseif( get_row_layout() == 'unlimited' ): ?>
+               <div class="col-3-12">
+                <div class="pricing--home-list-price">
+                    <h5><?php the_sub_field('plan-name');?></h5>
+                    <h2><?php the_sub_field('price-poa');?></h2>
+                  </div>
+                  <div class="pricing--home-list-coach">
+                    <p class="unlimited"><?php the_sub_field('coach-number');?></p>
+                    <a href="http://app.coachseek.com">Free trial</a>
+                </div>
+              </div>
+           <?php elseif( get_row_layout() == 'normal' ): ?>       
+              <div class="col-3-12">  
+               
+                  <div class="pricing--home-list-price">
+                    <h5><?php the_sub_field('plan-name');?></h5>
+                    <h2>$<?php the_sub_field('price-number');?> <span>/mo</span></h2>
+                  </div>
+                  <div class="pricing--home-list-coach">
+                    <p><?php the_sub_field('coach-number');?></p>
+                    <a href="http://app.coachseek.com">Free trial</a>
+                  </div>
+              </div>
+            <?php endif;
 
-          <div class="col-3-12">
-            <div class="pricing--home-list-price">
-                <h5>Unlimited</h5>
-                <h2>POA</h2>
-              </div>
-              <div class="pricing--home-list-coach">
-                <p class="unlimited">Unlimited number <br> of coaches</p>
-                <a href="">Free trial</a>
-            </div>
-          </div>
-           
+                endwhile;
+
+                else :
+
+                    // no layouts found
+
+                endif;
+
+            ?>       
          </div>
          <div class="pricing--home-list-desc row">
+            <?php
+            // check if the flexible content field has rows of data
+            if( have_rows('price-information') ):
+             // loop through the rows of data
+            while ( have_rows('price-information') ) : the_row(); 
+
+            ?>
            <p>
-             Pricing above includes no hidden costs, all current features and support
+           <?php the_sub_field('information');?>
            </p>
          </div>
          <div class="pricing--home-list-suitplan row">
-            <h5>Only coach seasonally? We can help.</h5>
-            <p>Drop us a line at <a href="mailto:hello@coachseek.com">hello@coachseek.com</a> and we can make a plan to suit you</p>
+            <h5><?php the_sub_field('help');?></h5>
+            <?php the_sub_field('help-information');?>
+             <?php 
+
+                endwhile;
+
+                else :
+
+                    // no layouts found
+
+                endif;
+
+            ?>       
          </div>
        </div>
 
@@ -132,7 +174,7 @@ BASED ON YOUR TEAM SIZE</h1>
            <div class="row--full">
                <h3>Interested in Coachseek ?</h3>
 
-               <a href="">try for free</a>
+               <a href="http://app.coachseek.com">Try for free</a>
            </div>
        </div>
        
@@ -150,7 +192,7 @@ BASED ON YOUR TEAM SIZE</h1>
                <div class="col-3-12">
                    <ul>
                        <li><h4>product</h4></li>
-                       <li><a href="/main-features">Features</a></li>
+                       <li><a href="/features">Features</a></li>
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                    </ul>

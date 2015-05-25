@@ -13,6 +13,18 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 @import url("../beetle/style.css");
 
 
+
+.csstransitions #intro a, .csstransitions #intro h2{
+  font-weight: 300;
+}
+
+.row.section.signup{
+  display: none;
+}
+.row-content.buffer.even{
+  font-weight: 300;
+}
+
 body{
 color: #525252;
 letter-spacing:0.025em;
