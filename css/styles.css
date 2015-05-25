@@ -1633,7 +1633,7 @@ footer .row ul li a {
 }
 /* line 77, ../scss/views/_main-features.scss */
 .mainfea--home-quote .row--full h3 {
-  font-family: 'lato-semi-bold';
+  font-family: 'lato-light';
   font-size: 30px;
   padding-top: 60px;
   width: 800px;
