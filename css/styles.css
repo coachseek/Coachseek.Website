@@ -2051,7 +2051,7 @@ footer .row ul li a {
   }
   /* line 79, ../scss/views/_careers.scss */
   .careers--home .row {
-    padding: 5%;
+    padding: 0 5%;
   }
   /* line 81, ../scss/views/_careers.scss */
   .careers--home .row .col-6-12 {
