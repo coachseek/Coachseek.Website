@@ -1124,7 +1124,7 @@ footer .row ul li a {
   max-width: 100%;
 }
 /* line 20, ../scss/views/_landing-page.scss */
-.landing--home-bg .landing-home-bg-overlap {
+.landing--home-bg .landing--home-bg-overlap {
   position: absolute;
   background: url("../images/overlap-black.png") center center;
   z-index: 1;

@@ -64,7 +64,7 @@ Template Name: Terms Page Template
               <div class="col-6-12 ">
                  <div class="landing--header-logo">
                     <a href="<?php echo site_url(); ?>">
-                      <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo-lg.png" alt="">
+                      <img src="<?php echo get_stylesheet_directory_uri();?>/images/logo-compressor.png" alt="">
                     </a>   
                  </div>
                </div>

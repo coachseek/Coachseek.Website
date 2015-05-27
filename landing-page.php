@@ -64,7 +64,7 @@ Template Name: Landing Page Template
                <div class="col-6-12 ">
                  <div class="landing--header-logo">
                     <a href="<?php echo site_url(); ?>">
-                      <img src="<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo-lg.png" alt="">
+                      <img src="<?php echo get_stylesheet_directory_uri();?>/images/logo-compressor.png" alt="">
                     </a>   
                  </div>
                </div>
@@ -85,7 +85,7 @@ Template Name: Landing Page Template
     <?php if( get_field('header-image') ): ?>
        <div class="landing--home-bg" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat; background-size: cover;">
         <?php endif; ?>
-          <div class="landing-home-bg-overlap"></div>
+          <div class="landing--home-bg-overlap"></div>
            <div class="row--full">
                <h1><?php the_field('title'); ?></h1>
                <p class="subtitle"><?php the_field('description'); ?></p>
