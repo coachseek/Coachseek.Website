@@ -1636,8 +1636,7 @@ footer .row ul li a {
   font-family: 'lato-light';
   font-size: 30px;
   padding-top: 60px;
-  width: 800px;
-  margin: 0 auto;
+  width: 100%;
 }
 /* line 84, ../scss/views/_main-features.scss */
 .mainfea--home-quote .row--full p {
