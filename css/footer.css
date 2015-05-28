@@ -153,6 +153,11 @@ footer .row:after {
   src: url("../fonts/lato/Lato-LightItalic.ttf") format("truetype");
   /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
+@media (min-device-width : 768px) and (max-device-width : 1024px){
+    footer .row {
+        padding-left: 5%;
+    }
+}
 
 @media (max-width: 767px) {
 
