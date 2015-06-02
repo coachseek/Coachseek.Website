@@ -55,9 +55,10 @@
 	            padding: 10px 45px;
 	            border-radius: 4px;
 	            margin: 0 auto;
+	            transition: background ease .8s;
 	            &:hover{
 	                background-color:$light-green;
-	                transition: all ease .8s;
+	               
 	            }
 	     	} 
 		}

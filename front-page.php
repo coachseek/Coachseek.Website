@@ -1,34 +1,28 @@
-<?php
-/*
-Template Name: Landing Page Template
-* Version: 1.0
-*/
-?>
 <!DOCTYPE html>
 <html  <?php language_attributes(); ?>>
     <head>
-       	<meta charset="<?php bloginfo( 'charset' ); ?>">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <title><?php wp_title( '|', true, 'right' ); ?></title>
          
         <!-- Favicon and iOS icons -->
-		<?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
-		<link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
-		<?php endif; ?>
+    <?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
+    <link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
+    <?php endif; ?>
        
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css">
     <script type="text/javascript">
@@ -80,7 +74,7 @@ Template Name: Landing Page Template
               
                </div>               
             </div>
-		</header>
+    </header>
 
     <?php if( get_field('header-image') ): ?>
        <div class="landing--home-bg" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat; background-size: cover;">

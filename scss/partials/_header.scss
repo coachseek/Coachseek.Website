@@ -30,9 +30,10 @@ header{
                             color: #fff;
                             padding: 5px 30px;
                             border-radius: 4px;
+                            transition: background ease .6s;
                             &:hover{
                                 background-color:$light-green;
-                                transition: all ease .6s;
+                                
                             }
                         }
                     }

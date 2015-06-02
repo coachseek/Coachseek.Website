@@ -98,12 +98,13 @@
             font-family: 'lato-regular';
             font-size: 14px;
             color: $green;
-            background: #fff;
+            background: rgba($white, 0.9);
             border-radius: 4px;
             padding: 12px 27px;
+            transition: background ease .8s;
             &:hover{
-                opacity: 0.7;
-                transition: all ease .8s;
+                 background: rgba($white, 1);
+               
             }
         }
     }
