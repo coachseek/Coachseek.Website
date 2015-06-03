@@ -19,6 +19,7 @@
 		}
 		img{
 			max-height: 342px;
+			width: 100%;
 		}
 	}
 	.row{
@@ -65,7 +66,7 @@
 
 	}
 }
-@media (max-width: 767px){
+@media (max-width: 768px){
 	.careers--home{
 		.row--full{
 			padding-bottom: 40px;

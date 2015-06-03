@@ -207,6 +207,15 @@ and (max-device-width : 1024px)
    .landing--home-quote .row{
         padding-left: 5%;
     }
+    .landing--home-desc .row--full .col-3-12{
+        h5{
+            width: 100%;
+        }
+        p{
+            width: 100%;
+        }
+    } 
+
 }
 @media (max-width: 767px){
     .landing--home-bg {

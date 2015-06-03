@@ -61,19 +61,46 @@
 	            padding: 10px 45px;
 	            border-radius: 4px;
 	            margin: 0 auto;
+	            transition: background ease .8s;
 	            &:hover{
 	                background-color:$light-green;
-	                transition: all ease .8s;
+	               
 	            }
 	     } 
 	}
 
 }
-@media (max-width: 767px ) {
+@media (max-width: 768px ) {
 	.team--home{
 		.team--ceo{
 			padding-bottom: 50px;
+			.col-7-12{
+			    @include column(12/12);  
+			    &.push-7 {
+			        @include unshift();
+			             
+			    }
+
+			    &.pull-7 {
+			        @include unshift();
+			             
+			    }
+			}
+			.col-5-12{
+			    @include column(12/12);  
+			    text-align: center;
+			    &.push-5 {
+			        @include unshift();
+			             
+			    }
+
+			    &.pull-5 {
+			        @include unshift();
+			             
+			    }
+			}
 		}
+
 		.team--member{
 			padding-top: 30px;
 			h3{
