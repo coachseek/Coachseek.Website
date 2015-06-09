@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://protennisacademy.coachseek.dev:8000/src/#/booking/details -->
+<html class=" js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Coachseek</title>
+    <link rel="shortcut icon" href="http://protennisacademy.coachseek.dev:8000/src/assets/pics/favicon.png">
+    <link rel="stylesheet" href="http://protennisacademy.coachseek.dev:8000/src/css/style.css">
+    <script type="text/javascript" async="" src="./Coachseek_files/saved_resource"></script><script src="./Coachseek_files/intercom.v1.js"></script><style type="text/css"></style>
+    <script src="./Coachseek_files/libs.js"></script>
+    <script src="./Coachseek_files/scripts.js"></script>
+    <script src="./Coachseek_files/templates.js"></script>
+<script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script></head>
+<body ng-app="app" ng-controller="appCtrl" ng-strict-di="" ng-class="{&#39;with-navbar&#39;: currentUser}" cz-shortcut-listen="true">
+    <div id="wrapper" ng-class="!isCollapsed?&#39;toggled&#39;: &#39;&#39;">
+        <div class="navbar navbar-inverse navbar-fixed-top ng-hide" ng-show="currentUser">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button class="navbar-toggle pull-left" type="button" ng-click="isCollapsed = !isCollapsed">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </button>
+                    <div class="pull-right indicator-container" ui-sref="scheduling" href="#/scheduling">
+    <div class="outer-logo"></div>
+    <div ng-class="{active: AILoading}" class="inner-logo"></div>
+</div>
+                </div>
+            </div>
+           <!-- Sidebar -->
+            <div ng-class="isBigScreen ? &#39;&#39; : &#39;sidebar-wrapper&#39; " class="sidebar-wrapper">
+                <ul ng-class="isBigScreen? &#39;nav navbar-nav&#39; : &#39;sidebar-nav&#39; " ng-click="isCollapsed = !isCollapsed" class="sidebar-nav">
+                    <li class="toggle-icon">
+                        <a>
+                            <i class="fa fa-bars fa-2x"></i>
+                        </a>
+                    </li>
+                    <li><a ui-sref="scheduling" ui-sref-active="active" href="http://protennisacademy.coachseek.dev:8000/src/#/scheduling">CALENDAR</a></li>
+                    <li><a ui-sref="customers" ui-sref-active="active" href="http://protennisacademy.coachseek.dev:8000/src/#/customers">CUSTOMERS</a></li>
+                    <li><a ui-sref="businessSetup.business" ng-class="{ active: $state.includes(&#39;businessSetup&#39;) }" href="http://protennisacademy.coachseek.dev:8000/src/#/business-setup/business">SETTINGS</a></li>
+                    <li><a ui-sref="bookingAdmin" ui-sref-active="active" href="http://protennisacademy.coachseek.dev:8000/src/#/booking-admin">BOOKING</a></li>
+                    <li>
+                    </li>
+                    <li class="login-right">
+                        <a class="kb-link fa fa-question-circle ng-hide" ng-hide="!isBigScreen" href="http://support.coachseek.com/" target="_blank"></a>
+                        <a class="logout" ng-click="currentUser ? logout() : login()" ng-i18next="">LOG IN</a>
+                    </li>
+                 </ul>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper" ng-click="isCollapsed = true" class="">
+            <div class="main-container">
+                <!-- uiView:  --><div ui-view="" id="main-view" state="booking.details" class=""><div class="current-booking-status">
+	<div class="border-right"><p>Booking with  Pro Tennis Academy</p><p></p></div>
+	<div class="border-right"><p>Hamilton Squash &amp; Tennis Club</p></div>
+	<div class="border-right"><p>Private Lesson</p></div>
+	<booking-date-range><div class="border-right"><p>Wednesday 15th Jul – Wednesday 16th Sep</p></div>
+</booking-date-range>
+	<booking-price><div><h4><span ng-i18next="denominations.NZD">$</span>700.00 NZD</h4></div></booking-price>
+</div>
+<div class="booking-container">  
+    <!-- uiView: booking-view --><div ui-view="booking-view" class="booking-content-container"><form name="form" class="booking-customer-form crud-item ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-email">
+    <div class="form-input">
+        <label name="firstName">First name</label>
+        <input name="firstName" ng-model="customer.firstName" placeholder="(Enter name of person attending)" required="" ng-maxlength="50" class="ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength">
+
+        <!-- ngIf: form.firstName.$touched -->
+    </div>
+    <div class="form-input">
+        <label name="lastName">Last name</label>
+        <input name="lastName" ng-model="customer.lastName" required="" ng-maxlength="50" class="ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength">
+
+        <!-- ngIf: form.lastName.$touched -->
+    </div>
+    <div class="form-input">
+        <label name="email">Email</label>
+        <input type="email" name="email" ng-model="customer.email" placeholder="(If under 18, contact details of parent/carer)" ng-maxlength="100" required="" class="ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-maxlength">
+
+        <!-- ngIf: form.email.$touched -->
+    </div>
+    <div class="form-input">
+        <label name="phone">Phone number</label>
+        <input name="phone" ng-model="customer.phone" placeholder="(If under 18, contact details of parent/carer)" ng-maxlength="50" required="" class="ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength">
+
+        <!-- ngIf: form.phone.$touched -->
+    </div>
+</form>
+<button class="back-button" ui-sref="booking.selection" href="#/booking/selection">Back</button>
+<button class="continue-button" ng-disabled="form.$invalid" ui-sref="booking.confirmation" href="#/booking/confirmation" disabled="disabled">Continue Booking</button>
+</div>
+</div>
+<a class="powered-by" href="http://www.coachseek.com/" target="_blank">
+	<div><span>Powered by</span><span class="logo"></span></div>
+</a></div>
+            </div>
+            <div class="alert-container">
+                <!-- ngRepeat: alert in alerts -->
+            </div>
+         </div>
+    </div>
+
+
+</body></html>
