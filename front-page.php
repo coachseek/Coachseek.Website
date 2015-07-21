@@ -83,7 +83,7 @@
            <div class="row--full">
                <h1><?php the_field('title'); ?></h1>
                <p class="subtitle"><?php the_field('description'); ?></p>
-               <a class="landing--home-tryfree" href="http://app.coachseek.com">Try for free</a>
+               <a class="landing--home-tryfree" href="https://app.coachseek.com/#/new-user-setup">Try for free</a>
                <p class="sublabel"><?php the_field('ps'); ?></p>
            </div>
            <div class="landing-home-computer"><img src="<?php echo get_stylesheet_directory_uri();?>/images/laptop.png" alt=""></div>
@@ -139,7 +139,7 @@
            <div class="row">
                <h3><?php the_field('quote-title'); ?></h3>
                <p><?php the_field('quote-name'); ?></p>
-               <a href="http://app.coachseek.com">Try for free</a>
+               <a href="https://app.coachseek.com/#/new-user-setup">Try for free</a>
            </div>
        </div>
        
@@ -152,7 +152,7 @@
                        <li><a href="/team">Team</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="/careers">Careers</a></li>
-                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
+                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
                    </ul>
                </div>
                <div class="col-3-12">

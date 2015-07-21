@@ -151,7 +151,7 @@ Template Name: Main Features Page Template
            <div class="row--full">
                <h3>Interested in Coachseek ?</h3>
 
-               <a href="http://app.coachseek.com">Try for free</a>
+               <a href="https://app.coachseek.com/#/new-user-setup">Try for free</a>
            </div>
        </div>
        

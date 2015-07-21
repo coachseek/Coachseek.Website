@@ -123,7 +123,7 @@ Template Name: Pricing Page Template
               </div>
               <div class="pricing--home-list-coach">
                 <p><?php the_sub_field('coach-number');?></p>
-                <a href="http://app.coachseek.com">Free trial</a>
+                <a href="https://app.coachseek.com/#/new-user-setup">Free trial</a>
               </div>
             </div>
            <?php elseif( get_row_layout() == 'unlimited' ): ?>
@@ -134,7 +134,7 @@ Template Name: Pricing Page Template
                   </div>
                   <div class="pricing--home-list-coach">
                     <p class="unlimited"><?php the_sub_field('coach-number');?></p>
-                    <a href="http://app.coachseek.com">Free trial</a>
+                    <a href="https://app.coachseek.com/#/new-user-setup">Free trial</a>
                 </div>
               </div>
            <?php elseif( get_row_layout() == 'normal' ): ?>       
@@ -146,7 +146,7 @@ Template Name: Pricing Page Template
                   </div>
                   <div class="pricing--home-list-coach">
                     <p><?php the_sub_field('coach-number');?></p>
-                    <a href="http://app.coachseek.com">Free trial</a>
+                    <a href="https://app.coachseek.com/#/new-user-setup">Free trial</a>
                   </div>
               </div>
             <?php endif;
@@ -197,7 +197,7 @@ Template Name: Pricing Page Template
            <div class="row--full">
                <h3>Interested in Coachseek ?</h3>
 
-               <a href="http://app.coachseek.com">Try for free</a>
+               <a href="https://app.coachseek.com/#/new-user-setup">Try for free</a>
            </div>
        </div>
        
@@ -209,7 +209,7 @@ Template Name: Pricing Page Template
                        <li><a href="/team">Team</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="/careers">Careers</a></li>
-                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
+                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
