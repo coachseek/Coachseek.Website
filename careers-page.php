@@ -199,7 +199,7 @@ Template Name: Careers Page Template
                </div>
                <div class="col-3-12">
                    <ul>
-                       <li><h4>examples</h4></li>
+                       <li><h4>solutions</h4></li>
                        <li><a href="/tennis">Tennis</a></li>
                        <li><a href="/golf">Golf</a></li>
                        <li><a href="/swimming">Swimming</a></li>
