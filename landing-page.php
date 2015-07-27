@@ -96,7 +96,7 @@ Template Name: Landing Page Template
        </div>
        
        <div class="landing--home-desc">
-            <h3>Getting started is easy</h3>
+            <h3><?php the_field('landing-home-desc'); ?></h3>
              <?php
 
               // check if the flexible content field has rows of data
