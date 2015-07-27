@@ -143,7 +143,7 @@ if ( $blog_navigator ) {
 
 			<?php if ( $sidebar_blog_post ) : ?>
 
-				<?php get_sidebar(); ?>
+				<?php //get_sidebar(); ?>
 
 			<?php endif; ?>
 
