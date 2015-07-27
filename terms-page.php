@@ -125,13 +125,14 @@ Template Name: Terms Page Template
                    </ul>
                </div>
                <div class="col-3-12">
-                   <ul>
+                    <ul>
                        <li><h4>contact</h4></li>
-                       <li><a href="mailto:hello@coachseek.com" target="_blank">hello@coachseek.com</a></li>
-                       <li><a href="mailto:support@coachseek.com" target="_blank">support@coachseek.com</a></li>
-                       <li><a href="https://www.facebook.com/Coachseek" target="_blank">Facebook</a></li>
-                       <li><a href="https://twitter.com/coachseek" target="_blank">Twitter</a></li>
-                       <li><a href="https://www.linkedin.com/company/coachseek" target="_blank" >Linkedin</a></li>
+                       <li><a href="mailto:hello@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; hello@coachseek.com</a></li>
+                       <li><a href="mailto:support@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; support@coachseek.com</a></li>
+                       <li><a href=""><i class="fa fa-phone"></i> &nbsp;  +1-888-762-7187</a></li>
+                       <li><a href="https://www.facebook.com/Coachseek" target="_blank"><i class="fa fa-facebook-f"></i> &nbsp; &nbsp; Facebook</a></li>
+                       <li><a href="https://twitter.com/coachseek" target="_blank"><i class="fa fa-twitter"></i> &nbsp; Twitter</a></li>
+                       <li><a href="https://www.linkedin.com/company/coachseek" target="_blank" ><i class="fa fa-linkedin"></i> &nbsp; &nbsp;Linkedin</a></li>
                    </ul>
                </div>
            </div>
