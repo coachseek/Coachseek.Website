@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Team Page Template
+Template Name: Testimonial Page Template
 * Version: 1.0
 */
 ?>
@@ -43,7 +43,7 @@ Template Name: Team Page Template
     <div class="container">
         <header>
             <div class="row--full">
-              <div class="col-6-12 ">
+               <div class="col-6-12 ">
                  <div class="landing--header-logo">
                     <a href="<?php echo site_url(); ?>">
                       <img src="<?php echo get_stylesheet_directory_uri();?>/images/logo-compressor.png" alt="">
@@ -63,89 +63,131 @@ Template Name: Team Page Template
               
                </div>               
             </div>
-    </header>
-    <div class="team--home">
-      <div class="row--full team--ceo">
-        <div class="col-5-12 push-5">
-          <img src="<?php the_field('ceo-image'); ?>" alt="">
-        </div>
-        <div class="col-7-12 pull-7">
-        <?php
-          // check if the flexible content field has rows of data
-          if( have_rows('ceo') ):
-
-           // loop through the rows of data
-          while ( have_rows('ceo') ) : the_row(); ?>
-
-          <h3><?php the_sub_field('title');?></h3>
-          <h5><?php the_sub_field('name');?></h5>
-          <p><?php the_sub_field('description');?></p>
-
-          <?php endwhile;
-          else :
-              // no layouts found
-          endif;
-          ?>
-
-        </div>
-      </div>
-      <div class="row team--member">
-       <?php
-          // check if the flexible content field has rows of data
-          if( have_rows('team-intro') ):
-
-           // loop through the rows of data
-          while ( have_rows('team-intro') ) : the_row(); ?>
-
-
-        <h3><?php the_sub_field('title');?></h3>
-        <p><?php the_sub_field('description');?></p>
-          
-         <?php endwhile;
-          else :
-              // no layouts found
-          endif;
-          ?>
-
-
-
-        <img src="<?php the_field('team-image'); ?>" alt="">
-         <?php
-          // check if the flexible content field has rows of data
-          if( have_rows('team-workwithus') ):
-
-           // loop through the rows of data
-          while ( have_rows('team-workwithus') ) : the_row(); ?>
-
-
-        <h3 class="team-member-workwithus"> <?php the_sub_field('title');?></h3>
-        <p><?php the_sub_field('description');?> </p>
-        <a href="/careers"><?php the_sub_field('button');?></a>
-
-          <?php endwhile;
-          else :
-              // no layouts found
-          endif;
-          ?>
-      </div>
-      
-    </div>
-
-
-      
-       <?php if( get_field('quote-image') ): ?>
-       <div class="mainfea--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
-        <?php endif; ?>
-           <div class="mainfea--home-overlap"></div>
+      </header>
+      <?php if( get_field('header-image') ): ?>
+       <div class="landing--home-bg testimonial" style="">
+          <?php endif; ?>
+          <div class="landing--home-bg-overlap"></div>
            <div class="row--full">
-               <h3>Interested in Coachseek ?</h3>
-
-               <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Team'});">Try for free</a>
+               <h1><?php the_field('title'); ?></h1>
            </div>
        </div>
+
+       <div class="testimonial--home">
+         <div class="row--full">
+           <h3><?php the_field('testimonial-title'); ?></h3>
+         </div>
+         <div class="row--full">
+           <div class="col-6-12">
+             <h5><?php the_field('testimonial-coach-name'); ?></h5>
+             <h6><?php the_field('testimonial-coach-organization'); ?></h6>
+             <a href="http://<?php the_field('testimonial-coach-website'); ?>" target="_blank"><?php the_field('testimonial-coach-website'); ?></a>
+             <p><?php the_field('testimonial-coach-description'); ?></p>
+           </div>
+           <div class="col-6-12">
+             <img src="<?php the_field('testimonial-coach-image'); ?>" alt="">
+           </div>
+         </div>
+       </div>
+
+       <div class="pricing--home-list testimonial-pricing">
+         <div class="row">
+          <?php
+            // check if the flexible content field has rows of data
+            if( have_rows('price-page-plan') ):
+             // loop through the rows of data
+            while ( have_rows('price-page-plan') ) : the_row(); 
+            if( get_row_layout() == 'popular' ):
+
+            ?>
+            <div class="col-3-12">
+             <div class="pricing--home-list-popular">Popular</div>  
+              <div class="pricing--home-list-price">
+                <h5><?php the_sub_field('plan-name');?></h5>
+                <h2>$<?php the_sub_field('price-number');?> <span>/mo</span></h2>
+              </div>
+              <div class="pricing--home-list-coach">
+                <p><?php the_sub_field('coach-number');?></p>
+                <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free trial</a>
+              </div>
+            </div>
+           <?php elseif( get_row_layout() == 'unlimited' ): ?>
+               <div class="col-3-12">
+                <div class="pricing--home-list-price">
+                    <h5><?php the_sub_field('plan-name');?></h5>
+                    <h2><?php the_sub_field('price-poa');?></h2>
+                  </div>
+                  <div class="pricing--home-list-coach">
+                    <p class="unlimited"><?php the_sub_field('coach-number');?></p>
+                    <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free trial</a>
+                </div>
+              </div>
+           <?php elseif( get_row_layout() == 'normal' ): ?>       
+              <div class="col-3-12">  
+               
+                  <div class="pricing--home-list-price">
+                    <h5><?php the_sub_field('plan-name');?></h5>
+                    <h2>$<?php the_sub_field('price-number');?> <span>/mo</span></h2>
+                  </div>
+                  <div class="pricing--home-list-coach">
+                    <p><?php the_sub_field('coach-number');?></p>
+                    <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free trial</a>
+                  </div>
+              </div>
+            <?php endif;
+
+                endwhile;
+
+                else :
+
+                    // no layouts found
+
+                endif;
+
+            ?>       
+         </div>
+         <div class="pricing--home-list-desc row">
+            <?php
+            // check if the flexible content field has rows of data
+            if( have_rows('price-information') ):
+             // loop through the rows of data
+            while ( have_rows('price-information') ) : the_row(); 
+
+            ?>
+           <p>
+           <?php the_sub_field('information');?>
+           </p>
+         </div>
+         <div class="pricing--home-list-suitplan row">
+            <h5><?php the_sub_field('help');?></h5>
+            <?php the_sub_field('help-information');?>
+             <?php 
+
+                endwhile;
+
+                else :
+
+                    // no layouts found
+
+                endif;
+
+            ?>       
+         </div>
+       </div>
+      <?php if( get_field('quote-image') ): ?>
+       <div class="landing--home-quote testimonial-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
+       <?php endif; ?>
+           <div class="landing--home-overlap"></div>
+           <div class="row--full">
+               <h3><?php the_field('quote-title'); ?></h3>
+               <p><?php the_field('quote-name'); ?></p>
+               <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Ref'});">Try for free</a>
+           </div>
+       </div>
+
        
        
-           <footer>
+       <footer>
            <div class="row">
                <div class="col-3-12">
                    <ul>
@@ -153,7 +195,7 @@ Template Name: Team Page Template
                        <li><a href="/team">Team</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="/careers">Careers</a></li>
-                       <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
+                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -177,7 +219,7 @@ Template Name: Team Page Template
                    </ul>
                </div>
                <div class="col-3-12">
-                    <ul>
+                   <ul>
                        <li><h4>contact</h4></li>
                        <li><a href="mailto:hello@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; hello@coachseek.com</a></li>
                        <li><a href="mailto:support@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; support@coachseek.com</a></li>
@@ -189,11 +231,13 @@ Template Name: Team Page Template
                </div>
            </div>
        </footer>
-    </div>
+       
+
     
+    </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
-         
+     
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5FP99N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -203,5 +247,7 @@ Template Name: Team Page Template
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FP99N');</script>
     <!-- End Google Tag Manager -->
+
+
     </body>
 </html>

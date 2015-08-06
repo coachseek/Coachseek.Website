@@ -24,31 +24,14 @@
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
     <?php endif; ?>
        
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css">
-    <script type="text/javascript">
-    adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
-    adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
-    (function () {
-    var oldonload = window.onload;
-    window.onload = function(){
-       __adroll_loaded=true;
-       var scr = document.createElement("script");
-       var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-       scr.setAttribute('async', 'true');
-       scr.type = "text/javascript";
-       scr.src = host + "/j/roundtrip.js";
-       ((document.getElementsByTagName('head') || [null])[0] ||
-        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-       if(oldonload){oldonload()}};
-    }());
-    </script>
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css">
 
   
       <script type="text/javascript">
       window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
       heap.load("2818681617");
-    </script>
-
+      </script>
+   
     </head>
 
     <body>
@@ -67,6 +50,7 @@
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
                    <ul class="landing--header-nav-list">
+                       <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a class="landing--header-signin" href="http://app.coachseek.com">Sign In</a></li>
@@ -77,16 +61,15 @@
     </header>
 
     <?php if( get_field('header-image') ): ?>
-       <div class="landing--home-bg" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat; background-size: cover;">
+       <div class="landing--home-bg">
         <?php endif; ?>
           <div class="landing--home-bg-overlap"></div>
            <div class="row--full">
                <h1><?php the_field('title'); ?></h1>
                <p class="subtitle"><?php the_field('description'); ?></p>
-               <a class="landing--home-tryfree" href="https://app.coachseek.com/#/new-user-setup">Try for free</a>
-               <p class="sublabel"><?php the_field('ps'); ?></p>
+               <a class="landing--home-tryfree-btn" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Main'});">Try for free</a>
+               <a href="/matgarnham" class="matt-loves-coachseek"><?php the_field('ps'); ?></a>
            </div>
-           <div class="landing-home-computer"><img src="<?php echo get_stylesheet_directory_uri();?>/images/laptop.png" alt=""></div>
        </div>
        
        <div class="landing--home-desc">
@@ -129,18 +112,37 @@
 
         
            <div class="row--full">
-               <a href="/features">View Features</a>
+               <a href="/features">See more</a>
            </div>
        </div>
       <?php if( get_field('quote-image') ): ?>
        <div class="landing--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
        <?php endif; ?>
            <div class="landing--home-overlap"></div>
-           <div class="row">
+           <div class="row--full">
                <h3><?php the_field('quote-title'); ?></h3>
                <p><?php the_field('quote-name'); ?></p>
-               <a href="https://app.coachseek.com/#/new-user-setup">Try for free</a>
+               <!-- <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Ref'});">Try for free</a> -->
            </div>
+       </div>
+
+       <div class="landing--home-tryfree">
+         <div class="row--full">
+            <h3>Try Coachseek free for 14 days</h3>
+            <p>No Credit Card required</p>
+            <a href="https://app.coachseek.com/#/new-user-setup">Try for free</a>
+         </div>
+         <div class="row--full">
+            <div class="landing--home-tryfree-itworks-wrapper"><p class="landing--home-tryfree-itworks">It works across PC, tablets and mobile</p></div>
+         
+         </div>
+         <div class="row--full">
+            <div class="landing--home-supports">
+              <img src="<?php echo get_stylesheet_directory_uri();?>/images/supports.png" alt="">
+            </div>
+       
+         </div>
+
        </div>
        
        
@@ -194,6 +196,17 @@
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
-    
+     
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5FP99N"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5FP99N');</script>
+    <!-- End Google Tag Manager -->
+
+
     </body>
 </html>
