@@ -1,8 +1,17 @@
 .landing--home-bg{
+    &.testimonial{
+        .row--full{
+            h1{
+                font-family: lato-light;
+            }
+        }
+    }
     position: relative;
-    height: 611px;
+    height: 656px;
     display: block;
     z-index: 0;
+    background: url('../images/matt-mainbackground.jpg') 0 40px no-repeat; 
+    background-size: cover;
     .landing-home-computer{
         text-align: center;
         top:40px;
@@ -17,44 +26,58 @@
 
         }
     }
-    .landing--home-bg-overlap{
-        position: absolute;
-        background: url("../images/overlap-black.png") center center;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-
-    }
-    .row--full{  
+    
+    .row--full{
+        padding-left:8%;  
         z-index: 2;
-        text-align: center;
+        // text-align: center;
         h1{
-            padding-top: 180px;
+            padding-top: 140px;
             width: 100%;
-            margin: 0 auto;
-            font-size: 50px;
-            font-family: lato-medium;
-             letter-spacing: 2px;
+            margin: 0;
+            text-align: left;
+            font-size: 36px;
+            font-family: lato-regular;
+            letter-spacing: 1px;
+            text-transform: none;
+            line-height: 40px;
         }
         p{
             width: 400px;
-            margin: 0 auto;
+            margin: 0;
+            text-align: left;
             &.subtitle{
                 padding-bottom: 50px;
+                padding-top: 5px;
             }
             &.sublabel{
                 padding-top: 25px;
                 font-size: 14px;
+                clear:both;
             }
         }
-        a.landing--home-tryfree{ 
+        a.matt-loves-coachseek{
+            font-size:12px;
+            transition: all ease .5s;
+            clear: both;
+            display: block;
+            padding-top: 20px;
+            &:hover{
+              color:rgba($white, 0.5);
+               
+            }
+
+        }
+        a.landing--home-tryfree-btn{ 
             position: relative;
+            float:left;
 //            top: 50px;
-            width: 148px;
+            text-align: center;
+            width: 146px;
             font-family: 'lato-semi-bold';
             font-size: 14px;
             background-color: $green;
-            padding: 10px 40px;
+            padding: 11px;
             border-radius: 4px;
             margin: 0 auto 20px auto;
             transition: background ease .8s;
@@ -70,16 +93,16 @@
 }
 .landing--home-desc{
     // background-color: #F4F4F4;
-    background-color: #EDEDED;
-    padding-top: 220px;
-    padding-bottom: 100px;
+    background-color: $white;
+    padding-top: 60px;
+    padding-bottom: 140px;
     h3{
         text-align: center;
         padding-bottom: 65px;
-        font-size: 30px;
+        font-size: 32px;
         color: $text-dark;
         font-weight: 300;
-        font-family: 'lato-light';
+        font-family: 'lato-semi-bold';
     }
     .row--full{
         padding: 0 7%;
@@ -130,10 +153,10 @@
             position: relative;
             top:40px;
             width: 148px;
-            font-family: 'lato-semi-bold';
-            font-size: 14px;
+            font-family: 'lato-regular';
+            font-size: 16px;
             background-color: $green;
-            padding: 10px 30px;
+            padding: 12px 40px;
             border-radius: 4px;
             margin: 0 auto;
             transition: background ease .8s;
@@ -148,8 +171,11 @@
 .landing--home-quote{
     position: relative;
     width: 100%;
-    height: 361px;
+    height: 481px;
     z-index: 0;
+    &.testimonial-quote{
+        height:393px;
+    }
     .landing--home-overlap{
         position: absolute;
         background: url("../images/overlap.png") center center;
@@ -157,19 +183,21 @@
         width: 100%;
         height: 100%;
     }
-    .row{
+    .row--full{
         text-align: left;
         z-index: 2;
+        padding-left: 5%;
         h3{
             font-family: lato-light;
             padding-top: 80px;
-            width: 440px;
+            font-size: 27px;
+            width: 530px;
         }
         p{
             position: relative;
             top: 40px;
             width: 440px;
-            font-size: 18px;
+            font-size: 20px;
             font-style: italic;
         }
         a{
@@ -180,8 +208,8 @@
             color: $green;
             background: rgba($white, 0.9);
             border-radius: 4px;
-            padding: 12px 27px;
-             transition: background ease .8s;
+            padding: 11px 35px;
+            transition: background ease .8s;
             &:hover{
                 background: rgba($white, 1);
                
@@ -189,39 +217,115 @@
         }
     }
 }
+.landing--home-tryfree{
+    display: block;
+    position: relative;
+    height: 800px;
+    text-align: center;
+    color: $text-dark;
+    padding: 50px 10px;
+    h3{
+        font-size: 30px;
+        font-family: lato-semi-bold;
+        padding-bottom: 20px;
+    }
+    p{
+        font-size: 18px;
+        margin-bottom: 50px;
+        &.landing--home-tryfree-itworks{
+            margin-bottom: 0px;
+            position: relative;
+            top:9px;
+            z-index: 3;
+            background-color: $white;
+            width: 320px;
+            margin: 0 auto;
+        }
+    }
+    div.landing--home-tryfree-itworks-wrapper{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        border-bottom: 1px solid #ddd;
+        max-width: 836px;
+        z-index: 0;
+        margin-bottom: 100px;
+    }
+    a{
+        font-size: 16px;
+        font-family: lato-regular;
+        width: 146px;
+        display: block;
+        margin: 0 auto;
+        color: $white;
+        background: rgba($green, 0.9);
+        border-radius: 4px;
+        padding: 11px 0px;
+        margin-bottom: 60px;
+        transition: background ease .8s;
+        &:hover{
+           background-color:$light-green;
+               
+        }
+    }
+    img{
+        max-width:100%;
+    }
+}
 
 
 @media (max-width: 320px){
     .landing--home-desc{
-        padding-top: 200px;
+        padding-top: 50px;
     }
 
 }
 
 @media (max-width: 767px){
+
     .landing--home-bg {
+        background: url('../images/matt-mainbackground-Mobile@2x-compressor.png') 0px 40px no-repeat; 
+        background-size: cover;
         height:500px;
+        .landing--home-bg-overlap{
+            position: absolute;
+            background: url("../images/overlap-black.png") center center;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+
+        }
         .landing-home-computer{
             top: 60px;
         }
-        .row--full 
-        {
+        .row--full {
+            padding-left:0;
+         
             h1{
+                text-align:center;
                 font-size: 36px;
                 padding-top: 130px;
             }
             p.subtitle{
+                text-align:center;
                 width: 100%;
                 padding-left: 17%;
                 padding-right: 17%;
             }
             p.sublabel{
+                text-align:center;
                 width: 100%;
+            }
+            a,a.landing--home-tryfree-btn{
+                display:block;
+                text-align:center;
+                float: none;
+                padding: 11px 35px;
             }
         }
     }
     .landing--home-desc {
-         padding-top: 250px;
+         padding-top: 50px;
         .row--full {
             padding-left: 20px;
             padding-right: 20px;
@@ -253,7 +357,12 @@
         }
     }
     .landing--home-quote {
-        .row {
+        &.testimonial-quote{
+            .row--full h3{
+                padding-top:30px;
+            }
+        }
+        .row--full {
             padding-left: 20px;
             padding-right: 20%;
             h3{
@@ -271,6 +380,20 @@
             }
         }
     }
+    .landing--home-tryfree{
+        height: 700px;
+        padding-bottom: 0px;
+        div.landing--home-tryfree-itworks-wrapper{
+            max-height:100%;
+            p{
+                width:100%;
+                top: 16px;
+                max-width: 176px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
 }
 
 
@@ -285,7 +408,7 @@ and (max-width : 1024px)
         padding-left: 5%;
     }
     .landing--home-desc {
-        padding-top: 250px;
+        padding-top: 50px;
         .row--full .col-3-12{
             h5{
                 width: 100%;

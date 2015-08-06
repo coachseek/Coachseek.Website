@@ -6,17 +6,13 @@
 
 /* mixins */
 
-@import "mixins/rgba";
-@import "mixins/font-family";
-@import "mixins/border-radius";
+@import "mixins/*";
+
 
 /* common */
 
-@import "common/common";
-@import "common/layout";
-@import "common/variables";
-@import "common/typography";
-@import "common/stickyfooter";
+@import "common/*";
+
 
 /* partials */
 
@@ -24,13 +20,8 @@
 @import "partials/footer";
 
 /* views */
-@import "views/landing-page";
-@import "views/terms-page";
-@import "views/team-page";
-@import "views/404";
-@import "views/main-features";
-@import "views/pricing-page";
-@import "views/careers";
+@import "views/*";
+
 
 /* fontawesome */
 @import "fontawesome/variables";

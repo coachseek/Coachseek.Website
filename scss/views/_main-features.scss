@@ -125,6 +125,15 @@
         }
     }
     .mainfea--home-bg {
+         &.testimonial{
+            background: url('../images/matt-mainbackground-Mobile@2x-compressor.png') 0px 40px no-repeat; background-size: cover;
+            height: 424px;
+            .row--full h1{
+                text-align: center;
+                font-family: 'lato-light';
+                text-transform: none;
+            }
+        }
         .row--full{
             h1{
                 width: 100%;

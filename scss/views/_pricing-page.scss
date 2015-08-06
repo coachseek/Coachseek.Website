@@ -33,6 +33,14 @@
     }
 }
 .pricing--home-list{
+	&.testimonial-pricing{
+		padding-top: 50px;
+		padding-bottom: 110px;
+		.pricing--home-list-desc{
+			padding-bottom: 70px;
+			padding-top: 0px;
+		}
+	}
 	background-color: $background-mid-grey;
 	color: $text-dark;
 	padding-bottom: 50px;
@@ -188,7 +196,7 @@ and (max-device-width : 1024px)
                 .pricing--home-list-price{
                  @include span(6/12); 
                  h5{
-                 	padding-top: 20px;
+                 	padding-top: 10px;
                  }
                 }
                 .pricing--home-list-coach{
