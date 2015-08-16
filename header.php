@@ -64,10 +64,19 @@
 		<?php endif; ?>
 
 		<?php wp_head(); ?>
-	
+
+			
       <script type="text/javascript">
       window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
       heap.load("2818681617");
+
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		 ga('create', 'UA-50345817-1', 'auto');
+		 ga('send', 'pageview');
 	    </script>
 
 	</head>
@@ -76,14 +85,14 @@
 
 		 <header>
             <div class="row--full">
-               <div class="col-6-12 ">
+               <div class="col-3-12 ">
                  <div class="landing--header-logo">
                     <a href="<?php echo site_url(); ?>">
                       <img src="<?php echo get_stylesheet_directory_uri();?>/images/logo-compressor.png" alt="">
                     </a>   
                  </div>
                </div>
-               <div class="col-6-12 landing--header-nav">
+               <div class="col-9-12 landing--header-nav">
                    <div class="landing--header-nav-icon" href="">
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
@@ -91,7 +100,8 @@
                    	   <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
-                       <li><a class="landing--header-signin" href="http://app.coachseek.com">Sign In</a></li>
+                       <li><a href="http://app.coachseek.com">Sign in</a></li>
+                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup">Sign up</a></li>
                    </ul>
               
                </div>               

@@ -1,41 +1,42 @@
 <?php
 /*
-Template Name: Team Page Template
+Template Name: Newsletter Page Template
 * Version: 1.0
 */
 ?>
 <!DOCTYPE html>
 <html  <?php language_attributes(); ?>>
     <head>
-       	<meta charset="<?php bloginfo( 'charset' ); ?>">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <title><?php wp_title( '|', true, 'right' ); ?></title>
          
         <!-- Favicon and iOS icons -->
-		<?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
-		<link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
-		<?php endif; ?>
+    <?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
+    <link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
+    <?php endif; ?>
        
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/newstyles3.css">
-
         
+  
       <script type="text/javascript">
       window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
       heap.load("2818681617");
+
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -43,14 +44,17 @@ Template Name: Team Page Template
 
      ga('create', 'UA-50345817-1', 'auto');
      ga('send', 'pageview');
-    </script>
+
+      </script>
+
+         
     </head>
 
     <body>
-    <div class="container">
-        <header>
+       <div class="container"> 
+        <header style="z-index:3;">
             <div class="row--full">
-              <div class="col-3-12 ">
+               <div class="col-3-12 ">
                  <div class="landing--header-logo">
                     <a href="<?php echo site_url(); ?>">
                       <img src="<?php echo get_stylesheet_directory_uri();?>/images/logo-compressor.png" alt="">
@@ -62,98 +66,46 @@ Template Name: Team Page Template
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
                    <ul class="landing--header-nav-list">
-                      <li><a href="/pricing">Pricing</a></li>
+                       <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
-                         <li><a href="http://app.coachseek.com">Sign in</a></li>
+                       <li><a href="http://app.coachseek.com">Sign in</a></li>
                        <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup">Sign up</a></li>
                    </ul>
               
                </div>               
             </div>
     </header>
-    <div class="team--home">
-      <div class="row--full team--ceo">
-        <div class="col-5-12 push-5">
-          <img src="<?php the_field('ceo-image'); ?>" alt="">
-        </div>
-        <div class="col-7-12 pull-7">
-        <?php
-          // check if the flexible content field has rows of data
-          if( have_rows('ceo') ):
 
-           // loop through the rows of data
-          while ( have_rows('ceo') ) : the_row(); ?>
+   
+       <div class="landing--home-bg" style="height:429px; background: url('<?php echo get_stylesheet_directory_uri();?>/images/overlap-black.png') center center; background-size: cover; z-index:0!important;">
+   
+         <?php if( get_field('header-image') ): ?>
+          <div class="landing--home-bg-overlap" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat;position: absolute;width: 100%;height: 100%; opacity:0.5!important;z-index:2!important;background-size: cover;"></div>
+          <?php endif; ?>
 
-          <h3><?php the_sub_field('title');?></h3>
-          <h5><?php the_sub_field('name');?></h5>
-          <p><?php the_sub_field('description');?></p>
-
-          <?php endwhile;
-          else :
-              // no layouts found
-          endif;
-          ?>
-
-        </div>
-      </div>
-      <div class="row team--member">
-       <?php
-          // check if the flexible content field has rows of data
-          if( have_rows('team-intro') ):
-
-           // loop through the rows of data
-          while ( have_rows('team-intro') ) : the_row(); ?>
-
-
-        <h3><?php the_sub_field('title');?></h3>
-        <p><?php the_sub_field('description');?></p>
-          
-         <?php endwhile;
-          else :
-              // no layouts found
-          endif;
-          ?>
-
-
-
-        <img src="<?php the_field('team-image'); ?>" alt="">
-         <?php
-          // check if the flexible content field has rows of data
-          if( have_rows('team-workwithus') ):
-
-           // loop through the rows of data
-          while ( have_rows('team-workwithus') ) : the_row(); ?>
-
-
-        <h3 class="team-member-workwithus"> <?php the_sub_field('title');?></h3>
-        <p><?php the_sub_field('description');?> </p>
-        <a href="/careers"><?php the_sub_field('button');?></a>
-
-          <?php endwhile;
-          else :
-              // no layouts found
-          endif;
-          ?>
-      </div>
-      
-    </div>
-
-
-      
-       <?php if( get_field('quote-image') ): ?>
-       <div class="mainfea--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
-        <?php endif; ?>
-           <div class="mainfea--home-overlap"></div>
            <div class="row--full">
-               <h3>Interested in Coachseek ?</h3>
-
-               <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Team'});">Try for free</a>
+               <h1 style="letter-spacing: 0px;"><?php the_field('title'); ?></h1>
+               <p class="subtitle" style="padding-top:25px;"><?php the_field('description'); ?></p>
+           
            </div>
        </div>
        
+       <div class="landing--home-desc" style="height:380px;">
+
+
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+          the_content();
+          endwhile; else: ?>
+          <p>Sorry, no posts matched your criteria.</p>
+          <?php endif; ?>   
+
+
+
+       </div>
+   
        
-           <footer>
+       <footer>
            <div class="row">
                <div class="col-3-12">
                    <ul>
@@ -161,7 +113,7 @@ Template Name: Team Page Template
                        <li><a href="/team">Team</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="/careers">Careers</a></li>
-                       <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
+                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -187,7 +139,7 @@ Template Name: Team Page Template
                    </ul>
                </div>
                <div class="col-3-12">
-                    <ul>
+                   <ul>
                        <li><h4>contact</h4></li>
                        <li><a href="mailto:hello@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; hello@coachseek.com</a></li>
                        <li><a href="mailto:support@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; support@coachseek.com</a></li>
@@ -199,27 +151,29 @@ Template Name: Team Page Template
                </div>
            </div>
        </footer>
-    </div>
+       
+
     
+    </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
      <script type="text/javascript">
-      adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
-      adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
-      (function () {
-      var oldonload = window.onload;
-      window.onload = function(){
-        __adroll_loaded=true;
-        var scr = document.createElement("script");
-        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-        scr.setAttribute('async', 'true');
-        scr.type = "text/javascript";
-        scr.src = host + "/j/roundtrip.js";
-        ((document.getElementsByTagName('head') || [null])[0] ||
-         document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-        if(oldonload){oldonload()}};
-      }());
-      </script>
+        adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
+        adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
+        (function () {
+        var oldonload = window.onload;
+        window.onload = function(){
+          __adroll_loaded=true;
+          var scr = document.createElement("script");
+          var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+          scr.setAttribute('async', 'true');
+          scr.type = "text/javascript";
+          scr.src = host + "/j/roundtrip.js";
+          ((document.getElementsByTagName('head') || [null])[0] ||
+           document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+          if(oldonload){oldonload()}};
+        }());
+        </script>
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5FP99N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -229,6 +183,39 @@ Template Name: Team Page Template
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FP99N');</script>
     <!-- End Google Tag Manager -->
-    <?php wp_footer(); ?>
+          <!-- Google Code for Clicked &#39;Try for Free&#39; Conversion Page
+      In your html page, add the snippet and call
+      goog_report_conversion when someone clicks on the
+      chosen link or button. -->
+      <script type="text/javascript">
+        /* <![CDATA[ */
+        goog_snippet_vars = function() {
+          var w = window;
+          w.google_conversion_id = 963132874;
+          w.google_conversion_label = "vCN2CPrf_F4QyvugywM";
+          w.google_remarketing_only = false;
+        }
+        // DO NOT CHANGE THE CODE BELOW.
+        goog_report_conversion = function(url) {
+          goog_snippet_vars();
+          window.google_conversion_format = "3";
+          window.google_is_call = true;
+          var opt = new Object();
+          opt.onload_callback = function() {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        }
+        var conv_handler = window['google_trackConversion'];
+        if (typeof(conv_handler) == 'function') {
+          conv_handler(opt);
+        }
+      }
+      /* ]]> */
+      </script>
+      <script type="text/javascript"
+        src="//www.googleadservices.com/pagead/conversion_async.js">
+      </script>
+      <?php wp_footer(); ?>
     </body>
 </html>

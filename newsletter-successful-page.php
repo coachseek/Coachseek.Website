@@ -1,39 +1,38 @@
 <?php
 /*
-Template Name: Pricing Page Template
+Template Name: Newsletter-successful Page Template
 * Version: 1.0
 */
 ?>
 <!DOCTYPE html>
 <html  <?php language_attributes(); ?>>
     <head>
-       	<meta charset="<?php bloginfo( 'charset' ); ?>">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <title><?php wp_title( '|', true, 'right' ); ?></title>
          
         <!-- Favicon and iOS icons -->
-		<?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
-		<link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
-		<?php endif; ?>
-		<?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
-		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
-		<?php endif; ?>
+    <?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
+    <link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
+    <?php endif; ?>
+    <?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
+    <?php endif; ?>
        
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/newstyles3.css">
-
- 
-  
+    
+        
       <script type="text/javascript">
       window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
       heap.load("2818681617");
@@ -45,12 +44,15 @@ Template Name: Pricing Page Template
 
      ga('create', 'UA-50345817-1', 'auto');
      ga('send', 'pageview');
-    </script>
-     </head>
+
+      </script>
+
+         
+    </head>
 
     <body>
-    <div class="container">
-          <header>
+       <div class="container">
+        <header>
             <div class="row--full">
                <div class="col-3-12 ">
                  <div class="landing--header-logo">
@@ -64,135 +66,86 @@ Template Name: Pricing Page Template
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
                    <ul class="landing--header-nav-list">
-                      <li><a href="/pricing">Pricing</a></li>
+                       <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="http://app.coachseek.com">Sign in</a></li>
+                         <li><a href="http://app.coachseek.com">Sign in</a></li>
                        <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup">Sign up</a></li>
                    </ul>
               
                </div>               
             </div>
     </header>
-    <?php if( get_field('header-image') ): ?>
-       <div class="pricing--home-bg" style="background: url('<?php the_field('header-image'); ?>') center bottom no-repeat; background-size: cover;">
-        <?php endif; ?>
+
+  <div class="landing--home-bg" style="height:429px; background: url('<?php echo get_stylesheet_directory_uri();?>/images/overlap-black.png') center center; background-size: cover; z-index:0!important;">
+   
+         <?php if( get_field('header-image') ): ?>
+          <div class="landing--home-bg-overlap" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat;position: absolute;width: 100%;height: 100%; opacity:0.5!important;z-index:2!important;background-size: cover;"></div>
+          <?php endif; ?>
+
 
            <div class="row--full">
-            <?php
-            // check if the flexible content field has rows of data
-            if( have_rows('price-page-description') ):
+               <h1 style="letter-spacing: 0px;"><?php the_field('title'); ?></h1>
+               <p class="subtitle" style="padding-top:25px;"><?php the_field('description'); ?></p>
+           
+           </div>
+       </div>
+       
+       <div class="landing--home-desc">
+             <h3><?php the_field('landing-home-desc'); ?></h3>
+             <?php
 
-             // loop through the rows of data
-            while ( have_rows('price-page-description') ) : the_row(); ?>
-               <h1><?php the_sub_field('title');?></h1>
-               <p class="subtitle"><?php the_sub_field('description');?></p>
-                    <?
+              // check if the flexible content field has rows of data
+              if( have_rows('features') ):
+
+                   // loop through the rows of data
+                  while ( have_rows('features') ) : the_row();
+                  if( get_row_layout() == 'circle-row' ): 
+                   ?>                     
+                <div class="row--full">
+                <?php  if( have_rows('circle-row') ):
+                      while ( have_rows('circle-row') ) : the_row(); ?>
+                 <div class="col-3-12">
+                    <div class="landing--home-circle">
+                        <img src="<?php the_sub_field('image');?>" alt="">
+                     </div>
+                     <h5><?php the_sub_field('title');?></h5>
+                     <p><?php the_sub_field('description');?></p>
+                 </div>
+                 
+                 <?
+                  endwhile;
+
+                  endif;
+                  endif;
+                 ?>
+
+               </div>
+              <?php 
+
               endwhile;
-
               else :
-
                   // no layouts found
-
               endif;
-            ?>
-           </div>
-       </div>
-       <div class="pricing--home-list">
-         <div class="row">
-          <?php
-            // check if the flexible content field has rows of data
-            if( have_rows('price-page-plan') ):
-             // loop through the rows of data
-            while ( have_rows('price-page-plan') ) : the_row(); 
-            if( get_row_layout() == 'popular' ):
+              ?>
 
-            ?>
-            <div class="col-3-12">
-             <div class="pricing--home-list-popular">Popular</div>  
-              <div class="pricing--home-list-price">
-                <h5><?php the_sub_field('plan-name');?></h5>
-                <h2>$<?php the_sub_field('price-number');?> <span>/mo</span></h2>
-              </div>
-              <div class="pricing--home-list-coach">
-                <p><?php the_sub_field('coach-number');?></p>
-                <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free trial</a>
-              </div>
-            </div>
-           <?php elseif( get_row_layout() == 'unlimited' ): ?>
-               <div class="col-3-12">
-                <div class="pricing--home-list-price">
-                    <h5><?php the_sub_field('plan-name');?></h5>
-                    <h2><?php the_sub_field('price-poa');?></h2>
-                  </div>
-                  <div class="pricing--home-list-coach">
-                    <p class="unlimited"><?php the_sub_field('coach-number');?></p>
-                    <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free trial</a>
-                </div>
-              </div>
-           <?php elseif( get_row_layout() == 'normal' ): ?>       
-              <div class="col-3-12">  
-               
-                  <div class="pricing--home-list-price">
-                    <h5><?php the_sub_field('plan-name');?></h5>
-                    <h2>$<?php the_sub_field('price-number');?> <span>/mo</span></h2>
-                  </div>
-                  <div class="pricing--home-list-coach">
-                    <p><?php the_sub_field('coach-number');?></p>
-                    <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free trial</a>
-                  </div>
-              </div>
-            <?php endif;
-
-                endwhile;
-
-                else :
-
-                    // no layouts found
-
-                endif;
-
-            ?>       
-         </div>
-         <div class="pricing--home-list-desc row">
-            <?php
-            // check if the flexible content field has rows of data
-            if( have_rows('price-information') ):
-             // loop through the rows of data
-            while ( have_rows('price-information') ) : the_row(); 
-
-            ?>
-           <p>
-           <?php the_sub_field('information');?>
-           </p>
-         </div>
-         <div class="pricing--home-list-suitplan row">
-            <h5><?php the_sub_field('help');?></h5>
-            <?php the_sub_field('help-information');?>
-             <?php 
-
-                endwhile;
-
-                else :
-
-                    // no layouts found
-
-                endif;
-
-            ?>       
-         </div>
-       </div>
-
-      <?php if( get_field('quote-image') ): ?>
-       <div class="mainfea--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
-        <?php endif; ?>
-           <div class="mainfea--home-overlap"></div>
+        
            <div class="row--full">
-               <h3>Interested in Coachseek ?</h3>
-
-               <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing2'});">Try for free</a>
+               <a href="/features">See more</a>
            </div>
        </div>
+      <?php if( get_field('quote-image') ): ?>
+       <div class="landing--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
+       <?php endif; ?>
+           <div class="landing--home-overlap"></div>
+           <div class="row--full">
+               <h3><?php the_field('quote-title'); ?></h3>
+               <p><?php the_field('quote-name'); ?></p>
+               <!-- <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Ref'});">Try for free</a> -->
+           </div>
+       </div>
+
+       
        
        <footer>
            <div class="row">
@@ -212,7 +165,7 @@ Template Name: Pricing Page Template
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                        <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>
-                        <li><a href="/newsletter">Newsletter</a></li>
+                       <li><a href="/newsletter">Newsletter</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -228,7 +181,7 @@ Template Name: Pricing Page Template
                    </ul>
                </div>
                <div class="col-3-12">
-                    <ul>
+                   <ul>
                        <li><h4>contact</h4></li>
                        <li><a href="mailto:hello@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; hello@coachseek.com</a></li>
                        <li><a href="mailto:support@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; support@coachseek.com</a></li>
@@ -241,6 +194,8 @@ Template Name: Pricing Page Template
            </div>
        </footer>
        
+
+    
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
@@ -260,7 +215,7 @@ Template Name: Pricing Page Template
          document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
         if(oldonload){oldonload()}};
       }());
-      </script>
+    </script>
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5FP99N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -270,6 +225,39 @@ Template Name: Pricing Page Template
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FP99N');</script>
     <!-- End Google Tag Manager -->
-    <?php wp_footer(); ?>
+          <!-- Google Code for Clicked &#39;Try for Free&#39; Conversion Page
+      In your html page, add the snippet and call
+      goog_report_conversion when someone clicks on the
+      chosen link or button. -->
+      <script type="text/javascript">
+        /* <![CDATA[ */
+        goog_snippet_vars = function() {
+          var w = window;
+          w.google_conversion_id = 963132874;
+          w.google_conversion_label = "vCN2CPrf_F4QyvugywM";
+          w.google_remarketing_only = false;
+        }
+        // DO NOT CHANGE THE CODE BELOW.
+        goog_report_conversion = function(url) {
+          goog_snippet_vars();
+          window.google_conversion_format = "3";
+          window.google_is_call = true;
+          var opt = new Object();
+          opt.onload_callback = function() {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        }
+        var conv_handler = window['google_trackConversion'];
+        if (typeof(conv_handler) == 'function') {
+          conv_handler(opt);
+        }
+      }
+      /* ]]> */
+      </script>
+      <script type="text/javascript"
+        src="//www.googleadservices.com/pagead/conversion_async.js">
+      </script>
+      <?php wp_footer(); ?>
     </body>
 </html>

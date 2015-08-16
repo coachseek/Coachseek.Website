@@ -30,12 +30,20 @@ Template Name: Testimonial Page Template
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
 		<?php endif; ?>
        
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/newstyles3.css">
 
   
       <script type="text/javascript">
       window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
       heap.load("2818681617");
+
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-50345817-1', 'auto');
+     ga('send', 'pageview');
     </script>
     </head>
 
@@ -43,14 +51,14 @@ Template Name: Testimonial Page Template
     <div class="container">
         <header>
             <div class="row--full">
-               <div class="col-6-12 ">
+               <div class="col-3-12 ">
                  <div class="landing--header-logo">
                     <a href="<?php echo site_url(); ?>">
                       <img src="<?php echo get_stylesheet_directory_uri();?>/images/logo-compressor.png" alt="">
                     </a>   
                  </div>
                </div>
-               <div class="col-6-12 landing--header-nav">
+               <div class="col-9-12 landing--header-nav">
                    <div class="landing--header-nav-icon" href="">
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
@@ -58,7 +66,8 @@ Template Name: Testimonial Page Template
                       <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
-                       <li><a class="landing--header-signin" href="http://app.coachseek.com">Sign In</a></li>
+                        <li><a href="http://app.coachseek.com">Sign in</a></li>
+                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup">Sign up</a></li>
                    </ul>
               
                </div>               
@@ -204,6 +213,8 @@ Template Name: Testimonial Page Template
                        <li><a href="/features">Features</a></li>
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
+                       <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -237,7 +248,35 @@ Template Name: Testimonial Page Template
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
-     
+    <script> 
+         $(document).ready(function(){
+          setTimeout(function() {
+             $("html, body").animate({
+                scrollTop:$('.testimonial--home').position().top
+             },{duration:1200});
+           },1000);
+         
+         });
+          
+
+    </script>
+    <script type="text/javascript">
+      adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
+      adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
+      (function () {
+      var oldonload = window.onload;
+      window.onload = function(){
+        __adroll_loaded=true;
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+         document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        if(oldonload){oldonload()}};
+      }());
+      </script> 
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5FP99N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -248,6 +287,6 @@ Template Name: Testimonial Page Template
     })(window,document,'script','dataLayer','GTM-5FP99N');</script>
     <!-- End Google Tag Manager -->
 
-
+    <?php wp_footer(); ?>
     </body>
 </html>

@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Subscribe Paypal Page Template
+* Version: 1.0
+*/
+?>
 <!DOCTYPE html>
 <html  <?php language_attributes(); ?>>
     <head>
@@ -25,8 +31,8 @@
     <?php endif; ?>
        
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/newstyles3.css">
-   
-      
+        
+  
       <script type="text/javascript">
       window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
       heap.load("2818681617");
@@ -45,8 +51,8 @@
     </head>
 
     <body>
-       <div class="container">
-        <header>
+       <div class="container"> 
+        <header style="z-index:3;">
             <div class="row--full">
                <div class="col-3-12 ">
                  <div class="landing--header-logo">
@@ -63,7 +69,7 @@
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="http://app.coachseek.com">Sign in</a></li>
+                       <li><a href="http://app.coachseek.com">Sign in</a></li>
                        <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup">Sign up</a></li>
                    </ul>
               
@@ -71,91 +77,45 @@
             </div>
     </header>
 
-    <?php if( get_field('header-image') ): ?>
-       <div class="landing--home-bg">
-        <?php endif; ?>
-          <div class="landing--home-bg-overlap"></div>
+   
+       <div class="landing--home-bg" style="height:429px; background: url('<?php echo get_stylesheet_directory_uri();?>/images/overlap-black.png') center center; background-size: cover; z-index:0!important;">
+   
+         <?php if( get_field('header-image') ): ?>
+          <div class="landing--home-bg-overlap" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat;position: absolute;width: 100%;height: 100%; opacity:0.5!important;z-index:2!important;background-size: cover;"></div>
+          <?php endif; ?>
+
            <div class="row--full">
-               <h1><?php the_field('title'); ?></h1>
-               <p class="subtitle"><?php the_field('description'); ?></p>
-               <a class="landing--home-tryfree-btn" href="https://app.coachseek.com/#/new-user-setup" onClick="goog_report_conversion()">Try for free</a>
-               <a href="/matgarnham" class="matt-loves-coachseek"><?php the_field('ps'); ?></a>
+               <h1 style="letter-spacing: 0px;"><?php the_field('title'); ?></h1>
+               <p class="subtitle" style="padding-top:25px;"><?php the_field('description'); ?></p>
+           
            </div>
        </div>
        
-       <div class="landing--home-desc">
-             <h3><?php the_field('landing-home-desc'); ?></h3>
-             <?php
+       <div class="landing--home-desc" style="height:380px;text-align:center;">
 
-              // check if the flexible content field has rows of data
-              if( have_rows('features') ):
 
-                   // loop through the rows of data
-                  while ( have_rows('features') ) : the_row();
-                  if( get_row_layout() == 'circle-row' ): 
-                   ?>                     
-                <div class="row--full">
-                <?php  if( have_rows('circle-row') ):
-                      while ( have_rows('circle-row') ) : the_row(); ?>
-                 <div class="col-3-12">
-                    <div class="landing--home-circle">
-                        <img src="<?php the_sub_field('image');?>" alt="">
-                     </div>
-                     <h5><?php the_sub_field('title');?></h5>
-                     <p><?php the_sub_field('description');?></p>
-                 </div>
-                 
-                 <?
-                  endwhile;
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="FUM72FM8FG9NS">
+          <table style="margin:0 auto;">
+          <tr><td><input type="hidden" name="on0" value="Payment Options">Payment Options</td></tr><tr><td><select name="os0">
+              <option value="Solo Coach Plan (1 coach)">Solo Coach Plan (1 coach) : $20.00 USD - monthly</option>
+              <option value="Team Coach Plan (Upto 5 coaches)">Team Coach Plan (Upto 5 coaches) : $35.00 USD - monthly</option>
+              <option value="Pro Coach Plan (Upto 10 coaches)">Pro Coach Plan (Upto 10 coaches) : $60.00 USD - monthly</option>
+              <option value="Annual Solo Coach Plan">Annual Solo Coach Plan : $200.00 USD - yearly</option>
+              <option value="Annual Team Coach Plan">Annual Team Coach Plan : $350.00 USD - yearly</option>
+              <option value="Annual Pro Coach Plan">Annual Pro Coach Plan : $600.00 USD - yearly</option>
+          </select> </td></tr>
+          </table>
+          <input style="margin-top:20px;" type="hidden" name="currency_code" value="USD">
+          <input style="margin-top:20px;"  type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img style="margin-top:20px;"  alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
 
-                  endif;
-                  endif;
-                 ?>
 
-               </div>
-              <?php 
-
-              endwhile;
-              else :
-                  // no layouts found
-              endif;
-              ?>
-
-        
-           <div class="row--full">
-               <a href="/features">See more</a>
-           </div>
-       </div>
-      <?php if( get_field('quote-image') ): ?>
-       <div class="landing--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
-       <?php endif; ?>
-           <div class="landing--home-overlap"></div>
-           <div class="row--full">
-               <h3><?php the_field('quote-title'); ?></h3>
-               <p><?php the_field('quote-name'); ?></p>
-               <!-- <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Ref'});">Try for free</a> -->
-           </div>
-       </div>
-
-       <div class="landing--home-tryfree">
-         <div class="row--full">
-            <h3>Try Coachseek free for 14 days</h3>
-            <p>No Credit Card required</p>
-            <a href="https://app.coachseek.com/#/new-user-setup">Try for free</a>
-         </div>
-         <div class="row--full">
-            <div class="landing--home-tryfree-itworks-wrapper"><p class="landing--home-tryfree-itworks">It works across PC, tablets and mobile</p></div>
-         
-         </div>
-         <div class="row--full">
-            <div class="landing--home-supports">
-              <img src="<?php echo get_stylesheet_directory_uri();?>/images/supports.png" alt="">
-            </div>
-       
-         </div>
 
        </div>
-       
+   
        
        <footer>
            <div class="row">
@@ -209,23 +169,23 @@
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
-    <script type="text/javascript">
-      adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
-      adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
-      (function () {
-      var oldonload = window.onload;
-      window.onload = function(){
-        __adroll_loaded=true;
-        var scr = document.createElement("script");
-        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-        scr.setAttribute('async', 'true');
-        scr.type = "text/javascript";
-        scr.src = host + "/j/roundtrip.js";
-        ((document.getElementsByTagName('head') || [null])[0] ||
-         document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-        if(oldonload){oldonload()}};
-      }());
-      </script>
+     <script type="text/javascript">
+        adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
+        adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
+        (function () {
+        var oldonload = window.onload;
+        window.onload = function(){
+          __adroll_loaded=true;
+          var scr = document.createElement("script");
+          var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+          scr.setAttribute('async', 'true');
+          scr.type = "text/javascript";
+          scr.src = host + "/j/roundtrip.js";
+          ((document.getElementsByTagName('head') || [null])[0] ||
+           document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+          if(oldonload){oldonload()}};
+        }());
+        </script>
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5FP99N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

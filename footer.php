@@ -33,6 +33,8 @@
                        <li><a href="/features">Features</a></li>
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
+                       <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -87,6 +89,23 @@ if ( $customjs ) {
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FP99N');</script>
     <!-- End Google Tag Manager -->
+          <script type="text/javascript">
+      adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
+      adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
+      (function () {
+      var oldonload = window.onload;
+      window.onload = function(){
+        __adroll_loaded=true;
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+         document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        if(oldonload){oldonload()}};
+      }());
+      </script> 
 
 </body>
 
