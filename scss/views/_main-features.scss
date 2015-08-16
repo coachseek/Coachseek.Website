@@ -28,6 +28,22 @@
             margin: 0 auto;
           
         }
+         a{
+            margin-top: 20px;
+            position: relative;
+            top: 50px;
+            font-family: 'lato-regular';
+            font-size: 14px;
+            color: $white;
+            background: rgba($green, 1);
+            border-radius: 4px;
+            padding: 12px 27px;
+            transition: background ease .8s;
+            &:hover{
+                 background: rgba($light-green, 1);
+               
+            }
+        }
      }
 }
 

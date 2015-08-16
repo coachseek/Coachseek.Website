@@ -1,0 +1,66 @@
+#mc4wp-form-1{
+	.mc4wp-response{
+		color: $text-grey;
+		margin-bottom: 20px;
+		.mc4wp-alert{
+			color: $red;
+
+		}
+		.mc4wp-success{
+			font-family: lato-regular;
+			font-size: 24px;
+			color: $green;
+		}
+	}
+
+	text-align: center;
+	input[type="email"],input[type="text"]{
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		font-family: lato-light;
+		border: 1px solid #979797;
+		width: 499px;
+		height: 71px;
+		padding: 10px 20px;
+		border-radius: 6px;
+		margin-bottom: 13px;
+		&:focus{
+			border: 2px solid $green;
+			 outline: none;
+		}
+
+	}
+	input[type="submit"]{
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		font-family: lato-regular;
+		font-size: 18px;
+		margin-top: 12px;
+		margin-bottom: 12px;
+		background: $green;
+		width: 500px;
+		height: 72px;
+		text-align: center; 
+		border-radius: 6px;
+		color: #ffffff;
+		transition: background ease .8s;
+            &:hover{
+                background-color:$light-green;
+               
+        }	
+	}
+
+
+}
+
+@media (max-width: 767px){
+	.mc4wp-form-1761{
+		padding: 0 15px;
+	}
+	input[type="email"],input[type="text"],input[type="submit"]{
+		width: 100% !important;
+		max-width: 500px;
+
+	}
+	
+}

@@ -37,7 +37,7 @@
             margin: 0;
             text-align: left;
             font-size: 36px;
-            font-family: lato-regular;
+            font-family: lato-semi-bold;
             letter-spacing: 1px;
             text-transform: none;
             line-height: 40px;
@@ -57,7 +57,7 @@
             }
         }
         a.matt-loves-coachseek{
-            font-size:12px;
+            font-size:16px;
             transition: all ease .5s;
             clear: both;
             display: block;
@@ -269,7 +269,8 @@
         }
     }
     img{
-        max-width:100%;
+        max-width:879px;
+        width:100%;
     }
 }
 
@@ -284,9 +285,9 @@
 @media (max-width: 767px){
 
     .landing--home-bg {
-        background: url('../images/matt-mainbackground-Mobile@2x-compressor.png') 0px 40px no-repeat; 
+        background: url('../images/matt-mainbackground-Mobile@2x-compressor.png') 0px 13px no-repeat; 
         background-size: cover;
-        height:500px;
+        height:501px;
         .landing--home-bg-overlap{
             position: absolute;
             background: url("../images/overlap-black.png") center center;
@@ -304,7 +305,7 @@
             h1{
                 text-align:center;
                 font-size: 36px;
-                padding-top: 130px;
+                padding-top: 80px;
             }
             p.subtitle{
                 text-align:center;

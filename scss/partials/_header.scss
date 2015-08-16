@@ -60,7 +60,7 @@ header{
     header{
     &.mobile-header{
         position: relative;
-        height: 175px;
+        height: 260px;
     }    
    
         .row--full{
@@ -68,7 +68,7 @@ header{
                 position: relative;
                 @include column(12/12);
                 ul{
-                    height: 174px;
+                    height: 224px;
                     display: none;
                     clear: both;
                     width: 100%;
