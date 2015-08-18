@@ -64,7 +64,7 @@
                        <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
                         <li><a href="http://app.coachseek.com">Sign in</a></li>
-                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup">Sign up</a></li>
+                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Sign up</a></li>
                    </ul>
               
                </div>               
@@ -78,7 +78,7 @@
            <div class="row--full">
                <h1><?php the_field('title'); ?></h1>
                <p class="subtitle"><?php the_field('description'); ?></p>
-               <a class="landing--home-tryfree-btn" href="https://app.coachseek.com/#/new-user-setup" onClick="goog_report_conversion()">Try for free</a>
+               <a class="landing--home-tryfree-btn" href="https://app.coachseek.com/#/new-user-setup"  onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Home-Top'});">Try for free</a>
                <a href="/matgarnham" class="matt-loves-coachseek"><?php the_field('ps'); ?></a>
            </div>
        </div>
@@ -141,7 +141,7 @@
          <div class="row--full">
             <h3>Try Coachseek free for 14 days</h3>
             <p>No Credit Card required</p>
-            <a href="https://app.coachseek.com/#/new-user-setup">Try for free</a>
+            <a href="https://app.coachseek.com/#/new-user-setup"  onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Home-Bottom'});">Try for free</a>
          </div>
          <div class="row--full">
             <div class="landing--home-tryfree-itworks-wrapper"><p class="landing--home-tryfree-itworks">It works across PC, tablets and mobile</p></div>

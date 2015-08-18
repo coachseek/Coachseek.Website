@@ -68,7 +68,7 @@ Template Name: Careers Page Template
                        <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
                         <li><a href="http://app.coachseek.com">Sign in</a></li>
-                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup">Sign up</a></li>
+                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Sign up</a></li>
                    </ul>
               
                </div>               
@@ -164,7 +164,7 @@ Template Name: Careers Page Template
         <?php endif; ?>
            <div class="mainfea--home-overlap"></div>
            <div class="row--full">
-               <h3>Interested in Coachseek ?</h3>
+               <h3>Let's get started</h3>
 
                <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Careers'});">Try for free</a>
            </div>

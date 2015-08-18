@@ -7,7 +7,27 @@
 	.row--full{
 		font-size: 22px;
 		&:last-child{
-			padding-left: 120px;
+			// padding-left: 120px;
+		}
+		&.tryforfree{
+			 text-align: center;
+			a{
+	            top: 20px;
+	            position: relative;
+	         
+	            font-family: 'lato-regular';
+	            font-size: 14px;
+	            color: $white;
+	            float: none;
+	            background: rgba($green, 1);
+	            border-radius: 4px;
+	            padding: 12px 27px;
+	            transition: background ease .8s;
+	            &:hover{
+	                 background: rgba($light-green, 1);
+	               
+	            }
+	        }
 		}
 		h3{
 			text-align: center;

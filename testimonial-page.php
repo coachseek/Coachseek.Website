@@ -30,7 +30,7 @@ Template Name: Testimonial Page Template
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
 		<?php endif; ?>
        
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/newstyles3.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/newstyles4.css">
 
   
       <script type="text/javascript">
@@ -67,7 +67,7 @@ Template Name: Testimonial Page Template
                        <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
                         <li><a href="http://app.coachseek.com">Sign in</a></li>
-                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup">Sign up</a></li>
+                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Sign up</a></li>
                    </ul>
               
                </div>               
@@ -96,6 +96,9 @@ Template Name: Testimonial Page Template
            <div class="col-6-12">
              <img src="<?php the_field('testimonial-coach-image'); ?>" alt="">
            </div>
+         </div>
+         <div class="row--full tryforfree">
+            <a href="https://app.coachseek.com/#/new-user-setup"  onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Mat-Top'});">Try for free</a>            
          </div>
        </div>
 
@@ -190,7 +193,7 @@ Template Name: Testimonial Page Template
            <div class="row--full">
                <h3><?php the_field('quote-title'); ?></h3>
                <p><?php the_field('quote-name'); ?></p>
-               <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Ref'});">Try for free</a>
+               <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Mat-Bottom'});">Try for free</a>
            </div>
        </div>
 

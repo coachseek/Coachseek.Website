@@ -70,7 +70,7 @@ Template Name: Subscribe Paypal Page Template
                        <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="http://app.coachseek.com">Sign in</a></li>
-                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup">Sign up</a></li>
+                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Sign up</a></li>
                    </ul>
               
                </div>               
