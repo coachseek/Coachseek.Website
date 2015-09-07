@@ -24,28 +24,41 @@
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
     <?php endif; ?>
        
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/newstyles3.css">
-   
-      
-      <script type="text/javascript">
-      window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("2818681617");
-
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-     ga('create', 'UA-50345817-1', 'auto');
-     ga('send', 'pageview');
-
-      </script>
+    
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css?ver=<?php $theme_version = wp_get_theme(); echo $theme_version->Version; ?>" type="text/css" media="screen" />
 
          
     </head>
 
     <body>
        <div class="container">
+            <?php 
+              if(isset($_POST['submit'])){
+                  $to = "ian@coachseek.com,ianbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com"; // this is your Email address
+                  $from = $_POST['email']; // this is the sender's Email address
+                  $firstname = $_POST['firstname'];
+                  $lastname = $_POST['lastname'];
+                  $phone = $_POST['phone'];
+                  $subject = "Demo Request from landing page";
+                  $subject2 = "Copy of your Demo request submission";
+                  $message = $firstname . " ".$lastname . " Request a demo," . "\n\n" . "Business name is: ". $_POST['business']."\n\n". "phone number is : ".$phone ."\n\n". " email address is : ". $from;
+                  $message2 = "Here is a copy of your request " . $firstname . "\n\n" . $message;
+                  $headers = "From:" . $from;
+                  $headers2 = "From:" . $to;
+                  mail($to,$subject,$message,$headers);
+                  mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+                  echo "<p class='feedback' style='background:#00A578;text-align:center; color:white; font-size:14px;'>Your Demo request has been sent, see you soon!</p>";
+                  ?>
+                  <style type="text/css">
+
+                    div.tnz-header-row{
+                      display:none !important;
+                    }</style>
+                  <?php
+                  // You can also use header('Location: thank_you.php'); to redirect to another page.
+                  header( "Refresh:4; url=http://www.coachseek.com", true, 303);
+                  }
+              ?>
         <header>
             <div class="row--full">
                <div class="col-3-12 ">
@@ -70,6 +83,39 @@
                </div>               
             </div>
     </header>
+     <div id="demo" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
+                      <form method="post" name="form1" action="">     
+                        <div class="row">
+                        <div class="row--full">
+                      
+                          <div class="row--full left ">
+                            <input type="text" name="business" placeholder="Business name" required>
+                          </div>
+                          <div class="row--full name left">
+                          <div class="col-6-12">
+                            <input type="text" name="firstname" placeholder="First name" required>
+                          </div>
+                          <div class="col-6-12">
+                             <input type="text" name="lastname" placeholder="Last name" required></div>
+                          </div>
+
+                         
+                        </div>
+                        <div class="row--full">
+                          <div class="row--full right "><input type="email" name="email" placeholder="Email address" required></div>
+                          <div class="row--full right "><input type="tel" name="phone" placeholder="Phone number" required></div>
+                        </div>
+                      </div>
+                      <div class="row--full" style="text-align:center;">
+                        <button id="submit" type="submit" name="submit">Let's Talk</button>
+                      </div>
+                    </form>
+   
+
+                  </div>
+                </div>
 
     <?php if( get_field('header-image') ): ?>
        <div class="landing--home-bg">
@@ -78,7 +124,9 @@
            <div class="row--full">
                <h1><?php the_field('title'); ?></h1>
                <p class="subtitle"><?php the_field('description'); ?></p>
-               <a class="landing--home-tryfree-btn" href="https://app.coachseek.com/#/new-user-setup"  onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Home-Top'});">Try for free</a>
+               <a class="landing--home-tryfree-btn" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'main-top'});" >Try for free</a>
+               <a href="#demo" class="landing--home-tryfree-btn white">Request a Demo</a>
+               
                <a href="/matgarnham" class="matt-loves-coachseek"><?php the_field('ps'); ?></a>
            </div>
        </div>
@@ -133,7 +181,6 @@
            <div class="row--full">
                <h3><?php the_field('quote-title'); ?></h3>
                <p><?php the_field('quote-name'); ?></p>
-               <!-- <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Ref'});">Try for free</a> -->
            </div>
        </div>
 
@@ -141,7 +188,7 @@
          <div class="row--full">
             <h3>Try Coachseek free for 14 days</h3>
             <p>No Credit Card required</p>
-            <a href="https://app.coachseek.com/#/new-user-setup"  onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Home-Bottom'});">Try for free</a>
+            <a href="https://app.coachseek.com/#/new-user-setup"  onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'main-bottom'});">Try for free</a>
          </div>
          <div class="row--full">
             <div class="landing--home-tryfree-itworks-wrapper"><p class="landing--home-tryfree-itworks">It works across PC, tablets and mobile</p></div>
@@ -209,23 +256,7 @@
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
-    <script type="text/javascript">
-      adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
-      adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
-      (function () {
-      var oldonload = window.onload;
-      window.onload = function(){
-        __adroll_loaded=true;
-        var scr = document.createElement("script");
-        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-        scr.setAttribute('async', 'true');
-        scr.type = "text/javascript";
-        scr.src = host + "/j/roundtrip.js";
-        ((document.getElementsByTagName('head') || [null])[0] ||
-         document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-        if(oldonload){oldonload()}};
-      }());
-      </script>
+
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5FP99N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -235,39 +266,10 @@
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FP99N');</script>
     <!-- End Google Tag Manager -->
-          <!-- Google Code for Clicked &#39;Try for Free&#39; Conversion Page
-      In your html page, add the snippet and call
-      goog_report_conversion when someone clicks on the
-      chosen link or button. -->
-      <script type="text/javascript">
-        /* <![CDATA[ */
-        goog_snippet_vars = function() {
-          var w = window;
-          w.google_conversion_id = 963132874;
-          w.google_conversion_label = "vCN2CPrf_F4QyvugywM";
-          w.google_remarketing_only = false;
-        }
-        // DO NOT CHANGE THE CODE BELOW.
-        goog_report_conversion = function(url) {
-          goog_snippet_vars();
-          window.google_conversion_format = "3";
-          window.google_is_call = true;
-          var opt = new Object();
-          opt.onload_callback = function() {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        }
-        var conv_handler = window['google_trackConversion'];
-        if (typeof(conv_handler) == 'function') {
-          conv_handler(opt);
-        }
-      }
-      /* ]]> */
-      </script>
-      <script type="text/javascript"
-        src="//www.googleadservices.com/pagead/conversion_async.js">
-      </script>
+
+
+
+          
       <?php wp_footer(); ?>
     </body>
 </html>

@@ -30,24 +30,43 @@ Template Name: Main Features Page Template
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
 		<?php endif; ?>
        
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/newstyles4.css">
-  
-  
-      <script type="text/javascript">
-      window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("2818681617");
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css?ver=<?php $theme_version = wp_get_theme(); echo $theme_version->Version; ?>" type="text/css" media="screen" />
 
-     ga('create', 'UA-50345817-1', 'auto');
-     ga('send', 'pageview');
-    </script>
+
     </head>
 
     <body>
     <div class="container">
+         <?php 
+              if(isset($_POST['submit'])){
+                  $to = "ian@coachseek.com,ianbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com"; // this is your Email address
+                  $from = $_POST['email']; // this is the sender's Email address
+                  $firstname = $_POST['firstname'];
+                  $lastname = $_POST['lastname'];
+                  $phone = $_POST['phone'];
+                  $subject = "Demo Request from landing page";
+                  $subject2 = "Copy of your Demo request submission";
+                  $message = $firstname . " ".$lastname . " Request a demo," . "\n\n" . "Business name is: ". $_POST['business']."\n\n". "phone number is : ".$phone ."\n\n". " email address is : ". $from;
+                  $message2 = "Here is a copy of your request " . $firstname . "\n\n" . $message;
+                  $headers = "From:" . $from;
+                  $headers2 = "From:" . $to;
+                  mail($to,$subject,$message,$headers);
+                  mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+                  echo "<p class='feedback' style='background:#00A578;text-align:center; color:white; font-size:14px;'>Your Demo request has been sent, see you soon!</p>";
+                  ?>
+                  <style type="text/css">
+
+                    div.tnz-header-row{
+                      display:none !important;
+                    }</style>
+                  <?php
+                  $Path=$_SERVER['REQUEST_URI'];
+                  $URI='http://www.coachseek.com'.$Path;
+                  // You can also use header('Location: thank_you.php'); to redirect to another page.
+                  header( "Refresh:3; url=$URI", true, 303);
+                  }
+              ?>
         <header>
             <div class="row--full">
                <div class="col-3-12 ">
@@ -62,16 +81,49 @@ Template Name: Main Features Page Template
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
                    <ul class="landing--header-nav-list">
-                        <li><a href="/pricing">Pricing</a></li>
-                       <li><a href="/features">Features</a></li>
-                       <li><a href="/blog">Blog</a></li>
-                         <li><a href="http://app.coachseek.com">Sign in</a></li>
-                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Sign up</a></li>
+                      <li><a href="/pricing">Pricing</a></li>
+                      <li><a href="/features">Features</a></li>
+                      <li><a href="/blog">Blog</a></li>
+                      <li><a href="http://app.coachseek.com">Sign in</a></li>
+                      <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Sign up</a></li>
                    </ul>
               
                </div>               
             </div>
     </header>
+     <div id="demo" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
+                      <form method="post" name="form1" action="">     
+                        <div class="row">
+                        <div class="row--full">
+                      
+                          <div class="row--full left ">
+                            <input type="text" name="business" placeholder="Business name" required>
+                          </div>
+                          <div class="row--full name left">
+                          <div class="col-6-12">
+                            <input type="text" name="firstname" placeholder="First name" required>
+                          </div>
+                          <div class="col-6-12">
+                             <input type="text" name="lastname" placeholder="Last name" required></div>
+                          </div>
+
+                         
+                        </div>
+                        <div class="row--full">
+                          <div class="row--full right "><input type="email" name="email" placeholder="Email address" required></div>
+                          <div class="row--full right "><input type="tel" name="phone" placeholder="Phone number" required></div>
+                        </div>
+                      </div>
+                      <div class="row--full" style="text-align:center;">
+                        <button id="submit" type="submit" name="submit">Let's Talk</button>
+                      </div>
+                    </form>
+   
+
+                  </div>
+                </div>
       <?php if( get_field('header-image') ): ?>
        <div class="mainfea--home-bg" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat; background-size: cover;">
           <?php endif; ?>
@@ -79,7 +131,8 @@ Template Name: Main Features Page Template
            <div class="row--full">
                <h1><?php the_field('title'); ?></h1>
                <p><?php the_field('description'); ?></p>
-                <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'FeaturesAndSolutions-top'});">Try for free</a>
+                <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'FeaturesAndSolutions-top'}); ">Try for free</a>
+                <a href="#demo" class="white" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'FeaturesAndSolutions-top'}); ">Request a Demo</a>
         
            </div>
        </div>
@@ -144,6 +197,7 @@ Template Name: Main Features Page Template
                <h3>Let's get started</h3>
 
                <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'FeaturesAndSolutions-bottom'});">Try for free</a>
+               <a href="#demo" class="dark" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'FeaturesAndSolutions-bottom'});">Request a Demo</a>
            </div>
        </div>
        
@@ -198,23 +252,7 @@ Template Name: Main Features Page Template
     
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
-    <script type="text/javascript">
-      adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
-      adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
-      (function () {
-      var oldonload = window.onload;
-      window.onload = function(){
-        __adroll_loaded=true;
-        var scr = document.createElement("script");
-        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-        scr.setAttribute('async', 'true');
-        scr.type = "text/javascript";
-        scr.src = host + "/j/roundtrip.js";
-        ((document.getElementsByTagName('head') || [null])[0] ||
-         document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-        if(oldonload){oldonload()}};
-      }());
-    </script>
+   
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5FP99N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

@@ -30,22 +30,10 @@ Template Name: Pricing Page Template
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
 		<?php endif; ?>
        
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/newstyles3.css">
+    
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css?ver=<?php $theme_version = wp_get_theme(); echo $theme_version->Version; ?>" type="text/css" media="screen" />
 
- 
-  
-      <script type="text/javascript">
-      window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("2818681617");
 
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-     ga('create', 'UA-50345817-1', 'auto');
-     ga('send', 'pageview');
-    </script>
      </head>
 
     <body>
@@ -244,23 +232,7 @@ Template Name: Pricing Page Template
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
-    <script type="text/javascript">
-      adroll_adv_id = "HXFFG67C6NB25CAPFBAH7D";
-      adroll_pix_id = "OG6XM5DRCNEWTHQWORDY5P";
-      (function () {
-      var oldonload = window.onload;
-      window.onload = function(){
-        __adroll_loaded=true;
-        var scr = document.createElement("script");
-        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-        scr.setAttribute('async', 'true');
-        scr.type = "text/javascript";
-        scr.src = host + "/j/roundtrip.js";
-        ((document.getElementsByTagName('head') || [null])[0] ||
-         document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-        if(oldonload){oldonload()}};
-      }());
-      </script>
+   
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5FP99N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
