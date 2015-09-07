@@ -1,0 +1,624 @@
+.landing--header-nav-list.tnz-nav-list{
+	li{
+		a{
+			font-family:lato-regular;
+			&.landing--header-signin{
+				font-family:lato-light;
+			}
+		}
+	}
+}
+header.tnz-header {
+	height:21px; 
+	background:#00A578;
+	border:0px;
+	padding-top: 3px;
+	.tnz-header-row.row--full .landing--header-logo{
+		width:100%;
+	
+		a{
+			&.coachseek-logo{
+				img{
+					width:156px;
+				}
+			}
+			&.tnz-logo{
+				margin-left:60px;
+			}
+			
+		}
+	}
+	
+}
+
+.tnz--home{
+	height:237px;
+	background-color:$background-price;
+	.row{
+		max-width:1040px;
+		padding: 0 3%;
+		.col-6-12{
+			// margin-right: 1.5%;
+			input{
+				// background:url('images/input-overlap.png') repeat center center; 
+				background-color:rgba($white, .1);
+				height:40px;
+				width:100%;
+				border-radius:6px;
+				margin-top:5px;
+				margin-bottom:5px;
+				padding-left:25px;
+				color:$white;
+			}
+			::-webkit-input-placeholder {
+			   color: $white;
+			   opacity:.5;
+
+			}
+
+			:-moz-placeholder { /* Firefox 18- */
+			   color: $white; 
+			   opacity:.5;
+			}
+
+			::-moz-placeholder {  /* Firefox 19+ */
+			   color: $white; 
+			   opacity:.5; 
+			}
+
+			:-ms-input-placeholder {  
+			   color: $white;  
+			   opacity:.5;
+			}
+			.row--full{
+				&.name{
+					input{
+						width:100%;
+						&:first-child{
+							// margin-right:20px;
+						}
+					}
+				
+				}
+			}
+		}
+	}
+	.row--full{
+		&.left{
+			// text-align:right;
+		}
+
+		h5{
+			text-align:center;
+			font-size:20px;
+			padding: 10px 0 20px 0;
+		}
+		button{
+			position: relative;
+            display:block;
+            width: 225px;
+            height:40px;
+            color:$white;
+    		text-align: center;            
+			font-family: 'lato-regular';
+            font-size: 18px;
+            background-color: $green;
+            padding: 0px 40px;
+            border-radius: 4px;
+            margin: 0 auto;
+            margin-top:20px;
+            border:0;
+             // background: none;
+            transition: background ease .8s;
+            &:hover{
+                background-color:$light-green;
+               
+            }
+
+
+        }
+	}
+}
+
+
+.landing--home-bg.tnz{
+	height: 452px;
+	background-position: 0px 20px; 
+	background-size: cover;
+	.row--full {
+			h1{
+				padding-top: 40px;
+				font-size: 32px;
+			}
+			a.matt-loves-coachseek{
+				font-size: 12px;
+				position: relative;
+				top:-25px;
+				padding-top:0px;
+				text-align:right;
+				padding-right:40px;
+			}
+		
+	}
+	ul{
+		list-style-image: url('../images/tick.png');
+		padding-top:20px;
+		padding-left:35px;
+		li{
+			padding:12px 10px 10px 0px;
+			p{
+				font-size:16px;
+
+				width:240px;
+			}
+		}
+	}
+}
+.landing--home-quote.tnz-quote{
+	height: 394px;
+	.row--full{
+		padding-top:15px;
+		p{
+			font-size:15px;
+			font-family: lato-regular;
+			line-height: 25px;	
+			&:last-child{
+				margin-top:15px;
+				font-style: normal;
+				font-weight:bold; 
+			}
+		}
+	}
+	
+}
+
+.testimonial--home.tnz-testimonial{
+	height: 520px;
+	.row--full:nth-child(2){
+		padding-left:200px;
+	}
+	.row--full{
+		h3{
+			padding-top:60px;
+			padding-bottom:45px;
+		}
+	}
+}
+
+.pricing--home-list.tnz-pricing{
+	padding-bottom: 70px;
+	background-color: $background-mid-grey;
+	color: $text-dark;
+	padding-bottom: 50px;
+	.row{
+		padding: 60px 0px 30px 0px;
+		max-width: 1027px;
+		&:nth-child(2){
+			max-width: 700px;
+			padding-top:45px;
+		}
+		h3{
+			font-size:30px;
+			text-align:center;
+		}
+		.col-4-12{
+			position: relative;
+			height: 286px;
+			
+			.pricing--home-list-popular{
+				position:absolute;
+				top: -25px;
+				width: 100%;
+				height: 25px;
+				background: #F2784B;
+				color: #fff;
+				font-size: 14px;
+				text-align: center;
+				padding-top: 4px;
+				// display: flex;
+	   //          justify-content: center;
+	   //          flex-direction: column;
+				-webkit-box-shadow: 0px -1px 20px 0px rgba(51,51,51,0.4);
+				-moz-box-shadow: 0px -1px 20px 0px rgba(51,51,51,0.4);
+				box-shadow: 0px -1px 20px 0px rgba(51,51,51,0.4);
+
+			}
+			.pricing--home-list-price{
+				color: #fff;
+				text-align: center;
+				height: 160px;
+				background-color: $background-price;
+				// display: flex;
+	   //          justify-content: center;
+	   //          flex-direction: column;
+	   			padding-top: 8px;
+     			-webkit-box-shadow: 0px 0px 10px 0px rgba(51,51,51,0.4);
+				-moz-box-shadow: 0px 0px 10px 0px rgba(51,51,51,0.4);
+				box-shadow: 0px 0px 10px 0px rgba(51,51,51,0.4);
+				h5{
+					font-family: lato-medium;
+					font-size: 16px;
+					margin-bottom: 10px;
+					span{
+						font-size:14px;
+					}
+				}
+
+				h2{
+					font-family: lato-medium;
+					font-size: 40px;
+
+					span{
+						font-size: 14px;
+						position: relative;
+						left: -10px;
+					}
+				}
+				p{
+					margin-top:20px;
+					font-size:12px;
+				}
+			}
+			.pricing--home-list-coach{
+				height: 120px;
+				border: 1px solid #ddd;
+				background-color: #fff;
+				
+				font-size: 16px;
+				text-align: center;
+				p{
+					position: relative;
+					margin:20px 0px 35px 0;
+					&.unlimited{
+						margin-bottom: 25px;
+					}
+				}
+				a{
+					position: relative;
+					font-family: lato-medium;
+					padding: 10px 30px;
+					background-color: $green;
+					border-radius: 4px;
+					transition: background ease 0.8s;
+					&:hover{
+						background-color: $light-green;
+						
+					}
+				}
+			}
+		}
+	}
+	.pricing--home-list-desc{
+		padding: 10px 0 45px 0;
+		text-align: center;
+		font-family: 'lato-light-italic';
+		font-size: 18px;
+	}
+	.pricing--home-list-suitplan{
+		text-align: center;
+		background-color: #DCDCDC;
+		border: 1px solid #ccc;
+		padding: 20px 0;
+		font-size: 18px;
+		h5{
+			font-family: lato-medium;
+			font-weight: 300;
+		}
+		a{
+			color: $light-green;
+		}
+
+	}
+}
+
+.landing--home-tryfree.tnz-tryfree{
+
+	h3{
+		padding-bottom: 35px;
+	}
+	a{
+		margin-bottom:40px;
+	}
+
+}
+.landing--home-desc.tnz-desc{
+	padding-top:40px;
+	padding-bottom:70px;
+	h3{
+		padding-bottom:80px;
+	}
+}
+
+@media (max-width : 480px){
+	.testimonial--home.tnz-testimonial{
+		height: 900px;
+	}
+	
+}
+
+@media (max-width : 767px) {
+	.landing--home-quote.tnz-quote{
+	height: 304px;
+		.row--full{
+			padding:40px 4% 0px 5%;
+		
+			p{
+				height:120px;
+				text-align:justify;
+				overflow-y:hidden;
+				width:100%;
+				font-size:15px;
+				&:last-child{
+					font-size:15px;
+					padding-top:30px;
+					padding-right:20%;
+					text-align:left;
+				}
+
+			}
+		}
+		
+	}   
+    .pricing--home-bg.tnz{
+    	height: 310px;
+    	.row--full {
+    		h1{
+		        width: 100%;
+		        padding: 100px 10px 0 20px;
+		        font-size: 34px;
+		    }
+		    p.subtitle{
+		    	width: 100%;
+		    	padding: 0 18px;
+		    }
+		    a.matt-loves-coachseek{
+		    	text-align:center;
+		    	padding-top:20px;
+		    }
+		}
+	}
+    .pricing--home-list{
+    	&.tnz-pricing{
+    		.row{
+    			padding: 30px 0px 10px 0px;
+    			h3{
+    				font-size:20px;
+    			}
+    		}
+    	}
+    	padding-bottom: 0px;
+    	.pricing--home-list-desc{
+    		display: block !important;
+    	}
+    	.pricing--home-list-suitplan{
+			display: block !important;
+    	}
+        .row{
+        	padding: 30px 10px 0px 10px;
+            .col-4-12{
+            	text-align: center;
+                &:nth-child(2){
+                    margin-top:60px;
+                    margin-bottom:30px;
+                }
+                &:last-child{
+                    .unlimited{
+                        margin-bottom:18px !important;
+                    }
+                }
+                height:160px !important;
+                .pricing--home-list-price{
+                 @include span(6/12); 
+                 h5{
+                 	padding-top: 10px;
+                 }
+                }
+                .pricing--home-list-coach{
+                     @include span(6/12); 
+                     height:160px !important;
+                     p{
+                        margin-top:18px !important;
+                        margin-bottom:35px !important;
+                     }
+                }
+            }
+            
+        }
+  
+    }
+    .mainfea--home-quote .row--full h3{
+    	width: 100%;
+    }
+}
+
+
+
+.tnz-partner{
+	width: 100%;
+	height: 300px;
+	.row--full{
+		text-align: center;
+		&:first-child{
+			border-top:1px solid #ddd;
+			margin: 0 10%;
+			p{
+				padding-top: 40px;
+				color: $text-dark;
+			}
+		}
+
+		&:last-child{
+			padding:50px 0 80px 0;
+			img{
+				display: inline-block;
+				&:first-child{
+					margin-right: 100px;
+					position: relative;
+					top:-40px;
+				}
+			}
+		}
+		
+	}
+}
+
+
+@media (max-width: 767px){
+	.pricing--home-list.tnz-pricing{
+		padding-top: 20px;
+    	padding-bottom: 40px;
+    	.row {
+    			padding:20px 4% 20px 4%;
+    		.col-4-12 {
+	    		.pricing--home-list-price{
+	    			padding-top:0px;
+
+	    			display:block !important;
+	    		}
+	    		.pricing--home-list-coach{
+	    			display:block !important;
+	    			a{
+	    		    	padding: 10px 20px;
+	    		    }
+	    		}
+	    	}
+    	}
+	}
+	.testimonial--home.tnz-testimonial{
+		height: 900px !important;
+		.row--full{
+			h3,h5,h6,a{
+				text-align: center
+			}
+			p{
+				float:none;
+				width: 100%;
+				max-width: 90%;
+    			margin: 0 auto;
+    			padding-left: 10px;
+    			padding-right: 10px;
+			}
+			a{
+				width: 100%;
+			}
+			.col-6-12{
+				text-align: center;
+				img{
+					max-width: 90%;
+				}
+			}
+		}
+	}
+}
+@media (max-width:767px){
+	.tnz--home {
+		height:100%;
+		max-height: 400px;	
+		.row .col-6-12 input{
+			margin-left:2%;
+			margin-right:2%;
+			max-width:96%;
+		}
+	
+	}
+
+
+}
+
+@media (max-width:767px){
+
+	header.tnz-header {
+		height: 40px;
+		.row--full {
+			.landing--header-logo a.tnz-logo{
+				display:none!important;
+			}
+			.landing--header-nav .landing--header-nav-icon{
+				top:-38px;
+			}
+		}
+	}
+	.landing--home-bg.tnz{
+		height:100%;
+		max-height: 480px;
+		.row--full{
+			h1{
+				font-size:20px;
+				text-align:left;
+				line-height:22px;
+				padding-top:60px;
+				padding-left: 20px;
+			}
+			a.matt-loves-coachseek{
+		    	text-align:center;
+		    	padding:0px;
+		    	top:40px;
+		    }
+
+		}
+		ul{
+			padding-left:50px;
+			li{
+				padding-top:10px;
+				padding-bottom:8px;
+				p{
+					width:100%;
+					font-size:16px;
+
+
+				}
+			}
+		}
+	}
+	.landing--home-tryfree {
+		height: 580px;
+		h3{
+			font-size:20px;
+		}
+	}
+	.landing--home-desc h3{
+		font-size:20px;
+	}
+
+	.tnz-partner{
+		.row--full:last-child img:first-child{
+			margin-right: 0px;
+			padding-top: 20px;
+		}
+	}
+}
+
+@media (min-width: 768px) 
+  and (max-width: 1024px) {
+	.testimonial--home.tnz-testimonial .row--full:nth-child(2) {
+    	padding-left: 30px;
+	}
+}
+
+
+@media (max-width: 1100px){
+	header .row--full .landing--header-logo a.tnz-logo{
+		margin-left:30px;
+	}
+	.testimonial--home.tnz-testimonial{
+		.row--full {
+			h3{
+				font-size:20px;
+			}
+			h5{
+				font-size:18px;
+			}
+			h6{
+				font-size:14px;
+			}
+
+			a{
+				font-size:14px;
+			}
+		}
+		.row--full:nth-child(2){
+			padding-left: 6%;
+		}
+	}
+}
+
