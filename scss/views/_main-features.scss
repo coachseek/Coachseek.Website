@@ -43,7 +43,19 @@
                  background: rgba($light-green, 1);
                
             }
+
+            &.white{
+                background-color:rgba($white, 0.9);
+                color: $green;
+                padding: 12px 15px;
+                margin-left: 20px;
+                &:hover{
+                    background: rgba($white, 1);
+               
+                }
+            }
         }
+
      }
 }
 
@@ -121,6 +133,16 @@
             &:hover{
                  background: rgba($white, 1);
                
+            }
+            &.dark{
+                background-color:rgba($background-price, 0.8);
+                color: $white;
+                padding: 12px 15px;
+                margin-left: 20px;
+                &:hover{
+                    background: rgba($background-price, 1);
+               
+                }
             }
         }
     }
