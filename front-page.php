@@ -34,7 +34,7 @@
        <div class="container">
             <?php 
               if(isset($_POST['submit'])){
-                  $to = "ian@coachseek.com,ianbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com"; // this is your Email address
+                  $to = "ian@coachseek.com,ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com"; // this is your Email address
                   $from = $_POST['email']; // this is the sender's Email address
                   $firstname = $_POST['firstname'];
                   $lastname = $_POST['lastname'];

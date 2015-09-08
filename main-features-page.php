@@ -39,13 +39,14 @@ Template Name: Main Features Page Template
     <body>
     <div class="container">
          <?php 
+              $Path=$_SERVER['REQUEST_URI'];
               if(isset($_POST['submit'])){
-                  $to = "ian@coachseek.com,ianbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com"; // this is your Email address
+                  $to = "ian@coachseek.com,ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com"; // this is your Email address
                   $from = $_POST['email']; // this is the sender's Email address
                   $firstname = $_POST['firstname'];
                   $lastname = $_POST['lastname'];
                   $phone = $_POST['phone'];
-                  $subject = "Demo Request from landing page";
+                  $subject = "Demo Request from ". $Path." page";
                   $subject2 = "Copy of your Demo request submission";
                   $message = $firstname . " ".$lastname . " Request a demo," . "\n\n" . "Business name is: ". $_POST['business']."\n\n". "phone number is : ".$phone ."\n\n". " email address is : ". $from;
                   $message2 = "Here is a copy of your request " . $firstname . "\n\n" . $message;
@@ -61,7 +62,7 @@ Template Name: Main Features Page Template
                       display:none !important;
                     }</style>
                   <?php
-                  $Path=$_SERVER['REQUEST_URI'];
+             
                   $URI='http://www.coachseek.com'.$Path;
                   // You can also use header('Location: thank_you.php'); to redirect to another page.
                   header( "Refresh:3; url=$URI", true, 303);
