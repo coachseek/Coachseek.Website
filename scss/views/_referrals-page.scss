@@ -1,0 +1,81 @@
+.referral--faqs{
+	color: $text-dark-grey;
+	padding:20px 10%;
+	a{
+		color: $green;
+	}
+	.row--full{
+		&.referral--faqs-contactus {
+			text-align: center;
+			padding: 50px 0px;
+		}
+		h1{
+			text-transform: none;
+			padding: 40px 0px;
+		}
+
+		.col-4-12{
+			text-align: justify;
+			padding-bottom: 20px;
+			h3{
+				font-size: 18px;
+				padding-bottom: 10px;
+			}
+			p{
+				font-size: 17px;
+			}
+			
+		}
+	}
+}
+.pricing--home-list.tnz-pricing.referral--testimonials{
+	padding:50px 6%;
+	a{
+		color: $green;
+	}
+	.row--full{
+		.col-4-12{
+			padding-bottom: 30px;
+			padding-top: 30px;
+			padding-right: 10px;
+			img{
+				max-width:80px;
+				width: 100%; 
+				border-radius: 100px;
+			}
+			.col-9-12	{
+				p{
+					text-align: justify;
+					&.referral--testimonials-words{
+						padding-bottom: 20px;
+					}
+					
+				}
+			}
+		}
+	}
+}
+.landing--home-quote.tnz-quote.referral-quote .row--full{
+	
+	a{
+		width: 400px;
+	}
+}
+
+@media (max-width : 767px) {
+	.pricing--home-list.tnz-pricing.referral--testimonials .row--full .col-4-12{		
+		text-align: center;
+		 .col-9-12 p{
+		 	text-align: center;
+		 }
+	}
+	.landing--home-quote.tnz-quote.referral-quote .row--full{
+		padding: 0px;
+		a{
+			width: 100%;
+		}
+	}
+	.landing--home-desc.referrals-feature .row--full img{
+		padding-bottom: 0px;
+	}
+}

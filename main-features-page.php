@@ -41,7 +41,7 @@ Template Name: Main Features Page Template
          <?php 
               $Path=$_SERVER['REQUEST_URI'];
               if(isset($_POST['submit'])){
-                  $to = "ian@coachseek.com,ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com"; // this is your Email address
+                  $to = "ian@coachseek.com,ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com,Apwong8@gmail.com"; // this is your Email address
                   $from = $_POST['email']; // this is the sender's Email address
                   $firstname = $_POST['firstname'];
                   $lastname = $_POST['lastname'];
@@ -84,9 +84,10 @@ Template Name: Main Features Page Template
                    <ul class="landing--header-nav-list">
                       <li><a href="/pricing">Pricing</a></li>
                       <li><a href="/features">Features</a></li>
+                       <li><a href="/support">Support</a></li>
                       <li><a href="/blog">Blog</a></li>
                       <li><a href="http://app.coachseek.com">Sign in</a></li>
-                      <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Sign up</a></li>
+                      <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Start My 14 Day Trial</a></li>
                    </ul>
               
                </div>               
@@ -137,6 +138,55 @@ Template Name: Main Features Page Template
         
            </div>
        </div>
+
+
+       <?php
+
+        // check if the flexible content field has rows of data
+        if( have_rows('feature-testimonial') ):
+
+             // loop through the rows of data
+            while ( have_rows('feature-testimonial') ) : the_row();
+
+                if( get_row_layout() == 'feature-testimonial' ):
+
+                ?>
+                  <div class="testimonial--home">
+                   <div class="row--full">
+                     <h3><?php the_field('testimonial-title'); ?></h3>
+                   </div>
+                   <div class="row--full">
+                     <div class="col-6-12">
+                       <h5><?php the_field('testimonial-coach-name'); ?></h5>
+                       <a href="http://<?php the_field('testimonial-coach-website'); ?>" target="_blank"><?php the_field('testimonial-coach-organization'); ?></a>
+                       <p><?php the_field('testimonial-coach-description'); ?></p>
+                     </div>
+                     <div class="col-6-12">
+                       <img style="max-height: 312px;" src="<?php the_field('testimonial-coach-image'); ?>" alt="">
+                     </div>
+                   </div>
+                   <div class="row--full tryforfree">
+
+                   <a href="https://app.coachseek.com/#/new-user-setup"  onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Mat-Top'});">Try for free</a> 
+                   <a href="/features"  onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Mat-Top'});">See Features</a> 
+                                
+                   </div>
+                 </div>
+
+                <?php
+
+
+                endif;
+
+            endwhile;
+
+        else :
+
+            // no layouts found
+
+        endif;
+
+        ?>
 
        <div class="mainfea--home-feature">       
         <?php
@@ -189,18 +239,191 @@ Template Name: Main Features Page Template
 
         ?>           
        </div>
-       
-       <?php if( get_field('quote-image') ): ?>
-       <div class="mainfea--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
-        <?php endif; ?>
-           <div class="mainfea--home-overlap"></div>
-           <div class="row--full">
-               <h3>Let's get started</h3>
+       <?php
 
-               <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'FeaturesAndSolutions-bottom'});">Try for free</a>
-               <a href="#demo" class="dark" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'FeaturesAndSolutions-bottom'});">Request a Demo</a>
-           </div>
-       </div>
+         // check if the flexible content field has rows of data
+        if( have_rows('feature-quote') ):
+
+            // loop through the rows of data
+          while ( have_rows('feature-quote') ) : the_row();
+
+            if( get_row_layout() == 'feature-quote' ):
+
+            ?>
+
+           <?php if( get_field('feature-quote-image') ): ?>
+             <div class="landing--home-quote testimonial-quote" style="background: url('<?php the_field('feature-quote-image'); ?>') center center no-repeat; background-size: cover;">
+             <?php endif; ?>
+                 <div class="landing--home-overlap"></div>
+                 <div class="row--full">
+                     <h3><?php the_field('feature-quote-title'); ?></h3>
+                     <p><?php the_field('feature-quote-name'); ?></p>
+                     <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Mat-Bottom'});">Try for free</a>
+                 </div>
+             </div>
+              <?php
+            
+
+            endif;
+
+            endwhile;
+
+          else :
+
+                  // no layouts found
+
+          endif;
+
+       ?>
+ 
+
+          <?php
+
+            // check if the flexible content field has rows of data
+            if( have_rows('feature-price') ):
+
+                 // loop through the rows of data
+                while ( have_rows('feature-price') ) : the_row();
+
+                    if( get_row_layout() == 'feature-price' ):
+
+                    ?>
+                       <div class="pricing--home-list testimonial-pricing">
+                       <div class="row">
+                        <?php
+                          // check if the flexible content field has rows of data
+                          if( have_rows('price-page-plan') ):
+                           // loop through the rows of data
+                          while ( have_rows('price-page-plan') ) : the_row(); 
+                          if( get_row_layout() == 'popular' ):
+
+                          ?>
+                          <div class="col-3-12">
+                           <div class="pricing--home-list-popular">Popular</div>  
+                            <div class="pricing--home-list-price">
+                              <h5><?php the_sub_field('plan-name');?></h5>
+                              <h2>$<?php the_sub_field('price-number');?> <span>/mo</span></h2>
+                            </div>
+                            <div class="pricing--home-list-coach">
+                              <p><?php the_sub_field('coach-number');?></p>
+                              <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free trial</a>
+                            </div>
+                          </div>
+                         <?php elseif( get_row_layout() == 'unlimited' ): ?>
+                             <div class="col-3-12">
+                              <div class="pricing--home-list-price">
+                                  <h5><?php the_sub_field('plan-name');?></h5>
+                                  <h2><?php the_sub_field('price-poa');?></h2>
+                                </div>
+                                <div class="pricing--home-list-coach">
+                                  <p class="unlimited"><?php the_sub_field('coach-number');?></p>
+                                  <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free trial</a>
+                              </div>
+                            </div>
+                         <?php elseif( get_row_layout() == 'normal' ): ?>       
+                            <div class="col-3-12">  
+                             
+                                <div class="pricing--home-list-price">
+                                  <h5><?php the_sub_field('plan-name');?></h5>
+                                  <h2>$<?php the_sub_field('price-number');?> <span>/mo</span></h2>
+                                </div>
+                                <div class="pricing--home-list-coach">
+                                  <p><?php the_sub_field('coach-number');?></p>
+                                  <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free trial</a>
+                                </div>
+                            </div>
+                          <?php endif;
+
+                              endwhile;
+
+                              else :
+
+                                  // no layouts found
+
+                              endif;
+
+                          ?>       
+                       </div>
+                       <div class="pricing--home-list-desc row">
+                          <?php
+                          // check if the flexible content field has rows of data
+                          if( have_rows('price-information') ):
+                           // loop through the rows of data
+                          while ( have_rows('price-information') ) : the_row(); 
+
+                          ?>
+                         <p>
+                         <?php the_sub_field('information');?>
+                         </p>
+                       </div>
+                       <div class="pricing--home-list-suitplan row">
+                          <h5><?php the_sub_field('help');?></h5>
+                          <?php the_sub_field('help-information');?>
+                           <?php 
+
+                              endwhile;
+
+                              else :
+
+                                  // no layouts found
+
+                              endif;
+
+                          ?>       
+                       </div>
+                     </div>
+                    <?php
+
+                    endif;
+
+                endwhile;
+
+            else :
+
+                // no layouts found
+
+            endif;
+
+            ?>
+
+            <?php
+
+              // check if the flexible content field has rows of data
+              if( have_rows('feature-quote-bottom') ):
+
+                   // loop through the rows of data
+                  while ( have_rows('feature-quote-bottom') ) : the_row();
+
+                      if( get_row_layout() == 'feature-quote-bottom' ):
+
+                    ?>
+                    <?php if( get_field('quote-image') ): ?>
+                    <div class="mainfea--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
+                      <?php endif; ?>
+                     <div class="mainfea--home-overlap"></div>
+                       <div class="row--full">
+                           <h3>Let's get started</h3>
+
+                           <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'FeaturesAndSolutions-bottom'});">Try for free</a>
+                           <a href="#demo" class="dark" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'FeaturesAndSolutions-bottom'});">Request a Demo</a>
+                       </div>
+                     </div>
+                     <?php
+
+            
+
+                      endif;
+
+                  endwhile;
+
+              else :
+
+                  // no layouts found
+
+              endif;
+
+              ?>
+
        
        
            <footer>
@@ -212,6 +435,8 @@ Template Name: Main Features Page Template
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="/careers">Careers</a></li>
                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
+                       <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
+                       <li><a href="/referrals">Refer & Earn</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -221,7 +446,8 @@ Template Name: Main Features Page Template
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                        <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>
-                        <li><a href="/newsletter">Newsletter</a></li>
+                       <li><a href="/newsletter">Newsletter</a></li>
+                       <li><a href="/subscribe-paypal">Subscribe</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -253,6 +479,16 @@ Template Name: Main Features Page Template
     
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-50345817-1', 'auto');
+     ga('send', 'pageview');
+
+    </script>
    
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5FP99N"

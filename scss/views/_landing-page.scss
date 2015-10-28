@@ -102,7 +102,23 @@
             color:$white;
         }
 
-         
+.modalDialog.landing--home-video-modal{
+    -webkit-transition: opacity 100ms ease-in;
+    -moz-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+        div{
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin-top: 0px;
+        }
+        .close-video{
+            right: 0px;
+            position: absolute;
+            top: 0px;
+        }
+}
+
 
 .landing--home-bg{
     &.testimonial{
@@ -116,8 +132,12 @@
     height: 656px;
     display: block;
     z-index: 0;
-    background: url('../images/matt-mainbackground.jpg') 0 40px no-repeat; 
-    background-size: cover;
+  
+   
+        background: url('../images/matt-mainbackground.jpg') 0 40px no-repeat; 
+        background-size: cover;
+    
+   
     .landing-home-computer{
         text-align: center;
         top:40px;
@@ -162,7 +182,17 @@
                 clear:both;
             }
         }
+        a.landing--home-video{
+            width: 100%;
+            max-width: 260px;
+            display: block;
+            font-size: 24px;
+            padding-bottom: 45px;
+            
+        }
         a.matt-loves-coachseek{
+            width: 100%;
+            max-width: 260px;
             font-size:16px;
             transition: all ease .5s;
             clear: both;
@@ -173,6 +203,11 @@
                
             }
 
+        }
+        p.landing--home-tryfree-desc{
+            clear: both;
+            font-size:14px;
+            font-weight:bold;
         }
         a.landing--home-tryfree-btn{ 
             position: relative;
@@ -222,6 +257,44 @@
     .row--full{
         padding: 0 7%;
         .col-3-12{
+            text-align: center;
+
+            position: relative;
+            color: $text-dark-grey;
+            .landing--home-circle{
+                margin:0 auto;
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border-radius: 150px;
+                -webkit-border-radius: 150px;
+                -moz-border-radius: 150px;
+                // border: 1px solid #ddd;
+                box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+                -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+                -moz-box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+                img{
+                    width: 100%;
+
+
+                }
+    
+            }
+            h5{
+                padding-top: 30px;
+                padding-bottom: 12px;
+                font-weight: 300;
+                width: 200px;
+                margin: 0 auto;
+                
+            }
+            p{
+                 width: 200px;
+                 margin:0 auto;
+                 padding-bottom: 40px;
+            }
+        }
+        .col-4-12{
             text-align: center;
 
             position: relative;
@@ -407,7 +480,7 @@
     .landing--home-bg {
         background: url('../images/matt-mainbackground-Mobile@2x-compressor.png') 0px 13px no-repeat; 
         background-size: cover;
-        height:501px;
+        height:initial;
         .landing--home-bg-overlap{
             position: absolute;
             background: url("../images/overlap-black.png") center center;
@@ -436,6 +509,20 @@
             p.sublabel{
                 text-align:center;
                 width: 100%;
+            }
+
+            a.landing--home-video{
+          
+                max-width: 100%;
+        
+                
+            }
+            p.landing--home-tryfree-desc{
+                text-align: center;
+                width: 100%;
+            }
+            a.matt-loves-coachseek{
+                max-width: 100%;
             }
             a,a.landing--home-tryfree-btn{
                 display:block;

@@ -82,8 +82,8 @@ add_filter( 'textarea_code', 'shortcode_unautop');
 
 add_filter('textarea_code', 'do_shortcode');
 
-echo apply_filters( 'the_content', $options['textarea_input']); 
-
+// echo apply_filters( 'the_content', $options['textarea_input']); 
+// wp_deregister_style( $handle );
 
 /*$subtitle = get_post_meta('portfolio-' . $page->ID, 'Slide_subtitle',  true);
 

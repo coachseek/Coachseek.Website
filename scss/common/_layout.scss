@@ -97,6 +97,9 @@ body {
     .col-4-12{
          @include column(12/12);  
     }
+    .col-9-12 {
+        @include column(12/12);
+    }
     .col-7-12{
          @include column(12/12);  
           &.push-7 {

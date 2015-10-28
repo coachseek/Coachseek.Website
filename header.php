@@ -71,23 +71,24 @@
 
 		 <header>
             <div class="row--full">
-               <div class="col-6-12 ">
+               <div class="col-4-12 ">
                  <div class="landing--header-logo">
                     <a href="<?php echo site_url(); ?>">
                       <img src="<?php echo get_stylesheet_directory_uri();?>/images/logo-compressor.png" alt="">
                     </a>   
                  </div>
                </div>
-               <div class="col-6-12 landing--header-nav">
+               <div class="col-8-12 landing--header-nav">
                    <div class="landing--header-nav-icon" href="">
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
                    <ul class="landing--header-nav-list">
                    	   <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/features">Features</a></li>
+                       <li><a href="/support">Support</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="http://app.coachseek.com">Sign in</a></li>
-                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Sign up</a></li>
+                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Start My 14 Day Trial</a></li>
                    </ul>
               
                </div>               

@@ -1,0 +1,21 @@
+.landing--home-desc .row--full {
+	ul{
+		padding-left: 20px;
+		padding-bottom: 40px;
+		li{
+			text-align:left;
+			list-style-type: square;
+			a{
+				&.support-link{
+					text-align:left;
+					width:90%;
+					padding:0px;
+					margin:0px;
+					background-color:transparent;
+					top:0px;
+					color:#00BF8C;
+				}
+			}
+		}
+	}	
+}

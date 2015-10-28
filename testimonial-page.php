@@ -54,9 +54,10 @@ Template Name: Testimonial Page Template
                    <ul class="landing--header-nav-list">
                       <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/features">Features</a></li>
+                        <li><a href="/support">Support</a></li>
                        <li><a href="/blog">Blog</a></li>
                         <li><a href="http://app.coachseek.com">Sign in</a></li>
-                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Sign up</a></li>
+                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Start My 14 Day Trial</a></li>
                    </ul>
               
                </div>               
@@ -200,6 +201,8 @@ Template Name: Testimonial Page Template
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="/careers">Careers</a></li>
                         <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
+                        <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
+                        <li><a href="/referrals">Refer & Earn</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -209,7 +212,8 @@ Template Name: Testimonial Page Template
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                        <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>
-                        <li><a href="/newsletter">Newsletter</a></li>
+                       <li><a href="/newsletter">Newsletter</a></li>
+                       <li><a href="/subscribe-paypal">Subscribe</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -253,6 +257,16 @@ Template Name: Testimonial Page Template
          
          });
           
+
+    </script>
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-50345817-1', 'auto');
+     ga('send', 'pageview');
 
     </script>
     

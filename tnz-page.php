@@ -41,7 +41,7 @@ Template Name: Tnz Page Template
         <header class="tnz-header">
               <?php 
               if(isset($_POST['submit'])){
-                   $to = "ian@coachseek.com,ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com"; // this is your Email address
+                   $to = "ian@coachseek.com,ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com,Apwong8@gmail.com"; // this is your Email address
                   $from = $_POST['email']; // this is the sender's Email address
                   $firstname = $_POST['firstname'];
                   $lastname = $_POST['lastname'];
@@ -67,7 +67,7 @@ Template Name: Tnz Page Template
                   }
               ?>
             <div class="row--full tnz-header-row">
-                  <p style="font-size:13px;text-align:center; font-family:lato-regular;">Exclusive offer for TNZ Registered Coaches - get 25% discount on Coachseek!</p>     
+                  <p style="font-size:13px;text-align:center; font-family:lato-regular;">Exclusive offer for TNZ Registered Coaches - get 25% discount on Coachseek!  <a href="#" class="matt-loves-coachseek-top" style="text-decoration:underline;">See why Mat loves Coachseek ></a></p>     
             </div>
       </header>
       <?php if( get_field('header-image') ): ?>
@@ -103,7 +103,7 @@ Template Name: Tnz Page Template
                   ?>
 
                 </ul>
-                 <a href="#" class="matt-loves-coachseek">See why TNZ Club Coach of the Year, Mat Garnham, loves Coachseek ></a>
+               
            </div>
        </div>
 
@@ -338,11 +338,21 @@ Template Name: Tnz Page Template
               scrollTop: $(".tnz-list").offset().top},
               1500);
       });
-      $("a.matt-loves-coachseek").click(function() {
-          $('html,body').animate({
+      $("a.matt-loves-coachseek-top").click(function() {
+         $('html,body').animate({
               scrollTop: $(".testimonial--home").offset().top},
               1500);
       });
+
+    </script>
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-50345817-1', 'auto');
+     ga('send', 'pageview');
 
     </script>
     
@@ -356,6 +366,5 @@ Template Name: Tnz Page Template
     })(window,document,'script','dataLayer','GTM-5FP99N');</script>
     <!-- End Google Tag Manager -->
 
-    <?php wp_footer(); ?>
     </body>
 </html>
