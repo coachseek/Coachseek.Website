@@ -87,6 +87,9 @@ body {
 .col-9-12 {
     @include column(9/12);
 }
+.col-10-12 {
+    @include column(10/12);
+}
 
 
 

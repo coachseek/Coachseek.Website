@@ -5,7 +5,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.7);
             z-index: 99999;
             opacity:0;
             -webkit-transition: opacity 400ms ease-in;
@@ -118,6 +118,17 @@
             top: 0px;
         }
 }
+.modalDialog.testimonial--home-video-modal{
+    @extend .modalDialog.landing--home-video-modal;
+    div{
+        width: 61%;
+        height: 61%;
+        margin-top: 7%;
+    }
+    .close-video{
+        top: -25px;
+    }
+}
 
 
 .landing--home-bg{
@@ -132,10 +143,8 @@
     height: 656px;
     display: block;
     z-index: 0;
-  
-   
-        background: url('../images/matt-mainbackground.jpg') 0 40px no-repeat; 
-        background-size: cover;
+    background: url('../images/matt-mainbackground.jpg') 0 40px no-repeat; 
+    background-size: cover;
     
    
     .landing-home-computer{
