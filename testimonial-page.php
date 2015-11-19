@@ -37,6 +37,12 @@ Template Name: Testimonial Page Template
     </head>
 
     <body>
+    <div id="testimonial--home-video" class="modalDialog testimonial--home-video-modal">
+      <div>
+        <a href="#close-video" title="Close" class="close-video" id="close-video" >Close <i class="fa fa-times fa-lg"></i></a>
+        <iframe src="https://player.vimeo.com/video/144455867?enablejsapi=1" id="testimonial--home-iframe" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
     <div class="container">
         <header>
             <div class="row--full">
@@ -63,6 +69,7 @@ Template Name: Testimonial Page Template
                </div>               
             </div>
       </header>
+
       <?php if( get_field('header-image') ): ?>
        <div class="landing--home-bg testimonial" style="">
           <?php endif; ?>
@@ -84,7 +91,11 @@ Template Name: Testimonial Page Template
              <p><?php the_field('testimonial-coach-description'); ?></p>
            </div>
            <div class="col-6-12">
-             <img src="<?php the_field('testimonial-coach-image'); ?>" alt="">
+              <a class="testimonial--home-link" id="testimonial--home-link" href="#testimonial--home-video">
+              <img id="testimonial-video" src="<?php the_field('testimonial-coach-image'); ?>" alt="">
+              <img id="mobile-testimonial-video" src="<?php echo get_stylesheet_directory_uri();?>/images/MatScreenshott.png" alt="">
+               <i class="fa fa-play-circle-o"></i>  
+              </a>
            </div>
          </div>
          <div class="row--full tryforfree">
@@ -247,6 +258,7 @@ Template Name: Testimonial Page Template
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
+    <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script> 
          $(document).ready(function(){
           setTimeout(function() {
@@ -257,6 +269,24 @@ Template Name: Testimonial Page Template
          
          });
           
+
+    </script>
+    <script>
+      var iframe = document.getElementById('testimonial--home-iframe');
+
+      // $f == Froogaloop
+      var player = $f(iframe);
+
+      // bind events
+      var playButtonTestimonial = document.getElementById("testimonial--home-link");
+      playButtonTestimonial.addEventListener("click", function() {
+        player.api("play");
+      });
+
+      var pauseButtonTestimonial = document.getElementById("close-video");
+      pauseButtonTestimonial.addEventListener("click", function() {
+        player.api("pause");
+      });
 
     </script>
     <script>
