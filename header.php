@@ -69,15 +69,20 @@
 
 	<body <?php body_class( $extra_body_class ); ?>>
 
-		 <header>
+		   <header>
             <div class="row--full">
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
                <div class="col-4-12 ">
+=======
+               <div class="col-3-12 ">
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                  <div class="landing--header-logo">
                     <a href="<?php echo site_url(); ?>">
                       <img src="<?php echo get_stylesheet_directory_uri();?>/images/logo-compressor.png" alt="">
                     </a>   
                  </div>
                </div>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
                <div class="col-8-12 landing--header-nav">
                    <div class="landing--header-nav-icon" href="">
                      <i class="fa fa-bars fa-lg"></i>
@@ -88,13 +93,33 @@
                        <li><a href="/support">Support</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="http://app.coachseek.com">Sign in</a></li>
+=======
+               <div class="col-9-12 landing--header-nav" style="top:-5px;position:relative;">
+                   <div class="landing--header-nav-icon" href="">
+                     <i class="fa fa-bars fa-lg"></i>
+                   </div>
+                     <ul class="landing--header-nav-list">
+                       <li><a href="/features">Features</a></li>
+                      <li><a href="/customers" >Testimonials</a></li>
+                       <li><a href="/pricing">Pricing</a></li>
+                       <li class="landing--header-nav-dropdown">
+                        <a class="landing--header-nav-more">More &nbsp; <i class="fa fa-caret-down"></i></a>
+                        <ul class="landing--header-nav-more-dropdown" style="padding-left:0px;">
+                          <li><a href="/support">Support</a></li>
+                          <li><a href="/blog">Blog</a></li>
+                          <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
+                          <li><a href="/subscribe-paypal">Purchase</a></li>
+                        </ul>
+                       </li>
+                       <li><a href="http://app.coachseek.com">Sign in</a></li>
+                       
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                        <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Start My 14 Day Trial</a></li>
                    </ul>
               
                </div>               
             </div>
     	</header>
-
 		<main class="site-main" role="main">
 
 			<?php if ( is_single() || is_page() || is_home() ) : ?>

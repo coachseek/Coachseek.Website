@@ -1,0 +1,20 @@
+.term.single-story--content{
+	.row{
+		color: $text-dark-grey;
+		h2{
+			font-size: 24px;
+			color: $text-dark-grey;
+			padding-top: 80px;
+		}
+		p{
+			font-size: 18px;
+			color: $text-dark-grey;
+		}
+		h3{
+			color: $text-dark-grey;
+		}
+		a{
+			color: $light-green;
+		}
+	}
+}

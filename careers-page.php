@@ -42,7 +42,8 @@ Template Name: Careers Page Template
     <div class="container">
         <header>
             <div class="row--full">
-              <div class="col-3-12 ">
+               <div class="col-3-12 ">
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                  <div class="landing--header-logo">
                     <a href="<?php echo site_url(); ?>">
                       <img src="<?php echo get_stylesheet_directory_uri();?>/images/logo-compressor.png" alt="">
@@ -56,9 +57,25 @@ Template Name: Careers Page Template
                    <ul class="landing--header-nav-list">
                       <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/features">Features</a></li>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
                        <li><a href="/support">Support</a></li>
                        <li><a href="/blog">Blog</a></li>
                         <li><a href="http://app.coachseek.com">Sign in</a></li>
+=======
+                       <li><a href="/customers" >Testimonials</a></li>
+                       <li><a href="/pricing">Pricing</a></li>
+                       <li class="landing--header-nav-dropdown">
+                        <a class="landing--header-nav-more">More &nbsp; <i class="fa fa-caret-down"></i></a>
+                        <ul class="landing--header-nav-more-dropdown">
+                          <li><a href="/support">Support</a></li>
+                          <li><a href="/blog">Blog</a></li>
+                          <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
+                          <li><a href="/subscribe-paypal">Purchase</a></li>
+                        </ul>
+                       </li>
+                       <li><a href="http://app.coachseek.com">Sign in</a></li>
+                       
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                        <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Start My 14 Day Trial</a></li>
                    </ul>
               
@@ -173,12 +190,17 @@ Template Name: Careers Page Template
                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
                        <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
                        <li><a href="/referrals">Refer & Earn</a></li>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
+=======
+                       <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                    </ul>
                </div>
                <div class="col-3-12">
                    <ul>
                        <li><h4>product</h4></li>
                        <li><a href="/features">Features</a></li>
+                       <li><a href="/customers">Testimonials</a></li>
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                        <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>

@@ -81,18 +81,39 @@ Template Name: Pricing Page Template
                    <div class="landing--header-nav-icon" href="">
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
                    <ul class="landing--header-nav-list">
                       <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/features">Features</a></li>
                         <li><a href="/support">Support</a></li>
                        <li><a href="/blog">Blog</a></li>
                         <li><a href="http://app.coachseek.com">Sign in</a></li>
+=======
+                    <ul class="landing--header-nav-list">
+                       <li><a href="/features">Features</a></li>
+                      <li><a href="/customers" >Testimonials</a></li>
+                       <li><a href="/pricing">Pricing</a></li>
+                       <li class="landing--header-nav-dropdown">
+                        <a class="landing--header-nav-more">More &nbsp; <i class="fa fa-caret-down"></i></a>
+                        <ul class="landing--header-nav-more-dropdown">
+                          <li><a href="/support">Support</a></li>
+                          <li><a href="/blog">Blog</a></li>
+                          <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
+                          <li><a href="/subscribe-paypal">Purchase</a></li>
+                        </ul>
+                       </li>
+                       <li><a href="http://app.coachseek.com">Sign in</a></li>
+                       
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                        <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Start My 14 Day Trial</a></li>
                    </ul>
-              
                </div>               
             </div>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
     </header>
+=======
+      </header>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
     <div id="demo" class="modalDialog">
           <div>
                     <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
@@ -169,7 +190,11 @@ Template Name: Pricing Page Template
               </div>
               <div class="pricing--home-list-coach">
                 <p><?php the_sub_field('coach-number');?></p>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
                 <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free trial</a>
+=======
+                <a href="/subscribe-paypal" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Subscribe</a>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
               </div>
             </div>
            <?php elseif( get_row_layout() == 'unlimited' ): ?>
@@ -192,7 +217,11 @@ Template Name: Pricing Page Template
                   </div>
                   <div class="pricing--home-list-coach">
                     <p><?php the_sub_field('coach-number');?></p>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
                     <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free trial</a>
+=======
+                    <a href="/subscribe-paypal" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Subscribe</a>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                   </div>
               </div>
             <?php endif;
@@ -246,6 +275,8 @@ Template Name: Pricing Page Template
                <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing2'});">Try for free</a>
            </div>
        </div>
+
+       
        
        <footer>
            <div class="row">
@@ -258,12 +289,17 @@ Template Name: Pricing Page Template
                         <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
                         <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
                         <li><a href="/referrals">Refer & Earn</a></li>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
+=======
+                        <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                    </ul>
                </div>
                <div class="col-3-12">
                    <ul>
                        <li><h4>product</h4></li>
                        <li><a href="/features">Features</a></li>
+                       <li><a href="/customers">Testimonials</a></li>
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                        <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>

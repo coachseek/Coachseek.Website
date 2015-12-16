@@ -81,9 +81,14 @@ function team_member_sc( $atts ) {
 add_filter( 'textarea_code', 'shortcode_unautop');
 
 add_filter('textarea_code', 'do_shortcode');
+add_filter('deprecated_constructor_trigger_error', '__return_false');
 
 // echo apply_filters( 'the_content', $options['textarea_input']); 
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
 // wp_deregister_style( $handle );
+=======
+
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
 
 /*$subtitle = get_post_meta('portfolio-' . $page->ID, 'Slide_subtitle',  true);
 

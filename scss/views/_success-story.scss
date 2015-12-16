@@ -1,0 +1,119 @@
+.pricing--home-bg.success-story{
+	.row--full{
+		p{
+			padding-top: 20px;
+		}
+	}
+}
+.success-story--quote{
+	position: relative;
+	padding-top: 80px;
+	color: #4F565D;
+	.success-story--quote-slider{
+		position: relative;
+		
+		.m-scooch{
+			padding-bottom: 40px;
+			.m-scooch-inner .m-item{
+			.row{
+					.col-4-12{
+						blockquote{
+							font-size: 21px;
+	    					font-style: italic;
+	    					font-family: 'lato-bold';
+							padding-bottom: 30px;
+							padding-top: 30px;
+						}
+						p{
+							font-size: 16px;
+							padding: 15px 0px;
+						}
+						a{
+							color: $green;
+							font-family: 'lato-semi-bold';
+						}
+					
+					}
+					.col-8-12{
+						img{
+							// border: 1px solid #e9ebee;
+    			// 			padding: 2px;
+    						width:100%;
+						}
+					}
+				}
+			}
+
+		}
+	}
+	.success-story--quote-grid{
+		background: #EDEDED;
+		padding: 80px 0px;
+		.row{
+			padding-bottom: 30px;
+			.col-4-12{
+				.success-story--quote-img{
+					position: relative;
+					.success-story--quote-img-overlap{
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						color: rgba($white, 0);
+						background:rgba($light-green,0);
+						transition: background ease .5s;
+						text-align: center;
+						padding: 30px;
+						
+						h1{
+							padding: 20px 20px 10px 20px;
+							font-size: 24px;
+							font-family: 'lato-bold';
+							
+						}
+						hr{
+							width: 30px;
+						    border: 0px;
+						    height: 4px;
+						    margin: 0 auto;
+						    background: rgba($white, 0);
+						}
+						p{
+							font-size: 20px;
+							font-family: 'lato-regular';
+						}
+						&:hover{
+							background:rgba($light-green,0.9);
+							color: rgba($white, 1);
+							hr{
+								background: rgba($white, 1);
+							}
+							
+						} 
+					}
+					img{
+						width: 100%;
+					}
+					
+				}
+				
+				h2{
+					font-family: 'lato-bold';
+					padding: 10px 0px;
+					font-style: italic;
+				}
+				p{
+					padding: 10px 0px;
+					font-family: 'lato-light';	
+					&.success-story--quote-gird-name{
+						// font-style: italic;	
+						font-family: 'lato-regular';
+					}
+					
+				}
+				a{
+					color: $green;
+				}
+			}
+		}
+	}
+}

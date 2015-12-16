@@ -27,12 +27,17 @@
                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
                        <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
                        <li><a href="/referrals">Refer & Earn</a></li>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
+=======
+                       <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                    </ul>
                </div>
                <div class="col-3-12">
                    <ul>
                        <li><h4>product</h4></li>
                        <li><a href="/features">Features</a></li>
+                       <li><a href="/customers">Testimonials</a></li>
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                        <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>

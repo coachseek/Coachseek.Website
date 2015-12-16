@@ -38,6 +38,7 @@ Template Name: ebook Page Template
 
     <body>
     <div class="container">
+  
         <header>
             <div class="row--full">
                <div class="col-3-12 ">
@@ -64,6 +65,87 @@ Template Name: ebook Page Template
             </div>
       </header>
 
+
+      <?php 
+              if(isset($_POST['submit'])){
+                  $to = "ian@coachseek.com,ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com,Apwong8@gmail.com"; // this is your Email address
+                  $from = $_POST['email']; // this is the sender's Email address
+                  $firstname = $_POST['firstname'];
+                  $lastname = $_POST['lastname'];
+                  $phone = $_POST['phone'];
+                  $subject = "Demo Request from landing page";
+                  $subject2 = "Copy of your Demo request submission";
+                  $message = $firstname . " ".$lastname . " Request a demo," . "\n\n" . "Business name is: ". $_POST['business']."\n\n". "phone number is : ".$phone ."\n\n". " email address is : ". $from;
+                  $message2 = "Here is a copy of your request " . $firstname . "\n\n" . $message;
+                  $headers = "From:" . $from;
+                  $headers2 = "From:" . $to;
+                  mail($to,$subject,$message,$headers);
+                  mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+                  echo "<p class='feedback' style='background:#00A578;text-align:center; color:white; font-size:14px;'>Your Demo request has been sent, see you soon!</p>";
+                  ?>
+                  <style type="text/css">
+
+                    div.tnz-header-row{
+                      display:none !important;
+                    }</style>
+                  <?php
+                  // You can also use header('Location: thank_you.php'); to redirect to another page.
+                  header( "Refresh:4; url=http://www.coachseek.com", true, 303);
+                  }
+              ?>
+             <div id="mailchimp-popup" class="modalDialog" style="opacity:1;">
+                <div>
+                    <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
+                      <form method="post" name="form1" action="">     
+                        <div class="row--full">
+                          <div class="col-7-12">
+                            <h2>GET A FREE COACHING BUSINESS HEALTH CHECK</h2>
+                            <h3>Want to know how to stay ahead in the game?</h3>
+                            <p>
+                              At Coachseek, we're helping coaching businesses grow and be more profitable than ever.
+                               We know that coaching is a tough challenge, but it can still be incredibly rewarding. 
+                               With a few tweaks, your business can be running smoother than you ever imagined. 
+                              Book a coaching business healthcheck with one of our specialists and to show you;
+                            </p>
+                         
+                            <ul>
+                              <li>- The tools you can use to free up more time in your busy schedule</li>
+                              <li>- Easy tweaks to your website to get more sign ups per term</li>
+                              <li>- How you can consolidate your entire business admin in to one cloud based tool </li>
+                              <li>- How to use social property to connect with new customers in your area </li>
+                            </ul>
+                          </div>
+                          <div class="col-5-12">
+                            <div class="row--full">
+                        
+                            <div class="row--full left ">
+                              <input type="text" name="business" placeholder="Business name" required>
+                            </div>
+                            <div class="row--full name left">
+                            <div class="col-6-12">
+                              <input type="text" name="firstname" placeholder="First name" required>
+                            </div>
+                            <div class="col-6-12">
+                               <input type="text" name="lastname" placeholder="Last name" required></div>
+                            </div>
+                            </div>
+                            <div class="row--full">
+                              <div class="row--full right "><input type="email" name="email" placeholder="Email address" required></div>
+                              <div class="row--full right "><input type="tel" name="phone" placeholder="Phone number" required></div>
+                            </div>
+                            
+                          </div>
+                   
+                        </div>
+                      <div class="row--full" style="text-align:center;">
+                        <button id="submit" type="submit" name="submit">Sign me up!</button>
+                      </div>
+                    </form>
+   
+
+                  </div>
+                </div>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
        <div class="landing--home-bg ebook" style="">
           <div class="landing--home-bg-overlap"></div>
            <div class="row--full">
@@ -72,8 +154,29 @@ Template Name: ebook Page Template
               </div>
               <div class="col-6-12">
                 <h1><?php the_field('ebook-home-title'); ?></h1>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
                 <p><?php the_field('ebook-home-description'); ?></p>  
                 <?php echo do_shortcode('[mc4wp_form id="2556"]'); ?>
+=======
+                <p class="ebook-home-subtitle"><?php the_field('ebook-home-description'); ?></p>  
+                  <!-- MailChimp for WordPress Pro v2.7.20 - https://mc4wp.com/ -->
+                <div id="mc4wp-form-1" class="form mc4wp-form mc4wp-form-2556 mc4wp-ajax">
+                <form method="post" ><input type="email" name="EMAIL" placeholder="Enter your email" required="required">
+                <input type="submit" id="mailchimp" value="Get Free Ebook">
+                <span class="mc4wp-ajax-loader" style="display: none;"></span>
+                <div style="position: absolute; left: -5000px;">
+                <input type="text" name="_mc4wp_ho_259b4c51c889ccc8cd7047c8e9d180d9" value="" tabindex="-1" autocomplete="off" /></div>
+                <input type="hidden" name="_mc4wp_timestamp" value="1450260819" />
+                <input type="hidden" name="_mc4wp_form_id" value="2556" />
+                <input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" />
+                <input type="hidden" name="_mc4wp_form_submit" value="1" />
+                <input type="hidden" name="_mc4wp_form_nonce" value="93a1436108" />
+                </form><div class="mc4wp-response">
+                  
+                </div>
+                </div><!-- / MailChimp for WP Pro Plugin --> 
+                <!--  2556-->
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                 <p><?php the_field('ebook-home-copy'); ?></p>
               </div>
            </div>
@@ -139,12 +242,22 @@ Template Name: ebook Page Template
                               // display a sub field value
                              ?>
                                 <div class="col-6-12">
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
                                 <div class="col-2-12">
                                   <img src="<?php the_sub_field('ebook-quote-img'); ?>" alt="">
                                 </div>
                                 <div class="col-10-12">
                                   <h3><?php the_sub_field('ebook-quote-name'); ?></h3>
                                   <p><?php the_sub_field('ebook-quote-desc'); ?></p>
+=======
+                                <div class="col-3-12">
+                                  <img src="<?php the_sub_field('ebook-quote-img'); ?>" alt="">
+                                </div>
+                                <div class="col-9-12">
+                                  <h3><?php the_sub_field('ebook-quote-desc'); ?></h3>
+                                  <p><?php the_sub_field('ebook-quote-name'); ?></p>
+                               
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                                 </div>
                               </div>
                              <?php
@@ -184,12 +297,20 @@ Template Name: ebook Page Template
                         <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
                         <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
                         <li><a href="/referrals">Refer & Earn</a></li>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
+=======
+                        <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                    </ul>
                </div>
                <div class="col-3-12">
                    <ul>
                        <li><h4>product</h4></li>
                        <li><a href="/features">Features</a></li>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
+=======
+                       <li><a href="/customers">Testimonials</a></li>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                        <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>
@@ -228,6 +349,16 @@ Template Name: ebook Page Template
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
+=======
+    <script type="text/javascript">
+    $('input#mailchimp').click(function() {
+      /* Act on the event */
+      $('#mailchimp-popup').css('opacity', '1');
+    });
+
+    </script>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
     <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -248,6 +379,14 @@ Template Name: ebook Page Template
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FP99N');</script>
     <!-- End Google Tag Manager -->
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
+=======
+    <script type="text/javascript">
+    mc4wp.forms.on('subscribed', function(form) {
+      // analytics.js
+      ga && ga('send', 'event', { eventCategory: 'Ebook&subcribeebook', eventAction: 'click', eventLabel: 'subcribeebook'});
+    </script>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
 
     <?php wp_footer(); ?>
     </body>

@@ -129,8 +129,23 @@
         top: -25px;
     }
 }
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
 
 
+=======
+.modalDialog#mailchimp-popup > div{
+
+            width: 90%;
+            height: 70%;
+            padding: 20px;
+            margin-top: 0px;
+}
+
+
+
+
+/*front page styling*/
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
 .landing--home-bg{
     &.testimonial{
         .row--full{
@@ -176,6 +191,12 @@
             letter-spacing: 1px;
             text-transform: none;
             line-height: 40px;
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
+=======
+        }
+        h3{
+            padding-top: 10px;
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
         }
         p{
             width: 400px;
@@ -189,8 +210,39 @@
                 padding-top: 25px;
                 font-size: 14px;
                 clear:both;
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
+=======
             }
         }
+        a.landing--home-video{
+            width: 100%;
+            max-width: 260px;
+            display: block;
+            font-size: 24px;
+            padding-bottom: 45px;
+            
+        }
+        a.matt-loves-coachseek{
+            width: 100%;
+            max-width: 260px;
+            font-size:16px;
+            transition: all ease .5s;
+            clear: both;
+            display: block;
+            padding-top: 20px;
+            &:hover{
+              color:rgba($white, 0.5);
+               
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
+            }
+
+        }
+        p.landing--home-tryfree-desc{
+            clear: both;
+            font-size:14px;
+            font-weight:bold;
+        }
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
         a.landing--home-video{
             width: 100%;
             max-width: 260px;
@@ -218,6 +270,8 @@
             font-size:14px;
             font-weight:bold;
         }
+=======
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
         a.landing--home-tryfree-btn{ 
             position: relative;
             float:left;
@@ -508,6 +562,12 @@
                 text-align:center;
                 font-size: 36px;
                 padding-top: 80px;
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
+=======
+            }
+            h3{
+                text-align: center;
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
             }
             p.subtitle{
                 text-align:center;
@@ -517,6 +577,7 @@
             }
             p.sublabel{
                 text-align:center;
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
                 width: 100%;
             }
 
@@ -530,6 +591,21 @@
                 text-align: center;
                 width: 100%;
             }
+=======
+                width: 100%;
+            }
+
+            a.landing--home-video{
+          
+                max-width: 100%;
+        
+                
+            }
+            p.landing--home-tryfree-desc{
+                text-align: center;
+                width: 100%;
+            }
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
             a.matt-loves-coachseek{
                 max-width: 100%;
             }

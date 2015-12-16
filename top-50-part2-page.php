@@ -71,7 +71,11 @@ Template Name: Top 50 Part 2 Page Template
                   header( "Refresh:4; url=http://www.coachseek.com", true, 303);
                   }
               ?>
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
         <header>
+=======
+            <header>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
             <div class="row--full">
                <div class="col-3-12 ">
                  <div class="landing--header-logo">
@@ -85,6 +89,7 @@ Template Name: Top 50 Part 2 Page Template
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
                    <ul class="landing--header-nav-list">
+<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/features">Features</a></li>
                        <li><a href="/blog">Blog</a></li>
@@ -94,6 +99,37 @@ Template Name: Top 50 Part 2 Page Template
                </div>               
             </div>
     </header>
+=======
+                       <li class="landing--header-nav-dropdown">
+                        <a class="landing--header-nav-feature" >Features  &nbsp; <i class="fa fa-caret-down"></i></a>
+                        <ul class="landing--header-nav-feature-dropdown">
+                          <li><a href="/tennis">Tennis</a></li>
+                          <li><a href="/golf">Golf</a></li>
+                          <li><a href="/swimming">Swimming</a></li>
+                          <li><a href="/fitness">Fitness</a></li>
+                          <li><a href="/equestrian">Equestrian</a></li>
+                          <li><a href="/running">Running</a></li>
+                          <li><a href="/cricket">Cricket</a></li>
+                        </ul>
+                       </li>
+                       <li><a href="/pricing">Pricing</a></li>
+                       <li class="landing--header-nav-dropdown">
+                        <a class="landing--header-nav-more">More &nbsp; <i class="fa fa-caret-down"></i></a>
+                        <ul class="landing--header-nav-more-dropdown">
+                          <li><a href="/support">Support</a></li>
+                          <li><a href="/blog">Blog</a></li>
+                          <li><a href="/subscribe-paypal">Purchase</a></li>
+                        </ul>
+                       </li>
+                       <li><a href="http://app.coachseek.com">Sign in</a></li>
+                       
+                       <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Start My 14 Day Trial</a></li>
+                   </ul>
+              
+               </div>               
+            </div>
+      </header>
+>>>>>>> c989e411c21423a7040ac751186a590270d9999e
       <?php if( get_field('header-image') ): ?>
        <div class="mainfea--home-bg" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat; background-size: cover;">
           <?php endif; ?>

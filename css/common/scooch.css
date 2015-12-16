@@ -1,0 +1,456 @@
+/*  Classes  on  outer  slideshow  wrapper:
+    either  NONE  or  'fraction'  or  'fraction'  +  one  of  'fraction1'...'fraction10'.
+        fraction  sets  box-sizing:  border-box,  so  that  padding  on  the  element  is  taken  out  ;
+    either  NONE  or  'center'  or  'right'
+
+*/
+/* line 7, ../../scss/common/scooch.scss */
+.m-scooch {
+  position: relative;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 11, ../../scss/common/scooch.scss */
+.m-scooch.m-left {
+  text-align: left;
+}
+
+/* line 13, ../../scss/common/scooch.scss */
+.m-scooch.m-center {
+  text-align: center;
+}
+
+/* line 15, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid > .m-scooch-inner > * {
+  width: 100%;
+}
+
+/* line 17, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid.m-center > .m-scooch-inner > *:first-child {
+  margin-left: 0%;
+}
+
+/* line 19, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid-2 > .m-scooch-inner > * {
+  width: 50%;
+}
+
+/* line 21, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid-2.m-center > .m-scooch-inner > *:first-child {
+  margin-left: 25%;
+}
+
+/* line 23, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid-3 > .m-scooch-inner > * {
+  width: 33.333%;
+}
+
+/* line 25, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid-3.m-center > .m-scooch-inner > *:first-child {
+  margin-left: 33.333%;
+}
+
+/* line 27, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid-4 > .m-scooch-inner > * {
+  width: 25%;
+}
+
+/* line 29, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid-4.m-center > .m-scooch-inner > *:first-child {
+  margin-left: 37.5%;
+}
+
+/* line 31, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid-5 > .m-scooch-inner > * {
+  width: 20%;
+}
+
+/* line 33, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid-5.m-center > .m-scooch-inner > *:first-child {
+  margin-left: 40%;
+}
+
+/* line 35, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid-6 > .m-scooch-inner > * {
+  width: 16.667%;
+}
+
+/* line 37, ../../scss/common/scooch.scss */
+.m-scooch.m-fluid-6.m-center > .m-scooch-inner > *:first-child {
+  margin-left: 41.667%;
+}
+
+/* line 39, ../../scss/common/scooch.scss */
+.m-scooch img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* https://github.com/mobify/scooch/issues/23 */
+/* line 43, ../../scss/common/scooch.scss */
+.m-scooch .m-item {
+  -webkit-transform: translate(0);
+  transform: translate(0);
+}
+
+/* line 47, ../../scss/common/scooch.scss */
+.m-scooch-inner {
+  position: relative;
+  white-space: nowrap;
+  text-align: left;
+  /*  Removes  inline-block  gaps  due  to  whitespace  */
+  font-size: 0;
+  /*  Configure  animations  */
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -ms-transition-property: -ms-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  /*  iOS  like  slide  timings  */
+  -webkit-transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+  -moz-transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+  -ms-transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+  -o-transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+/* line 70, ../../scss/common/scooch.scss */
+.m-scooch-inner > * {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  /*  We  must  reset  the  font-size  here  */
+  font-size: 16px;
+}
+
+/* line 76, ../../scss/common/scooch.scss */
+.m-fluid > .m-scooch-inner > * {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 82, ../../scss/common/scooch.scss */
+.m-center:not(.m-fluid) > .m-scooch-inner {
+  display: inline-block;
+  margin-right: -20000px  !important;
+  margin-left: 0  !important;
+}
+
+/* line 86, ../../scss/common/scooch.scss */
+.m-center:not(.m-fluid) > .m-scooch-inner > * {
+  position: relative;
+  left: -20000px;
+}
+
+/* line 89, ../../scss/common/scooch.scss */
+.m-center:not(.m-fluid) > .m-scooch-inner > *:first-child {
+  float: left;
+  margin-right: 20000px;
+  left: 0;
+}
+
+/* line 93, ../../scss/common/scooch.scss */
+.m-center:not(.m-fluid) > .m-scooch-inner > *:first-child:last-child {
+  margin-right: 0;
+}
+
+/* line 95, ../../scss/common/scooch.scss */
+.m-center:not(.m-fluid) > .m-scooch-inner > *:last-child {
+  margin-right: -30000px;
+}
+
+/* 
+  Carousel control base styling 
+*/
+/* line 104, ../../scss/common/scooch.scss */
+.m-scooch-controls {
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* line 109, ../../scss/common/scooch.scss */
+.m-scooch-controls a {
+  padding: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: -moz-none;
+  user-drag: none;
+}
+
+/* Carousel controls: Bulleted */
+/* line 122, ../../scss/common/scooch.scss */
+.m-scooch-bulleted a {
+  line-height: 0;
+  text-decoration: none;
+  text-indent: -999px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 6px;
+  width: 0;
+  height: 0;
+  margin: 0 3px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transition: background-color 0.1s ease-in;
+  -moz-transition: background-color 0.1s ease-in;
+  -o-transition: background-color 0.1s ease-in;
+  transition: background-color 0.1s ease-in;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px;
+  box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* line 145, ../../scss/common/scooch.scss */
+.m-scooch-bulleted a:hover, .m-scooch-bulleted a:focus {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* line 149, ../../scss/common/scooch.scss */
+.m-scooch-bulleted a.m-active {
+  background-color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 1px 2px;
+}
+
+/* Carousel controls: Pagination */
+/* line 159, ../../scss/common/scooch.scss */
+.m-scooch-pagination {
+  padding-top: 10px;
+}
+
+/* line 162, ../../scss/common/scooch.scss */
+.m-scooch-pagination a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 3px 10px;
+  margin: 1px 0;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transition: background-color 0.1s ease-in;
+  -moz-transition: background-color 0.1s ease-in;
+  -o-transition: background-color 0.1s ease-in;
+  transition: background-color 0.1s ease-in;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* line 177, ../../scss/common/scooch.scss */
+.m-scooch-pagination a:hover, .m-scooch-pagination a:focus {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* line 181, ../../scss/common/scooch.scss */
+.m-scooch-pagination a.m-active {
+  background-color: white;
+}
+
+/* Carousel controls: HUD */
+/* line 186, ../../scss/common/scooch.scss */
+.m-scooch-hud {
+  padding-top: 0;
+}
+
+/* line 189, ../../scss/common/scooch.scss */
+.m-scooch-hud a {
+  z-index: 2;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 0;
+  padding: 0;
+  text-decoration: none;
+  text-indent: -999px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: opacity 0.1s ease-in;
+  -moz-transition: opacity 0.1s ease-in;
+  -o-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+
+/* line 212, ../../scss/common/scooch.scss */
+.m-scooch:hover .m-scooch-hud a {
+  opacity: 0.3;
+}
+
+/* line 215, ../../scss/common/scooch.scss */
+.m-scooch .m-scooch-hud a:hover, .m-scooch .m-scooch-hud a:focus {
+  opacity: 1;
+}
+
+/* line 218, ../../scss/common/scooch.scss */
+.m-scooch-hud a:after {
+  color: rgba(255, 255, 255, 0.85);
+  content: "\25c0";
+  font-size: 25px;
+  font-weight: bold;
+  text-indent: 0;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 47px;
+  height: 50px;
+  z-index: 9;
+}
+
+/* line 233, ../../scss/common/scooch.scss */
+.m-scooch-hud .m-scooch-prev {
+  left: 10px;
+}
+
+/* line 236, ../../scss/common/scooch.scss */
+.m-scooch-hud .m-scooch-next {
+  right: 10px;
+}
+
+/* line 239, ../../scss/common/scooch.scss */
+.m-scooch-hud .m-scooch-next:after {
+  left: auto;
+  right: 0;
+  content: "\25b6";
+}
+
+/* extra bits */
+/* captions */
+/* line 251, ../../scss/common/scooch.scss */
+.m-caption {
+  margin: 0;
+  padding: 10px;
+  height: auto;
+  text-align: center;
+}
+
+/* scaled slides */
+/* line 263, ../../scss/common/scooch.scss */
+.m-scaled .m-item {
+  opacity: 0.7;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  transform: scale(0.75);
+  /* Configure animations */
+  /* (0.5s would match the transition length between each, 
+    but fast swiping on a phone can result in odd timing. 
+    Half-length durations for each transform is a reasonable 
+    middle ground.) */
+  -webkit-transition: -webkit-transform cubic-bezier(0.33, 0.66, 0.66, 1) 0.25s, opacity ease-out 0.25s;
+  -moz-transition-timing-function: -moz-transform cubic-bezier(0.33, 0.66, 0.66, 1) 0.25s, opacity ease-out 0.25s;
+  -o-transition-timing-function: -o-transform cubic-bezier(0.33, 0.66, 0.66, 1) 0.25s, opacity ease-out 0.25s;
+  transition-timing-function: transform cubic-bezier(0.33, 0.66, 0.66, 1) 0.25s, opacity ease-out 0.25s;
+}
+
+/* line 282, ../../scss/common/scooch.scss */
+.m-scaled .m-active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+/* Default Themes/Sytles for Slider */
+/* line 293, ../../scss/common/scooch.scss */
+.m-fluid .m-item {
+  margin-right: 20px;
+}
+
+/* Fluid Width Photo Carousel
+ * .m-scooch.m-fluid.m-scooch-photos
+ */
+/* line 301, ../../scss/common/scooch.scss */
+.m-scooch-photos {
+  margin: 0 -10px;
+  padding: 0 10px;
+}
+
+/* line 306, ../../scss/common/scooch.scss */
+.m-scooch-photos .m-item > img {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+  -o-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+  -ms-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+}
+
+/* line 320, ../../scss/common/scooch.scss */
+.m-scooch-photos .m-caption {
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Inner Cards for Carousel */
+/* line 333, ../../scss/common/scooch.scss */
+.m-card-dark, .m-card-light {
+  padding: 20px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+  -o-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+  -ms-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+}
+
+/* line 345, ../../scss/common/scooch.scss */
+.m-card-dark {
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+}
+
+/* line 349, ../../scss/common/scooch.scss */
+.m-card-light {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+/* line 353, ../../scss/common/scooch.scss */
+.m-card-dark .m-caption, .m-card-light .m-caption {
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+/* line 358, ../../scss/common/scooch.scss */
+.m-fade-out {
+  -webkit-mask-image: -webkit-linear-gradient(left, transparent 0%, black 5%, black 95%, transparent 100%);
+}
