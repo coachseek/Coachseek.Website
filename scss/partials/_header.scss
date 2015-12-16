@@ -119,15 +119,12 @@ header{
 @media (max-width: 767px){
     header{
     &.mobile-header{
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-        position: relative;
-        height: 260px;
-=======
+
         position: fixed;
         background-color: #fff;
         height: 100%;
         overflow-y: scroll;
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
+
     }    
    
         .row--full{
@@ -135,10 +132,7 @@ header{
                 position: relative;
                 @include column(12/12);
                 ul{
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-                    height: 264px;
-=======
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
+
                     display: none;
                     clear: both;
                     width: 100%;

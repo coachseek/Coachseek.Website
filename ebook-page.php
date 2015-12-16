@@ -65,7 +65,7 @@ Template Name: ebook Page Template
             </div>
       </header>
 
-
+=======
       <?php 
               if(isset($_POST['submit'])){
                   $to = "ian@coachseek.com,ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com,Apwong8@gmail.com"; // this is your Email address
@@ -242,14 +242,7 @@ Template Name: ebook Page Template
                               // display a sub field value
                              ?>
                                 <div class="col-6-12">
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-                                <div class="col-2-12">
-                                  <img src="<?php the_sub_field('ebook-quote-img'); ?>" alt="">
-                                </div>
-                                <div class="col-10-12">
-                                  <h3><?php the_sub_field('ebook-quote-name'); ?></h3>
-                                  <p><?php the_sub_field('ebook-quote-desc'); ?></p>
-=======
+
                                 <div class="col-3-12">
                                   <img src="<?php the_sub_field('ebook-quote-img'); ?>" alt="">
                                 </div>
@@ -257,7 +250,7 @@ Template Name: ebook Page Template
                                   <h3><?php the_sub_field('ebook-quote-desc'); ?></h3>
                                   <p><?php the_sub_field('ebook-quote-name'); ?></p>
                                
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
+
                                 </div>
                               </div>
                              <?php
@@ -297,20 +290,18 @@ Template Name: ebook Page Template
                         <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
                         <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
                         <li><a href="/referrals">Refer & Earn</a></li>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-=======
+
                         <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
+
                    </ul>
                </div>
                <div class="col-3-12">
                    <ul>
                        <li><h4>product</h4></li>
                        <li><a href="/features">Features</a></li>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-=======
+
                        <li><a href="/customers">Testimonials</a></li>
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
+
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                        <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>
@@ -349,8 +340,7 @@ Template Name: ebook Page Template
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-=======
+
     <script type="text/javascript">
     $('input#mailchimp').click(function() {
       /* Act on the event */
@@ -358,7 +348,7 @@ Template Name: ebook Page Template
     });
 
     </script>
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
+
     <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -379,14 +369,13 @@ Template Name: ebook Page Template
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FP99N');</script>
     <!-- End Google Tag Manager -->
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-=======
+
     <script type="text/javascript">
     mc4wp.forms.on('subscribed', function(form) {
       // analytics.js
       ga && ga('send', 'event', { eventCategory: 'Ebook&subcribeebook', eventAction: 'click', eventLabel: 'subcribeebook'});
     </script>
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
+
 
     <?php wp_footer(); ?>
     </body>
