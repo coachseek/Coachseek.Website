@@ -345,6 +345,7 @@ Template Name: ebook Page Template
     });
     $('a.close').click(function(){
         $('#mailchimp-popup').css('opacity', '0');
+        $('#mailchimp-popup').css('pointer-events', 'none');
     });
 
     </script>

@@ -2,6 +2,8 @@
 	.row--full{
 		p{
 			padding-top: 20px;
+			max-width: 560px;
+			width: 100%;
 		}
 	}
 }
@@ -13,6 +15,9 @@
 		position: relative;
 		
 		.m-scooch{
+			&.m-scooch-photos{
+				margin: 0px;
+			}
 			padding-bottom: 40px;
 			.m-scooch-inner .m-item{
 			.row{
@@ -27,6 +32,7 @@
 						p{
 							font-size: 16px;
 							padding: 15px 0px;
+							text-align: center;
 						}
 						a{
 							color: $green;
