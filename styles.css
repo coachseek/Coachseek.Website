@@ -1,0 +1,91 @@
+/*
+Error: Invalid CSS after "...ition: relative": expected "{", was ";"
+        on line 123 of /Applications/MAMP/htdocs/coachseek.dev/wp-content/themes/Coachseek.Website/scss/partials/_header.scss
+        from line 19 of /Applications/MAMP/htdocs/coachseek.dev/wp-content/themes/Coachseek.Website/scss/styles.scss
+
+118: 
+119: @media (max-width: 767px){
+120:     header{
+121:     &.mobile-header{
+122: <<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
+123:         position: relative;
+124:         height: 260px;
+125: =======
+126:         position: fixed;
+127:         background-color: #fff;
+128:         height: 100%;
+
+Backtrace:
+/Applications/MAMP/htdocs/coachseek.dev/wp-content/themes/Coachseek.Website/scss/partials/_header.scss:123
+/Applications/MAMP/htdocs/coachseek.dev/wp-content/themes/Coachseek.Website/scss/styles.scss:19
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1162:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1098:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1093:in `tok!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:638:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:708:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:658:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:647:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:639:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:708:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:658:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:647:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:639:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:708:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:658:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:647:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:639:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:401:in `media_directive'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:219:in `special_directive'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:194:in `directive'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:657:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:650:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:117:in `stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:42:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:403:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:309:in `to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:278:in `render'
+/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...ition: relative\": expected \"{\", was \";\"\A         on line 123 of /Applications/MAMP/htdocs/coachseek.dev/wp-content/themes/Coachseek.Website/scss/partials/_header.scss\A         from line 19 of /Applications/MAMP/htdocs/coachseek.dev/wp-content/themes/Coachseek.Website/scss/styles.scss\A \A 118: \A 119: @media (max-width: 767px){\A 120:     header{\A 121:     &.mobile-header{\A 122: <<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5\A 123:         position: relative;\A 124:         height: 260px;\A 125: =======\A 126:         position: fixed;\A 127:         background-color: #fff;\A 128:         height: 100%;"; }

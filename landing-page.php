@@ -33,9 +33,6 @@ Template Name: Landing Page Template
     
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css?ver=<?php $theme_version = wp_get_theme(); echo $theme_version->Version; ?>" type="text/css" media="screen" />
 
- 
-  
-
     </head>
 
     <body>

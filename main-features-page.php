@@ -68,11 +68,7 @@ Template Name: Main Features Page Template
                   header( "Refresh:3; url=$URI", true, 303);
                   }
               ?>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-        <header>
-=======
           <header>
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
             <div class="row--full">
                <div class="col-3-12 ">
                  <div class="landing--header-logo">
@@ -85,15 +81,6 @@ Template Name: Main Features Page Template
                    <div class="landing--header-nav-icon" href="">
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-                   <ul class="landing--header-nav-list">
-                      <li><a href="/pricing">Pricing</a></li>
-                      <li><a href="/features">Features</a></li>
-                       <li><a href="/support">Support</a></li>
-                      <li><a href="/blog">Blog</a></li>
-                      <li><a href="http://app.coachseek.com">Sign in</a></li>
-                      <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Start My 14 Day Trial</a></li>
-=======
                      <ul class="landing--header-nav-list">
                        <li><a href="/features">Features</a></li>
                      <li><a href="/customers" >Testimonials</a></li>
@@ -110,16 +97,11 @@ Template Name: Main Features Page Template
                        <li><a href="http://app.coachseek.com">Sign in</a></li>
                        
                        <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Start My 14 Day Trial</a></li>
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
                    </ul>
               
                </div>               
             </div>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-    </header>
-=======
       </header>
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
      <div id="demo" class="modalDialog">
                 <div>
                     <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
@@ -413,14 +395,11 @@ Template Name: Main Features Page Template
 
             ?>
 
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-=======
           
 
 
 
 
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
             <?php
 
               // check if the flexible content field has rows of data
@@ -472,10 +451,7 @@ Template Name: Main Features Page Template
                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
                        <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
                        <li><a href="/referrals">Refer & Earn</a></li>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-=======
                        <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
                    </ul>
                </div>
                <div class="col-3-12">

@@ -39,7 +39,7 @@ Template Name: ebook Page Template
     <body>
     <div class="container">
   
-        <header>
+    <header>
             <div class="row--full">
                <div class="col-3-12 ">
                  <div class="landing--header-logo">
@@ -52,23 +52,31 @@ Template Name: ebook Page Template
                    <div class="landing--header-nav-icon" href="">
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
-                   <ul class="landing--header-nav-list">
-                      <li><a href="/pricing">Pricing</a></li>
+                  <ul class="landing--header-nav-list">
                        <li><a href="/features">Features</a></li>
-                        <li><a href="/support">Support</a></li>
-                       <li><a href="/blog">Blog</a></li>
-                        <li><a href="http://app.coachseek.com">Sign in</a></li>
+                      <li><a href="/customers" >Testimonials</a></li>
+                       <li><a href="/pricing">Pricing</a></li>
+                       <li class="landing--header-nav-dropdown">
+                        <a class="landing--header-nav-more">More &nbsp; <i class="fa fa-caret-down"></i></a>
+                        <ul class="landing--header-nav-more-dropdown">
+                          <li><a href="/support">Support</a></li>
+                          <li><a href="/blog">Blog</a></li>
+                          <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
+                          <li><a href="/subscribe-paypal">Purchase</a></li>
+                        </ul>
+                       </li>
+                       <li><a href="http://app.coachseek.com">Sign in</a></li>
+                       
                        <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Start My 14 Day Trial</a></li>
                    </ul>
               
                </div>               
             </div>
-      </header>
+    </header>
 
-=======
       <?php 
               if(isset($_POST['submit'])){
-                  $to = "ian@coachseek.com,ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com,Apwong8@gmail.com"; // this is your Email address
+                  $to = "ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com,Apwong8@gmail.com"; // this is your Email address
                   $from = $_POST['email']; // this is the sender's Email address
                   $firstname = $_POST['firstname'];
                   $lastname = $_POST['lastname'];
@@ -81,7 +89,7 @@ Template Name: ebook Page Template
                   $headers2 = "From:" . $to;
                   mail($to,$subject,$message,$headers);
                   mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-                  echo "<p class='feedback' style='background:#00A578;text-align:center; color:white; font-size:14px;'>Your Demo request has been sent, see you soon!</p>";
+                  echo "<p class='feedback' style='position:relative;background:#00A578;text-align:center; color:white; font-size:14px;'>Your Demo request has been sent, see you soon!</p>";
                   ?>
                   <style type="text/css">
 
@@ -90,16 +98,16 @@ Template Name: ebook Page Template
                     }</style>
                   <?php
                   // You can also use header('Location: thank_you.php'); to redirect to another page.
-                  header( "Refresh:4; url=http://www.coachseek.com", true, 303);
+                  header( "Refresh:4; url=http://www.coachseek.com/sports-coaching-survival-guide/", true, 303);
                   }
               ?>
-             <div id="mailchimp-popup" class="modalDialog" style="opacity:1;">
+             <div id="mailchimp-popup" class="modalDialog">
                 <div>
                     <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
                       <form method="post" name="form1" action="">     
                         <div class="row--full">
                           <div class="col-7-12">
-                            <h2>GET A FREE COACHING BUSINESS HEALTH CHECK</h2>
+                            <h1>GET A FREE COACHING BUSINESS HEALTH CHECK</h1>
                             <h3>Want to know how to stay ahead in the game?</h3>
                             <p>
                               At Coachseek, we're helping coaching businesses grow and be more profitable than ever.
@@ -119,33 +127,42 @@ Template Name: ebook Page Template
                             <div class="row--full">
                         
                             <div class="row--full left ">
+                              <label for="">Business name</label>
                               <input type="text" name="business" placeholder="Business name" required>
                             </div>
                             <div class="row--full name left">
                             <div class="col-6-12">
+                              <label for="">First name</label>
                               <input type="text" name="firstname" placeholder="First name" required>
                             </div>
                             <div class="col-6-12">
+                              <label for="">Last name</label>
                                <input type="text" name="lastname" placeholder="Last name" required></div>
                             </div>
                             </div>
                             <div class="row--full">
-                              <div class="row--full right "><input type="email" name="email" placeholder="Email address" required></div>
-                              <div class="row--full right "><input type="tel" name="phone" placeholder="Phone number" required></div>
+                              <div class="row--full right ">
+                                <label for="">Email address</label>
+                                <input type="email" name="email" placeholder="Email address" required>
+                                </div>
+                              <div class="row--full right ">
+                              <label for="">Phone number</label>
+                                <input type="tel" name="phone" placeholder="Phone number" required>
+                                </div>
+                                 <div class="row--full" style="text-align:center;">
+                                  <button id="submit" type="submit" name="submit" style="background:white;color:#00A478;">Sign me up!</button>
+                                </div>
                             </div>
                             
                           </div>
                    
                         </div>
-                      <div class="row--full" style="text-align:center;">
-                        <button id="submit" type="submit" name="submit">Sign me up!</button>
-                      </div>
+                     
                     </form>
    
 
                   </div>
                 </div>
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
        <div class="landing--home-bg ebook" style="">
           <div class="landing--home-bg-overlap"></div>
            <div class="row--full">
@@ -154,29 +171,9 @@ Template Name: ebook Page Template
               </div>
               <div class="col-6-12">
                 <h1><?php the_field('ebook-home-title'); ?></h1>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-                <p><?php the_field('ebook-home-description'); ?></p>  
+                <p style="font-size: 22px;max-width: 500px;width:100%;"><?php the_field('ebook-home-description'); ?></p>  
                 <?php echo do_shortcode('[mc4wp_form id="2556"]'); ?>
-=======
-                <p class="ebook-home-subtitle"><?php the_field('ebook-home-description'); ?></p>  
-                  <!-- MailChimp for WordPress Pro v2.7.20 - https://mc4wp.com/ -->
-                <div id="mc4wp-form-1" class="form mc4wp-form mc4wp-form-2556 mc4wp-ajax">
-                <form method="post" ><input type="email" name="EMAIL" placeholder="Enter your email" required="required">
-                <input type="submit" id="mailchimp" value="Get Free Ebook">
-                <span class="mc4wp-ajax-loader" style="display: none;"></span>
-                <div style="position: absolute; left: -5000px;">
-                <input type="text" name="_mc4wp_ho_259b4c51c889ccc8cd7047c8e9d180d9" value="" tabindex="-1" autocomplete="off" /></div>
-                <input type="hidden" name="_mc4wp_timestamp" value="1450260819" />
-                <input type="hidden" name="_mc4wp_form_id" value="2556" />
-                <input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" />
-                <input type="hidden" name="_mc4wp_form_submit" value="1" />
-                <input type="hidden" name="_mc4wp_form_nonce" value="93a1436108" />
-                </form><div class="mc4wp-response">
-                  
-                </div>
-                </div><!-- / MailChimp for WP Pro Plugin --> 
-                <!--  2556-->
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
+               
                 <p><?php the_field('ebook-home-copy'); ?></p>
               </div>
            </div>
@@ -218,6 +215,7 @@ Template Name: ebook Page Template
               ?>      
        </div>
   
+      
        <div class="landing--home-quote ebook">
         <?php
 
@@ -278,6 +276,7 @@ Template Name: ebook Page Template
           ?>
         </div>
      
+     
 
        <footer>
            <div class="row">
@@ -290,7 +289,6 @@ Template Name: ebook Page Template
                         <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
                         <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
                         <li><a href="/referrals">Refer & Earn</a></li>
-
                         <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
 
                    </ul>
@@ -299,9 +297,7 @@ Template Name: ebook Page Template
                    <ul>
                        <li><h4>product</h4></li>
                        <li><a href="/features">Features</a></li>
-
                        <li><a href="/customers">Testimonials</a></li>
-
                        <li><a href="/pricing">Pricing</a></li>
                        <li><a href="/faq">FAQ's</a></li>
                        <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>
@@ -345,6 +341,10 @@ Template Name: ebook Page Template
     $('input#mailchimp').click(function() {
       /* Act on the event */
       $('#mailchimp-popup').css('opacity', '1');
+      $('#mailchimp-popup').css('pointer-events', 'auto');
+    });
+    $('a.close').click(function(){
+        $('#mailchimp-popup').css('opacity', '0');
     });
 
     </script>

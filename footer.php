@@ -27,10 +27,7 @@
                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
                        <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
                        <li><a href="/referrals">Refer & Earn</a></li>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-=======
                        <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
                    </ul>
                </div>
                <div class="col-3-12">

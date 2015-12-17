@@ -23,11 +23,7 @@
     <?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
     <?php endif; ?>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-       
-=======
 
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
     
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css?ver=<?php $theme_version = wp_get_theme(); echo $theme_version->Version; ?>" type="text/css" media="screen" />
 
@@ -41,11 +37,7 @@
         <iframe src="https://player.vimeo.com/video/138563137?enablejsapi=1" id="landing--home-iframe" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
       </div>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-       <div class="container">
-=======
        <div class="container bluehost">
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
             <?php 
               if(isset($_POST['submit'])){
                   $to = "ian@coachseek.com,ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com,Apwong8@gmail.com"; // this is your Email address
@@ -86,14 +78,6 @@
                    <div class="landing--header-nav-icon" href="">
                      <i class="fa fa-bars fa-lg"></i>
                    </div>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-                   <ul class="landing--header-nav-list">
-                       <li><a href="/pricing">Pricing</a></li>
-                       <li><a href="/features">Features</a></li>
-                       <li><a href="/support">Support</a></li>
-                       <li><a href="/blog">Blog</a></li>
-                        <li><a href="http://app.coachseek.com">Sign in</a></li>
-=======
                   <ul class="landing--header-nav-list">
                        <li><a href="/features">Features</a></li>
                       <li><a href="/customers" >Testimonials</a></li>
@@ -109,7 +93,6 @@
                        </li>
                        <li><a href="http://app.coachseek.com">Sign in</a></li>
                        
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
                        <li><a class="landing--header-signin" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'SignUpButton'});">Start My 14 Day Trial</a></li>
                    </ul>
               
@@ -156,16 +139,10 @@
           <div class="landing--home-bg-overlap"></div>
            <div class="row--full">
                <h1><?php the_field('title'); ?></h1>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-               <p class="subtitle" style="padding-bottom:40px;"><?php the_field('description'); ?></p>
-               <a class="landing--home-video" href="#landing--home-video" id="landing--home-play" onClick="ga('send', 'event', { eventCategory: 'DemoVideo', eventAction: 'click', eventLabel: 'main-top'});"><i class="fa fa-play-circle fa-lg"></i> Watch Demo Video</a>
-
-=======
                <h3><?php the_field('sub-title')?></h3>
                <p class="subtitle" style="padding-bottom:40px;"><?php the_field('description'); ?></p>
              <!--   <a class="landing--home-video" href="#landing--home-video" id="landing--home-play" onClick="ga('send', 'event', { eventCategory: 'DemoVideo', eventAction: 'click', eventLabel: 'main-top'});"><i class="fa fa-play-circle fa-lg"></i> Watch Demo Video</a> -->
                 
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
                <a class="landing--home-tryfree-btn" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'main-top'});" >Try for free</a>
                <a href="#demo" class="landing--home-tryfree-btn white">Request a Demo</a>
                <p class="landing--home-tryfree-desc"><?php the_field('trial-description'); ?></p>
@@ -243,10 +220,7 @@
          </div>
 
        </div>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-=======
        
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
        
        
        <footer>
@@ -260,10 +234,7 @@
                         <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
                         <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
                         <li><a href="/referrals">Refer & Earn</a></li>
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-=======
                         <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
                    </ul>
                </div>
                <div class="col-3-12">
