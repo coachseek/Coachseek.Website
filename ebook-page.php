@@ -76,12 +76,12 @@ Template Name: ebook Page Template
 
       <?php 
               if(isset($_POST['submit'])){
-                  $to = "ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com,Apwong8@gmail.com"; // this is your Email address
+                  $to = "ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com,Apwong8@gmail.com,alexhamilton@windowslive.com"; // this is your Email address
                   $from = $_POST['email']; // this is the sender's Email address
                   $firstname = $_POST['firstname'];
                   $lastname = $_POST['lastname'];
                   $phone = $_POST['phone'];
-                  $subject = "Demo Request from landing page";
+                  $subject = "Health Check from e-book page";
                   $subject2 = "Copy of your Demo request submission";
                   $message = $firstname . " ".$lastname . " Request a demo," . "\n\n" . "Business name is: ". $_POST['business']."\n\n". "phone number is : ".$phone ."\n\n". " email address is : ". $from;
                   $message2 = "Here is a copy of your request " . $firstname . "\n\n" . $message;
@@ -107,18 +107,21 @@ Template Name: ebook Page Template
                       <form method="post" name="form1" action="">     
                         <div class="row--full">
                           <div class="col-7-12">
-                            <h1>GET A FREE COACHING BUSINESS HEALTH CHECK</h1>
+                            <h1>AWESOME YOUR FREE EBOOK IS ON ITS WAY!</h1>
+
                             <h3>Want to know how to stay ahead in the game?</h3>
+
+                            <h3>Get a Free 15 Minute Coaching Business Health Check</h3>
                             <p>
                               At Coachseek, we're helping coaching businesses grow and be more profitable than ever.
                                We know that coaching is a tough challenge, but it can still be incredibly rewarding. 
                                With a few tweaks, your business can be running smoother than you ever imagined. 
-                              Book a coaching business healthcheck with one of our specialists and to show you;
+                              Book a coaching business healthcheck with one of our specialists who will show you;
                             </p>
                          
                             <ul>
-                              <li>- The tools you can use to free up more time in your busy schedule</li>
-                              <li>- Easy tweaks to your website to get more sign ups per term</li>
+                              <li>- The 5 tools you can use to free up more time in your busy schedule</li>
+                              <li>- Easy tweaks to your website to increase sign ups by 50% per term</li>
                               <li>- How you can consolidate your entire business admin in to one cloud based tool </li>
                               <li>- How to use social property to connect with new customers in your area </li>
                             </ul>
@@ -150,7 +153,7 @@ Template Name: ebook Page Template
                                 <input type="tel" name="phone" placeholder="Phone number" required>
                                 </div>
                                  <div class="row--full" style="text-align:center;">
-                                  <button id="submit" type="submit" name="submit" style="background:white;color:#00A478;">Sign me up!</button>
+                                  <button id="submit" type="submit" name="submit" style="background:white;color:#00A478;">Let's Talk!</button>
                                 </div>
                             </div>
                             
