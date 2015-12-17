@@ -76,7 +76,7 @@ Template Name: ebook Page Template
 
       <?php 
               if(isset($_POST['submit'])){
-                  $to = "ianpbishop@gmail.com,denym8@gmail.com,samyin1990@gmail.com,Apwong8@gmail.com,alexhamilton@windowslive.com"; // this is your Email address
+                  $to = "coachseeknz@gmail.com,samyin1990@gmail.com"; // this is your Email address
                   $from = $_POST['email']; // this is the sender's Email address
                   $firstname = $_POST['firstname'];
                   $lastname = $_POST['lastname'];
