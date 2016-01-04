@@ -1,0 +1,123 @@
+.landing--home-bg.webinar{
+	.landing--home-bg-overlap{
+		position: absolute;
+	    background: url("../images/overlap-black.png") center center;
+	    z-index: 1;
+	    width: 100%;
+	    height: 100%;
+	}
+	h1{
+		padding-bottom: 20px;
+	}
+	.col-6-12{
+		form{
+			padding-left: 60px;
+			.row--full{
+				padding-left: 0px;
+			}
+			padding-top: 140px;
+			input{
+				display: block;
+				height: 50px;
+				max-width: 350px;
+				width: 100%;
+				border-radius: 2px;
+				padding-left: 10px;
+				margin: 10px 0px;
+			}
+			button{
+				margin-top: 20px;
+	            font-family: 'lato-regular';
+	            font-size: 14px;
+	            color: $white;
+	            background: rgba($green, 1);
+	            border-radius: 4px;
+	            max-width: 350px;
+    			height: 50px;
+    			width: 100%;
+	            transition: background ease .8s;
+	            border: 0;
+	            &:hover{
+	                 background: rgba($light-green, 1);
+	               
+	            }
+			}
+		}
+	}
+}
+.landing--home-desc.webinar{
+	h3{
+		padding-bottom: 15px;
+	}
+	p{
+		font-weight: bold;
+		color: $dark-grey;
+		font-size: 20px;
+		padding-bottom: 40px;
+		text-align: center;
+	}
+	.col-6-12{
+		&:first-child{
+			height: 400px;
+    		line-height: 550px;
+		}
+		img{
+			max-width: 350px;
+			width: 100%;
+		}
+		ul{
+			li{
+				padding: 20px 0;
+				p{
+
+					font-weight: normal;
+					color: $text-dark-grey;
+					font-size: 18px;
+					text-align: justify;
+					padding-bottom: 0px;
+				}
+				
+			}
+			padding-bottom: 40px;
+		}
+		a{
+			
+			font-family: 'lato-regular';
+	        font-size: 14px;
+	        color: $white;
+	        background: rgba($green, 1);
+	        border-radius: 4px;
+	        padding: 12px 27px;
+	        transition: background ease .8s;
+	        border: 0;
+	        &:hover{
+	            background: rgba($light-green, 1);
+	               
+	        }
+		}
+	}
+}
+@media (max-width: 768px){
+	.landing--home-bg.webinar{
+		p{
+			text-align: center;
+		}
+		.col-6-12{
+			form{
+				padding: 20px 10px 30px 10px;
+				.row--full{
+					text-align: center;
+				}
+				input{
+					max-width: 100%;
+					height: 60px;
+				}
+			}
+		}
+	}
+	.landing--home-desc.webinar{
+		text-align: center;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}

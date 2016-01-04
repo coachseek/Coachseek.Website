@@ -18,8 +18,9 @@
     	padding:60px 40px 0 100px;
 
     	.col-6-12{
-    		#mc4wp-form-1.mc4wp-form-2556{
-    			form{
+    		
+    		form#mc4wp-form-1.mc4wp-form.mc4wp-form-2556{
+    			.mc4wp-form-fields{
     				text-align: left;
     				input[type="email"]{
     					height:55px;
@@ -37,8 +38,8 @@
 					    right: 9px;
 					    border-bottom-left-radius: 0;
 					    border-top-left-radius: 0;
-					
-    				}
+					}
+    				
     			}
     		}
     		img{
@@ -134,8 +135,8 @@
 			padding: 0  20px;
 			.col-6-12{
 				text-align: center;
-				#mc4wp-form-1.mc4wp-form-2556{
-	    			form{
+				form#mc4wp-form-1.mc4wp-form.mc4wp-form-2556{
+					.mc4wp-form-fields{
 	    				text-align: center;
 
 	    				input[type="submit"]{
