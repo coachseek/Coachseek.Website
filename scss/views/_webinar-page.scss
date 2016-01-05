@@ -11,6 +11,9 @@
 		font-size: 30px;
 		line-height: 35px;
 	}
+	p{
+		max-width: 95%;
+	}
 	.col-6-12{
 		form{
 			padding-left: 60px;
@@ -67,6 +70,7 @@
 			padding-top: 80px;
 			max-width: 500px;
 			width: 100%;
+			padding-right: 20px;
 		}
 		ul{
 			li{

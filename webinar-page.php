@@ -85,7 +85,7 @@ Template Name: webinar Page Template
            <div class="row--full">
               <div class="col-6-12">  
                 <h1><?php the_field('webinar-home-title'); ?></h1>
-                <p style="font-size: 22px;max-width: 500px;width:100%;"><?php the_field('webinar-home-description'); ?></p>  
+                <p style="font-size: 22px;width:100%;"><?php the_field('webinar-home-description'); ?></p>  
               </div>
               <div class="col-6-12">
                 <form method="post" name="webinar" id="webinar-form" action=""  >     
