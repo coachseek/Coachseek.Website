@@ -1,15 +1,37 @@
-<<<<<<< be4cc270ec0664dc83b10bd8a001b3e377e8acc5
-$(document).ready(function(){$(".landing--header-nav-icon").on("click",function(){$(".landing--header-nav-list").toggle(),$("header").toggleClass("mobile-header")}),$(window).resize(function(){$(window).width()>768?$(".landing--header-nav-list").show():$(window).width()<768&&!$("header").hasClass("mobile-header")&&$(".landing--header-nav-list").hide()}),$(".landing--header-nav-icon").click(function(){return $("html, body").animate({scrollTop:0},400),!1})});
-// $(document).ready(function(){
-// 	$( window ).load(function() {
-//   		// Run code
-// 		$('.landing--home-bg').css("background", " url('../images/matt-mainbackground.jpg') 0 40px no-repeat");
-
+jQuery(document).ready(function($) {
+	// function contact_ajax(){
+ //        var fname = $('#fname').val();
+	// 	var email = $('#email').val();
+	// 	var phone = $('#phone').val();
+	// 	var message = $('#message').val();
+	// 	var data = {
+	// 	  		action: 'contact_ajax',
+	// 	  		security : MyAjax.security,
+	// 	  		fname: fname,
+	// 	  		email: email,
+	// 	  		phone: phone,
+	// 	  		message: message
+	// 	 };
+		 
+	// 	 $.post(MyAjax.ajaxurl, data, function(response) {
+	// 			var parsed_json = jQuery.parseJSON(response);
+	// 			$('#contact_ajax').hide();
+	// 			$("#contact_ajax_response").html(parsed_json);
+				
+	// 	});
+	// 	return false;
 		
-// 	});
-// });
-=======
-$(document).ready(function(){
+	// }
+	
+	// $('#contact').submit( function(e){
+	// 	e.preventDefault();
+	// 	$('#contact_ajax').show();
+	// 	$("#contact_ajax_response").html('');
+	// 	contact_ajax();
+	// 	return false;
+	// });
+	
+
 	$('a.landing--header-nav-feature').on('click',function(e){
 		$('ul.landing--header-nav-feature-dropdown').toggle();
 		$('a.landing--header-nav-feature i').toggleClass('fa-rotate-180');
@@ -22,4 +44,4 @@ $(document).ready(function(){
 	});
 	$(".landing--header-nav-icon").on("click",function(){$(".landing--header-nav-list").toggle(),$("header").toggleClass("mobile-header"),$('i.fa-bars').toggleClass('fa-rotate-90')}),$(window).resize(function(){$(window).width()>768?$(".landing--header-nav-list").show():$(window).width()<768&&!$("header").hasClass("mobile-header")&&$(".landing--header-nav-list").hide()}),$(".landing--header-nav-icon").click(function(){return $("html, body").animate({scrollTop:0},400),!1})
 });
->>>>>>> c989e411c21423a7040ac751186a590270d9999e
+

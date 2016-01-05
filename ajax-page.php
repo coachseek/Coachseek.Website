@@ -7,28 +7,28 @@ Template Name: webinar Page Template
 <!DOCTYPE html>
 <html  <?php language_attributes(); ?>>
     <head>
-        <meta charset="<?php bloginfo( 'charset' ); ?>">
+       	<meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <title><?php wp_title( '|', true, 'right' ); ?></title>
          
         <!-- Favicon and iOS icons -->
-      <?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
-      <link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
-      <?php endif; ?>
-      <?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
-      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
-      <?php endif; ?>
-      <?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
-      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
-      <?php endif; ?>
-      <?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
-      <?php endif; ?>
-      <?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
-      <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
-      <?php endif; ?>
+  		<?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
+  		<link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
+  		<?php endif; ?>
+  		<?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
+  		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
+  		<?php endif; ?>
+  		<?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
+  		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
+  		<?php endif; ?>
+  		<?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
+  		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
+  		<?php endif; ?>
+  		<?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
+  		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
+  		<?php endif; ?>
          
       
       <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css?ver=<?php $theme_version = wp_get_theme(); echo $theme_version->Version; ?>" type="text/css" media="screen" />
@@ -212,7 +212,6 @@ Template Name: webinar Page Template
     <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
-
       $('.loading-submit').hide();
       var iframe = document.getElementById('landing--home-iframe');
 
@@ -220,20 +219,14 @@ Template Name: webinar Page Template
       var player = $f(iframe);
 
       // bind events
-      // var playButton = document.getElementById("webinar-submit");
-      // playButton.addEventListener("click", function() {
-      //   player.api("play");
-      // });
+      var playButton = document.getElementById("webinar-submit");
+      playButton.addEventListener("click", function() {
+        player.api("play");
+      });
 
       var pauseButton = document.getElementById("close-video");
       pauseButton.addEventListener("click", function() {
         player.api("pause");
-      });
-      $("a.webinar-feature-register").click(function(e) {
-        e.preventDefault();
-          $('html, body').animate({
-              scrollTop: $("#webinar-form").offset().top
-          }, 1000);
       });
 
       $('#webinar-submit').click(function(e) {
@@ -261,7 +254,6 @@ Template Name: webinar Page Template
           });
         }else{
           $('.loading-submit').hide();
-           player.api("pause");
         }
       });
       $('#close-video').click(function(){
