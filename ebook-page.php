@@ -60,6 +60,7 @@ Template Name: ebook Page Template
                         <a class="landing--header-nav-more">More &nbsp; <i class="fa fa-caret-down"></i></a>
                         <ul class="landing--header-nav-more-dropdown">
                           <li><a href="/support">Support</a></li>
+                          <li><a href="/webinar-cut-the-admin-and-grow-your-business">Webinar</a></li>
                           <li><a href="/blog">Blog</a></li>
                           <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
                           <li><a href="/subscribe-paypal">Purchase</a></li>

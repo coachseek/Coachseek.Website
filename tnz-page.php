@@ -208,7 +208,7 @@ Template Name: Tnz Page Template
              <p><?php the_field('testimonial-coach-description'); ?></p>
            </div>
            <div class="col-6-12">
-             <img src="<?php the_field('testimonial-coach-image'); ?>" alt="">
+             <img width="300" src="<?php the_field('testimonial-coach-image'); ?>" alt="">
            </div>
          </div>
      
