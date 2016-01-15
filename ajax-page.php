@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: webinar Page Template
+Template Name: testing ajax Page Template
 * Version: 1.0
 */
 ?>

@@ -108,9 +108,7 @@ Template Name: ebook Page Template
                       <form method="post" name="form1" action="">     
                         <div class="row--full">
                           <div class="col-7-12">
-                            <h1>AWESOME YOUR FREE EBOOK IS ON ITS WAY!</h1>
-
-                            <h3>Want to know how to stay ahead in the game?</h3>
+                            <h1>Want to know how to stay ahead in the game?</h1>
 
                             <h3>Get a Free 15 Minute Coaching Business Health Check</h3>
                             <p>
@@ -178,7 +176,8 @@ Template Name: ebook Page Template
                 <p style="font-size: 22px;max-width: 500px;width:100%;"><?php the_field('ebook-home-description'); ?></p>  
                 <?php echo do_shortcode('[mc4wp_form id="2556"]'); ?>
                
-                <p><?php the_field('ebook-home-copy'); ?></p>
+                <!-- <p><?php //the_field('ebook-home-copy'); ?></p> -->
+                <a class="health-check" href="">Sign Up Health Check</a>
               </div>
            </div>
        </div>
@@ -326,7 +325,10 @@ Template Name: ebook Page Template
                        <li><h4>contact</h4></li>
                        <li><a href="mailto:hello@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; hello@coachseek.com</a></li>
                        <li><a href="mailto:support@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; support@coachseek.com</a></li>
-                       <li><a href=""><i class="fa fa-phone"></i> &nbsp;  +1-888-762-7187</a></li>
+                        <li><a href=""><i class="fa fa-phone"></i> &nbsp; US/CAN +1-888-762-7187</a></li>
+                       <li><a href=""><i class="fa fa-phone"></i> &nbsp; UK +44 (0)20-8133-0285</a></li>
+                       <li><a href=""><i class="fa fa-phone"></i> &nbsp; AUS +61 (0)39-028-4578</a></li>
+                       <li><a href=""><i class="fa fa-phone"></i> &nbsp; NZ +64 (0)21-842-810</a></li>
                        <li><a href="https://www.facebook.com/Coachseek" target="_blank"><i class="fa fa-facebook-f"></i> &nbsp; &nbsp; Facebook</a></li>
                        <li><a href="https://twitter.com/coachseek" target="_blank"><i class="fa fa-twitter"></i> &nbsp; Twitter</a></li>
                        <li><a href="https://www.linkedin.com/company/coachseek" target="_blank" ><i class="fa fa-linkedin"></i> &nbsp; &nbsp;Linkedin</a></li>
@@ -342,7 +344,8 @@ Template Name: ebook Page Template
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
 
     <script type="text/javascript">
-    $('input#mailchimp').click(function() {
+    $('a.health-check').click(function(e) {
+      e.preventDefault();
       /* Act on the event */
       $('#mailchimp-popup').css('opacity', '1');
       $('#mailchimp-popup').css('pointer-events', 'auto');

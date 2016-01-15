@@ -13,8 +13,6 @@
 
     }
     .row--full{
-
-
     	padding:60px 40px 0 100px;
 
     	.col-6-12{
@@ -63,6 +61,20 @@
 
     			padding: 12px 0;
     			width: 100%;
+    		}
+    		a.health-check{
+    			position: relative;
+			    font-family: lato-medium;
+			    padding: 16px 30px;
+			    background-color: $green;
+			    border-radius: 4px;
+			    transition: background ease 0.8s;
+			    left: 120px;
+			    top: 50px;
+				&:hover{
+					background-color: $light-green;
+						
+				}
     		}
     	}
     }
@@ -158,6 +170,10 @@
 
 					padding-top: 40px;
 
+				}
+				a.health-check{
+					left: 0px;
+			    	top: 0px;
 				}
 			}
 		}

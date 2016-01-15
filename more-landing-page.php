@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Main Features Page Template
+Template Name: More Landing Page Template
 * Version: 1.0
 */
 ?>
