@@ -1,34 +1,34 @@
 <?php
 /*
-Template Name: ebook Page Template
+Template Name: ajax Page Template
 * Version: 1.0
 */
 ?>
 <!DOCTYPE html>
 <html  <?php language_attributes(); ?>>
     <head>
-       	<meta charset="<?php bloginfo( 'charset' ); ?>">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <title><?php wp_title( '|', true, 'right' ); ?></title>
          
         <!-- Favicon and iOS icons -->
-  		<?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
-  		<link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
-  		<?php endif; ?>
-  		<?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
-  		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
-  		<?php endif; ?>
-  		<?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
-  		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
-  		<?php endif; ?>
-  		<?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
-  		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
-  		<?php endif; ?>
-  		<?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
-  		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
-  		<?php endif; ?>
+      <?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
+      <link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
+      <?php endif; ?>
+      <?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
+      <?php endif; ?>
+      <?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
+      <?php endif; ?>
+      <?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
+      <?php endif; ?>
+      <?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
+      <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
+      <?php endif; ?>
          
       
       <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css?ver=<?php $theme_version = wp_get_theme(); echo $theme_version->Version; ?>" type="text/css" media="screen" />
@@ -105,7 +105,7 @@ Template Name: ebook Page Template
              <div id="mailchimp-popup" class="modalDialog">
                 <div>
                     <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
-                      <form method="post" name="form1" action="">     
+                      <form  method="post" name="ebook" id="ebook-form" action="">     
                         <div class="row--full">
                           <div class="col-7-12">
                             <h1>Want to know how to stay ahead in the game?</h1>
@@ -126,36 +126,45 @@ Template Name: ebook Page Template
                             </ul>
                           </div>
                           <div class="col-5-12">
-                            <div class="row--full">
-                        
-                            <div class="row--full left ">
-                              <label for="">Business name</label>
-                              <input type="text" name="business" placeholder="Business name" required>
-                            </div>
-                            <div class="row--full name left">
-                            <div class="col-6-12">
-                              <label for="">First name</label>
-                              <input type="text" name="firstname" placeholder="First name" required>
-                            </div>
-                            <div class="col-6-12">
-                              <label for="">Last name</label>
-                               <input type="text" name="lastname" placeholder="Last name" required></div>
-                            </div>
-                            </div>
-                            <div class="row--full">
-                              <div class="row--full right ">
-                                <label for="">Email address</label>
-                                <input type="email" name="email" placeholder="Email address" required>
-                                </div>
-                              <div class="row--full right ">
-                              <label for="">Phone number</label>
-                                <input type="tel" name="phone" placeholder="Phone number" required>
-                                </div>
-                                 <div class="row--full" style="text-align:center;">
-                                  <button id="submit" type="submit" name="submit" style="background:white;color:#00A478;">Let's Talk!</button>
-                                </div>
-                            </div>
-                            
+                       
+                              <div class="row--full">
+                          
+                              <div class="row--full left ">
+                                <label for="">Business name</label>
+                                <input type="text" name="business" placeholder="Business name" required>
+                              </div>
+                              <div class="row--full name left">
+                              <div class="col-6-12">
+                                <label for="">First name</label>
+                                <input type="text" name="firstname" placeholder="First name" required>
+                              </div>
+                              <div class="col-6-12">
+                                <label for="">Last name</label>
+                                 <input type="text" name="lastname" placeholder="Last name" required></div>
+                              </div>
+                              </div>
+                              <div class="row--full">
+                                <div class="row--full right ">
+                                  <label for="">Email address</label>
+                                  <input type="email" name="email" placeholder="Email address" required>
+                                  </div>
+                                <div class="row--full right ">
+                                <label for="">Phone number</label>
+                                  <input type="tel" name="phone" placeholder="Phone number" required>
+                                  </div>
+                                   <div class="row--full" style="text-align:center;">
+                                    <button id="ebook-submit" type="submit" name="submit" style="background:white;color:#00A478;">Let's Talk!</button><span class="loading-submit"><i class="fa fa-spinner fa-pulse"></i></span>
+                                  
+                                  </div>
+                                  <p class="ebook-post-error" style="color:red;">
+                                    Your submission could not be processed, Please try later again!
+                                  </p>
+                                  <p class="ebook-post-success" style="color:green;">
+                                    Your submission has been received, We will touch you soon!
+                                  </p>
+                      
+                              </div>
+                           
                           </div>
                    
                         </div>
@@ -165,6 +174,7 @@ Template Name: ebook Page Template
 
                   </div>
                 </div>
+
        <div class="landing--home-bg ebook" style="">
           <div class="landing--home-bg-overlap"></div>
            <div class="row--full">
@@ -341,10 +351,15 @@ Template Name: ebook Page Template
     
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
 
     <script type="text/javascript">
-    $('a.health-check').click(function(e) {
+    $(document).ready(function(){
+      $('.ebook-post-error').hide();
+      $('.ebook-post-success').hide();
+      $('.loading-submit').hide();
+      $('a.health-check').click(function(e) {
       e.preventDefault();
       /* Act on the event */
       $('#mailchimp-popup').css('opacity', '1');
@@ -355,6 +370,41 @@ Template Name: ebook Page Template
         $('#mailchimp-popup').css('pointer-events', 'none');
     });
 
+    $('#ebook-submit').click(function(e) {
+        e.preventDefault();
+        $('.loading-submit').show();
+        /* Act on the event */
+         var data = {
+          firstname: $("input[name='firstname']").val(),
+          email: $("input[name='email']").val(),
+          phone: $("input[name='phone']").val(),
+          lastname: $("input[name='lastname']").val(),
+          business: $("input[name='business']").val()
+        };
+        if($('#ebook-form').valid()){
+          $.ajax({
+              type: "POST",
+              url: "<?php echo get_stylesheet_directory_uri();?>/ebook-email.php",
+              data: data,
+              success: function(){
+                  $('#webinar--home-video').css('opacity', '1');
+                  $('#webinar--home-video').css('pointer-events', 'auto');
+                  $('.loading-submit').hide();
+                  $('.ebook-post-success').show();
+                  $('.ebook-post-error').hide();
+              },
+              error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                  // alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                  $('.ebook-post-error').show();
+              }  
+          });
+        }else{
+          $('.loading-submit').hide();
+           
+        }
+      });
+    });
+    
     </script>
 
     <script>

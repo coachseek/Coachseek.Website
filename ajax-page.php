@@ -1,34 +1,34 @@
 <?php
 /*
-Template Name: testing ajax Page Template
+Template Name: ajax Page Template
 * Version: 1.0
 */
 ?>
 <!DOCTYPE html>
 <html  <?php language_attributes(); ?>>
     <head>
-       	<meta charset="<?php bloginfo( 'charset' ); ?>">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <title><?php wp_title( '|', true, 'right' ); ?></title>
          
         <!-- Favicon and iOS icons -->
-  		<?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
-  		<link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
-  		<?php endif; ?>
-  		<?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
-  		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
-  		<?php endif; ?>
-  		<?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
-  		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
-  		<?php endif; ?>
-  		<?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
-  		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
-  		<?php endif; ?>
-  		<?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
-  		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
-  		<?php endif; ?>
+      <?php if ( isset( $mokaine['custom-favicon']['url'] ) && $mokaine['custom-favicon']['url'] != '' ) : ?>
+      <link rel="shortcut icon" href="<?php echo $mokaine['custom-favicon']['url']; ?>" />
+      <?php endif; ?>
+      <?php if ( isset( $mokaine['custom-ios-icon144']['url'] ) && $mokaine['custom-ios-icon144']['url'] != '' ) : ?>
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $mokaine['custom-ios-icon144']['url']; ?>" />
+      <?php endif; ?>
+      <?php if ( isset( $mokaine['custom-ios-icon114']['url'] ) && $mokaine['custom-ios-icon114']['url'] != '' ) : ?>
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $mokaine['custom-ios-icon114']['url']; ?>" />
+      <?php endif; ?>
+      <?php if ( isset( $mokaine['custom-ios-icon72']['url'] ) && $mokaine['custom-ios-icon72']['url'] != '' ) : ?>
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $mokaine['custom-ios-icon72']['url']; ?>" />
+      <?php endif; ?>
+      <?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
+      <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
+      <?php endif; ?>
          
       
       <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css?ver=<?php $theme_version = wp_get_theme(); echo $theme_version->Version; ?>" type="text/css" media="screen" />
@@ -37,12 +37,6 @@ Template Name: testing ajax Page Template
     </head>
 
     <body>
-     <div id="webinar--home-video" class="modalDialog landing--home-video-modal">
-        <div style="margin-top: 7%; width: 80%; height: 70%;">
-          <a href="#close-video" title="Close" class="close-video" id="close-video" >Close <i class="fa fa-times fa-lg"></i></a>
-        <iframe src="<?php the_field('webinar-home-video'); ?>" id="landing--home-iframe" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-      </div>
     <div class="container">
   
     <header>
@@ -81,76 +75,222 @@ Template Name: testing ajax Page Template
             </div>
     </header>
 
-       <div class="landing--home-bg webinar" style="background: url('<?php the_field('webinar-home-background'); ?>') 0 0px no-repeat; background-size: cover;">
+      <?php 
+              if(isset($_POST['submit'])){
+                  $to = "coachseeknz@gmail.com,samyin1990@gmail.com"; // this is your Email address
+                  $from = $_POST['email']; // this is the sender's Email address
+                  $firstname = $_POST['firstname'];
+                  $lastname = $_POST['lastname'];
+                  $phone = $_POST['phone'];
+                  $subject = "Health Check from e-book page";
+                  $subject2 = "Copy of your Demo request submission";
+                  $message = $firstname . " ".$lastname . " Request a demo," . "\n\n" . "Business name is: ". $_POST['business']."\n\n". "phone number is : ".$phone ."\n\n". " email address is : ". $from;
+                  $message2 = "Here is a copy of your request " . $firstname . "\n\n" . $message;
+                  $headers = "From:" . $from;
+                  $headers2 = "From:" . $to;
+                  mail($to,$subject,$message,$headers);
+                  mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+                  echo "<p class='feedback' style='position:relative;background:#00A578;text-align:center; color:white; font-size:14px;'>Your Demo request has been sent, see you soon!</p>";
+                  ?>
+                  <style type="text/css">
+
+                    div.tnz-header-row{
+                      display:none !important;
+                    }</style>
+                  <?php
+                  // You can also use header('Location: thank_you.php'); to redirect to another page.
+                  header( "Refresh:4; url=http://www.coachseek.com/sports-coaching-survival-guide/", true, 303);
+                  }
+              ?>
+             <div id="mailchimp-popup" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
+                      <form  method="post" name="ebook" id="ebook-form" action="">     
+                        <div class="row--full">
+                          <div class="col-7-12">
+                            <h1>Want to know how to stay ahead in the game?</h1>
+
+                            <h3>Get a Free 15 Minute Coaching Business Health Check</h3>
+                            <p>
+                              At Coachseek, we're helping coaching businesses grow and be more profitable than ever.
+                               We know that coaching is a tough challenge, but it can still be incredibly rewarding. 
+                               With a few tweaks, your business can be running smoother than you ever imagined. 
+                              Book a coaching business healthcheck with one of our specialists who will show you;
+                            </p>
+                         
+                            <ul>
+                              <li>- The 5 tools you can use to free up more time in your busy schedule</li>
+                              <li>- Easy tweaks to your website to increase sign ups by 50% per term</li>
+                              <li>- How you can consolidate your entire business admin in to one cloud based tool </li>
+                              <li>- How to use social property to connect with new customers in your area </li>
+                            </ul>
+                          </div>
+                          <div class="col-5-12">
+                       
+                              <div class="row--full">
+                          
+                              <div class="row--full left ">
+                                <label for="">Business name</label>
+                                <input type="text" name="business" placeholder="Business name" required>
+                              </div>
+                              <div class="row--full name left">
+                              <div class="col-6-12">
+                                <label for="">First name</label>
+                                <input type="text" name="firstname" placeholder="First name" required>
+                              </div>
+                              <div class="col-6-12">
+                                <label for="">Last name</label>
+                                 <input type="text" name="lastname" placeholder="Last name" required></div>
+                              </div>
+                              </div>
+                              <div class="row--full">
+                                <div class="row--full right ">
+                                  <label for="">Email address</label>
+                                  <input type="email" name="email" placeholder="Email address" required>
+                                  </div>
+                                <div class="row--full right ">
+                                <label for="">Phone number</label>
+                                  <input type="tel" name="phone" placeholder="Phone number" required>
+                                  </div>
+                                   <div class="row--full" style="text-align:center;">
+                                    <button id="ebook-submit" type="submit" name="submit" style="background:white;color:#00A478;">Let's Talk!</button><span class="loading-submit"><i class="fa fa-spinner fa-pulse"></i></span>
+                                  
+                                  </div>
+                                  <p class="ebook-post-error" style="color:red;">
+                                    Your submission could not be processed, Please try later again!
+                                  </p>
+                                  <p class="ebook-post-success" style="color:green;">
+                                    Your submission has been received, We will touch you soon!
+                                  </p>
+                      
+                              </div>
+                           
+                          </div>
+                   
+                        </div>
+                     
+                    </form>
+   
+
+                  </div>
+                </div>
+
+       <div class="landing--home-bg ebook" style="">
           <div class="landing--home-bg-overlap"></div>
            <div class="row--full">
-              <div class="col-6-12">  
-                <h1><?php the_field('webinar-home-title'); ?></h1>
-                <p style="font-size: 22px;max-width: 500px;width:100%;"><?php the_field('webinar-home-description'); ?></p>  
+              <div class="col-6-12">
+                <img src="<?php echo get_stylesheet_directory_uri();?>/images/ebook-title-devices.png" alt="">
               </div>
               <div class="col-6-12">
-                <form method="post" name="webinar" id="webinar-form" action=""  >     
-                  <div class="row--full">
-                      <div class="row--full">
-                        <input type="text" name="firstname" placeholder="First Name" required>
-                      </div> 
-                      <div class="row--full">
-                        <input type="text" name="email" placeholder="Email Address" required>
-                      </div>
-                      <div class="row--full">
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
-                      </div>
-                      <div class="row--full">
-                        <input type="text" name="sport" placeholder="Sport" required>
-                      </div>
-                        <div class="row--full">
-                        <input type="text" name="business" placeholder="Business Name" required>
-                      </div>
-                      <button id="webinar-submit" type="submit" name="submit">Watch Webinar</button><span class="loading-submit"><i class="fa fa-spinner fa-pulse"></i></span>
-                  </div>
-              </form>
+                <h1><?php the_field('ebook-home-title'); ?></h1>
+                <p style="font-size: 22px;max-width: 500px;width:100%;"><?php the_field('ebook-home-description'); ?></p>  
+                <?php echo do_shortcode('[mc4wp_form id="2556"]'); ?>
+               
+                <!-- <p><?php //the_field('ebook-home-copy'); ?></p> -->
+                <a class="health-check" href="">Sign Up Health Check</a>
               </div>
            </div>
        </div>
 
-      <div class="landing--home-desc webinar">
-        <h3><?php the_field('webinar-feature-title'); ?> </h3>
-        <p><?php the_field('webinar-feature-description'); ?> </p>
-        <div class="row">
-          <div class="col-6-12">
-            <img src="<?php the_field('webinar-feature-image'); ?> " alt="">
-          </div>
-          <div class="col-6-12">
-            <ul>
-            <?php
-                // check if the repeater field has rows of data
-                if( have_rows('webinar-feature-list') ):
+         <div class="landing--home-desc ebook">
+             <h3><?php the_field('ebook-feature-title'); ?> </h3>
+             <?php
+              // check if the flexible content field has rows of data
+              if( have_rows('features') ):
+                   // loop through the rows of data
+                  while ( have_rows('features') ) : the_row();
+                  if( get_row_layout() == 'circle-row' ): 
+                   ?>                     
+                <div class="row--full">
+                <?php  if( have_rows('circle-row') ):
+                      while ( have_rows('circle-row') ) : the_row(); ?>
+                 <div class="col-3-12">
+                  <p><?php the_sub_field('description');?></p>
+                  <div class="landing--home-circle">
+                    <img src="<?php the_sub_field('image');?>" alt="">
+                  </div>                   
+                 </div>
+                 
+                 <?
+                  endwhile;
 
-                  // loop through the rows of data
-                    while ( have_rows('webinar-feature-list') ) : the_row();
+                  endif;
+                  endif;
+                 ?>
 
-                        // display a sub field value
-                      ?>
-                        <li><?php the_sub_field('webinar-feature-description'); ?> </li>
-                      <?php
+               </div>
+              <?php 
 
-                    endwhile;
-
-                else :
-
-                    // no rows found
-
-                endif;
-
-              ?>
-            </ul>
-            <a href="" class="webinar-feature-register">Register now</a>
-          </div>
-        </div>      
-          
-            
+              endwhile;
+              else :
+                  // no layouts found
+              endif;
+              ?>      
        </div>
   
+      
+       <div class="landing--home-quote ebook">
+        <?php
+
+          // check if the flexible content field has rows of data
+          if( have_rows('ebook-quote') ):
+
+               // loop through the rows of data
+              while ( have_rows('ebook-quote') ) : the_row();
+
+                  if( get_row_layout() == 'ebook-quote' ):
+
+                    ?>
+                    <div class="row--full">
+                    <?php
+
+                      // check if the repeater field has rows of data
+                      if( have_rows('ebook-quote-repeater') ):
+
+                        // loop through the rows of data
+                          while ( have_rows('ebook-quote-repeater') ) : the_row();
+
+                              // display a sub field value
+                             ?>
+                                <div class="col-6-12">
+
+                                <div class="col-3-12">
+                                  <img src="<?php the_sub_field('ebook-quote-img'); ?>" alt="">
+                                </div>
+                                <div class="col-9-12">
+                                  <h3><?php the_sub_field('ebook-quote-desc'); ?></h3>
+                                  <p><?php the_sub_field('ebook-quote-name'); ?></p>
+                               
+
+                                </div>
+                              </div>
+                             <?php
+
+                          endwhile;
+
+                      else :
+
+                          // no rows found
+
+                      endif;
+
+                    ?></div><?php                
+
+                  endif;
+
+              endwhile;
+
+          else :
+
+              // no layouts found
+
+          endif;
+
+          ?>
+        </div>
+     
+     
+
        <footer>
            <div class="row">
                <div class="col-3-12">
@@ -195,7 +335,10 @@ Template Name: testing ajax Page Template
                        <li><h4>contact</h4></li>
                        <li><a href="mailto:hello@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; hello@coachseek.com</a></li>
                        <li><a href="mailto:support@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; support@coachseek.com</a></li>
-                       <li><a href=""><i class="fa fa-phone"></i> &nbsp;  +1-888-762-7187</a></li>
+                        <li><a href=""><i class="fa fa-phone"></i> &nbsp; US/CAN +1-888-762-7187</a></li>
+                       <li><a href=""><i class="fa fa-phone"></i> &nbsp; UK +44 (0)20-8133-0285</a></li>
+                       <li><a href=""><i class="fa fa-phone"></i> &nbsp; AUS +61 (0)39-028-4578</a></li>
+                       <li><a href=""><i class="fa fa-phone"></i> &nbsp; NZ +64 (0)21-842-810</a></li>
                        <li><a href="https://www.facebook.com/Coachseek" target="_blank"><i class="fa fa-facebook-f"></i> &nbsp; &nbsp; Facebook</a></li>
                        <li><a href="https://twitter.com/coachseek" target="_blank"><i class="fa fa-twitter"></i> &nbsp; Twitter</a></li>
                        <li><a href="https://www.linkedin.com/company/coachseek" target="_blank" ><i class="fa fa-linkedin"></i> &nbsp; &nbsp;Linkedin</a></li>
@@ -203,34 +346,31 @@ Template Name: testing ajax Page Template
                </div>
            </div>
        </footer>
+       
+
     
     </div>
-
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
-
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
-    <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+
     <script type="text/javascript">
     $(document).ready(function(){
+      $('.ebook-post-error').hide();
+      $('.ebook-post-success').hide();
       $('.loading-submit').hide();
-      var iframe = document.getElementById('landing--home-iframe');
+      $('a.health-check').click(function(e) {
+      e.preventDefault();
+      /* Act on the event */
+      $('#mailchimp-popup').css('opacity', '1');
+      $('#mailchimp-popup').css('pointer-events', 'auto');
+    });
+    $('a.close').click(function(){
+        $('#mailchimp-popup').css('opacity', '0');
+        $('#mailchimp-popup').css('pointer-events', 'none');
+    });
 
-      // $f == Froogaloop
-      var player = $f(iframe);
-
-      // bind events
-      var playButton = document.getElementById("webinar-submit");
-      playButton.addEventListener("click", function() {
-        player.api("play");
-      });
-
-      var pauseButton = document.getElementById("close-video");
-      pauseButton.addEventListener("click", function() {
-        player.api("pause");
-      });
-
-      $('#webinar-submit').click(function(e) {
+    $('#ebook-submit').click(function(e) {
         e.preventDefault();
         $('.loading-submit').show();
         /* Act on the event */
@@ -238,32 +378,33 @@ Template Name: testing ajax Page Template
           firstname: $("input[name='firstname']").val(),
           email: $("input[name='email']").val(),
           phone: $("input[name='phone']").val(),
-          sport: $("input[name='sport']").val(),
+          lastname: $("input[name='lastname']").val(),
           business: $("input[name='business']").val()
         };
-        if($("#webinar-form").valid()){
+        if($('#ebook-form').valid()){
           $.ajax({
               type: "POST",
-              url: "<?php echo get_stylesheet_directory_uri();?>/email.php",
+              url: "<?php echo get_stylesheet_directory_uri();?>/ebook-email.php",
               data: data,
               success: function(){
                   $('#webinar--home-video').css('opacity', '1');
                   $('#webinar--home-video').css('pointer-events', 'auto');
-                  player.api("play");
                   $('.loading-submit').hide();
-              }
+                  $('.ebook-post-success').show();
+                  $('.ebook-post-error').hide();
+              },
+              error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                  // alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                  $('.ebook-post-error').show();
+              }  
           });
         }else{
           $('.loading-submit').hide();
+           
         }
       });
-      $('#close-video').click(function(){
-          $('#webinar--home-video').css('opacity', '0');
-          $('#webinar--home-video').css('pointer-events', 'none');
-          player.api("pause");
-      });
     });
-
+    
     </script>
 
     <script>
@@ -286,6 +427,13 @@ Template Name: testing ajax Page Template
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FP99N');</script>
     <!-- End Google Tag Manager -->
+
+    <script type="text/javascript">
+    mc4wp.forms.on('subscribed', function(form) {
+      // analytics.js
+      ga && ga('send', 'event', { eventCategory: 'Ebook&subcribeebook', eventAction: 'click', eventLabel: 'subcribeebook'});
+    </script>
+
 
     <?php wp_footer(); ?>
     </body>

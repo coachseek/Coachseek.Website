@@ -101,6 +101,7 @@ Template Name: webinar Page Template
                         <input type="text" name="business" placeholder="Business Name" required>
                       </div>
                       <button id="webinar-submit" type="submit" name="submit">Watch Webinar</button><span class="loading-submit"><i class="fa fa-spinner fa-pulse"></i></span>
+                      <p class="webinar-post-error"> Your submission could not be processed, Please try later again!</p>
                   </div>
               </form>
               </div>
@@ -210,7 +211,7 @@ Template Name: webinar Page Template
     <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
-
+      $('.webinar-post-error').hide();
       $('.loading-submit').hide();
       var iframe = document.getElementById('landing--home-iframe');
 
@@ -255,7 +256,11 @@ Template Name: webinar Page Template
                   $('#webinar--home-video').css('pointer-events', 'auto');
                   player.api("play");
                   $('.loading-submit').hide();
-              }
+              },
+              error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                  // alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                  $('.webinar-post-error').show();
+              }  
           });
         }else{
           $('.loading-submit').hide();
