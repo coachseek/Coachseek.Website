@@ -41,7 +41,7 @@ Template Name: Main Features Page Template
          <?php 
               $Path=$_SERVER['REQUEST_URI'];
               if(isset($_POST['submit'])){
-                  $to = "coachseeknz@gmail.com,samyin1990@gmail.com"; // this is your Email address
+                  $to = "coachseeknz@gmail.com,samyin1990@gmail.com,r3i1i0s4l9j4e9m4@coachseeknz.slack.com"; // this is your Email address
                   $from = $_POST['email']; // this is the sender's Email address
                   $firstname = $_POST['firstname'];
                   $lastname = $_POST['lastname'];
