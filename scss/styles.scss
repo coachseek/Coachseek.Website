@@ -13,6 +13,9 @@
 
 @import "common/*";
 
+/* include */
+@import "include/*";
+
 
 /* partials */
 
@@ -21,6 +24,7 @@
 
 /* views */
 @import "views/*";
+
 
 
 /* fontawesome */
@@ -36,3 +40,5 @@
 @import "fontawesome/rotated-flipped";
 @import "fontawesome/stacked";
 @import "fontawesome/icons";
+
+@import "SpinKit/scss/spinkit.scss";

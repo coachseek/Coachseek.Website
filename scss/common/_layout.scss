@@ -7,6 +7,8 @@
 html {
     width: 100%;
     -webkit-font-smoothing: antialiased;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body {
@@ -98,7 +100,7 @@ body {
          @include column(12/12);  
     }
     .col-4-12{
-         @include column(12/12);  
+        @include column(12/12);  
     }
     .col-9-12 {
         @include column(12/12);
@@ -112,7 +114,6 @@ body {
                @include unshift();
              
             }
-
             &.pull-7 {
                  @include unshift();
              
@@ -191,7 +192,7 @@ body {
             }
 
             &.pull-5 {
-                @include column(6/12);
+                @include column(5/12);
                 @include shift(-7/12);
              
             }

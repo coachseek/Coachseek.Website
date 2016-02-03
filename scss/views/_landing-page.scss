@@ -196,7 +196,7 @@
     height: 656px;
     display: block;
     z-index: 0;
-    background: url('../images/matt-mainbackground.jpg') 0 40px no-repeat; 
+    background: url('../images/healthy-person-woman-sport.jpg') 0 40px no-repeat; 
     background-size: cover;
     
    
@@ -224,11 +224,12 @@
             width: 100%;
             margin: 0;
             text-align: left;
-            font-size: 36px;
-            font-family: lato-semi-bold;
+            font-size: 40px;
+            font-family: lato-bold;
             letter-spacing: 1px;
             text-transform: none;
-            line-height: 40px;
+            line-height: 46px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 
         }
         h3{
@@ -546,7 +547,7 @@
     }
 
     .landing--home-bg {
-        background: url('../images/matt-mainbackground-Mobile@2x-compressor.png') 0px 13px no-repeat; 
+        background: url('../images/healthy-person-woman-sport.jpg') right top 20px no-repeat; 
         background-size: cover;
         height:initial;
         .landing--home-bg-overlap{
@@ -689,7 +690,7 @@
 and (max-width : 1024px) 
 {
     .landing--home-bg{
-        background-position: -120px 40px; 
+        // background-position: -120px 40px; 
     }
 
    .landing--home-desc .row--full .col-3-12 .landing--home-circle{
