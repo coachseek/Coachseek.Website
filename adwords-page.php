@@ -107,7 +107,7 @@ Template Name: Adwords Page Template
                       </div>
                     </div>
                     <div class="row">
-                      <a class="button" href=""><?php echo the_sub_field('home-button');?></a>
+                      <a class="button" href="https://app.coachseek.com/#/new-user-setup"  onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'adwordsLandingPage'});"> <?php echo the_sub_field('home-button');?></a>
                     </div>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ Template Name: Adwords Page Template
                                     <div class="col-6-12 <?php echo the_sub_field('testimonial-slides-color'); ?>">
                                       <h3><?php echo the_sub_field('testimonial-slides-quote'); ?></h3>
                                       <p><?php echo the_sub_field('testimonial-slides-name'); ?></p>
-                                      <a class="button <?php echo the_sub_field('testimonial-slides-color'); ?>" href="">Read more</a>
+                                      <a class="button <?php echo the_sub_field('testimonial-slides-color'); ?>" href="<?php echo the_sub_field('testimonial-slides-link'); ?>">Read more</a>
                                     </div>
                                     <div class="col-6-12" style="background: url('<?php echo the_sub_field('testimonial-slides-image'); ?>') no-repeat center top; background-size:cover;"></div>
                                   </div>
@@ -184,6 +184,47 @@ Template Name: Adwords Page Template
         endif;
 
         ?>
+
+      <?php
+
+      // check if the flexible content field has rows of data
+      if( have_rows('partners-banner') ):
+
+           // loop through the rows of data
+          while ( have_rows('partners-banner') ) : the_row();
+
+              if( get_row_layout() == 'partners-banner' ):
+      ?>
+        <div class="section fullpage--partners-banner">
+          <div class="row">
+            <div class="col-6-12">
+              <p> Official Partners: </p>
+            </div>
+            <div class="col-2-12">
+              <img src="<?php the_sub_field('partners-banner-logo-1');?>" alt="">
+            </div>
+            <div class="col-4-12">
+              <img src="<?php the_sub_field('partners-banner-logo-2');?>" alt="">
+            </div>
+          </div>
+        </div>
+      <?php  
+
+              endif;
+
+          endwhile;
+
+      else :
+
+          // no layouts found
+
+      endif;
+
+      ?>
+
+
+
+
 
 
         <?php
@@ -248,101 +289,239 @@ Template Name: Adwords Page Template
         endif;
 
         ?>
+        <?php
 
-        <div class="section fullpage-optional-banner">
-          
-        </div>
+        // check if the flexible content field has rows of data
+        if( have_rows('fullpage-optional-banner') ):
 
+             // loop through the rows of data
+            while ( have_rows('fullpage-optional-banner') ) : the_row();
+
+                if( get_row_layout() == 'fullpage-optional-banner' ):
+                  ?>
+
+                <div class="section fullpage-optional-banner">
+                  <div class="row">  
+                    <h3><?php echo the_sub_field('banner-title'); ?></h3>
+                    <div class="fullpage-optional-description"> 
+                      <p><?php echo the_sub_field('banner-description'); ?></p>
+                    </div>
+                   
+                    <a class="button" href="<?php echo the_sub_field('banner-link'); ?>" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'AdwordsLandingPage'});">Get Started</a>
+                  </div>
+
+                </div>
+        <?php
+                   endif;
+
+            endwhile;
+
+        else :
+
+            // no layouts found
+
+        endif;
+
+        ?>
+
+        <?php
+
+        // check if the flexible content field has rows of data
+        if( have_rows('fullpage-pricing') ):
+
+             // loop through the rows of data
+            while ( have_rows('fullpage-pricing') ) : the_row();
+
+                if( get_row_layout() == 'usd' ):
+        ?>
         <div class="section fullpage--testimonial-pricing">
-          
           <div class="pricing--home-list">
           <h2>Pricing plan to suit any team</h2>
            <div class="row">
-            <?php
-              // check if the flexible content field has rows of data
-              if( have_rows('price-page-plan') ):
-               // loop through the rows of data
-              while ( have_rows('price-page-plan') ) : the_row(); 
-              if( get_row_layout() == 'popular' ):
-
-              ?>
+              <div class="col-3-12">  
+                    <div class="pricing--home-list-price">
+                      <h5>Solo</h5>
+                      <h2>$20&nbsp;<span>/mo</span></h2>
+                    </div>
+                    <div class="pricing--home-list-coach">
+                     <p>1 coach</p>
+                      <a style="border-radius:8px;" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free Trial</a>
+                    </div>
+              </div> 
               <div class="col-3-12">
-               <!-- <div class="pricing--home-list-popular">Popular</div>   -->
                 <div class="pricing--home-list-price">
-                  <h5><?php the_sub_field('plan-name');?></h5>
-                  <h2>$<?php the_sub_field('price-number');?> <span>/mo</span></h2>
+                  <h5>Standard&nbsp; <span>Popular!</span></h5>
+                  <h2>$35&nbsp;<span>/mo</span></h2>
                 </div>
                 <div class="pricing--home-list-coach">
-                  <p><?php the_sub_field('coach-number');?></p>
-                  <a style="border-radius:8px;"  href="/subscribe-paypal" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free Trial</a>
+                   <p>Up to 5 coaches</p>
+                  <a style="border-radius:8px;"  href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free Trial</a>
                 </div>
               </div>
-             <?php elseif( get_row_layout() == 'unlimited' ): ?>
-                 <div class="col-3-12">
-                  <div class="pricing--home-list-price">
-                      <h5><?php the_sub_field('plan-name');?></h5>
-                      <h2><?php the_sub_field('price-poa');?></h2>
-                    </div>
-                    <div class="pricing--home-list-coach">
-                      <p class="unlimited"><?php the_sub_field('coach-number');?></p>
-                      <a style="border-radius:8px;"  class="unlimited" href="#demo" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Request a Demo</a>
-                  </div>
-                </div>
-             <?php elseif( get_row_layout() == 'normal' ): ?>       
-                <div class="col-3-12">  
-                 
+              <div class="col-3-12">  
                     <div class="pricing--home-list-price">
-                      <h5><?php the_sub_field('plan-name');?></h5>
-                      <h2>$<?php the_sub_field('price-number');?> <span>/mo</span></h2>
+                      <h5>Pro</h5>
+                      <h2>$60&nbsp;<span>/mo</span></h2>
                     </div>
                     <div class="pricing--home-list-coach">
-                      <p><?php the_sub_field('coach-number');?></p>
-                      <a style="border-radius:8px;" href="/subscribe-paypal" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free Trial</a>
+                      <p>Up to 10 coaches</p>
+                      <a style="border-radius:8px;" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free Trial</a>
                     </div>
+              </div> 
+               <div class="col-3-12">
+                <div class="pricing--home-list-price">
+                    <h5>Unlimited</h5>
+                    <h2>POA</h2>
+                  </div>
+                  <div class="pricing--home-list-coach">
+                    <p class="unlimited">Unlimited number of coaches</p>
+                    <a style="border-radius:8px;"  class="unlimited" href="#demo" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Request a Demo</a>
                 </div>
-              <?php endif;
-
-                  endwhile;
-
-                  else :
-
-                      // no layouts found
-
-                  endif;
-
-              ?>       
+              </div>      
            </div>
            <div class="pricing--home-list-desc row">
-              <?php
-              // check if the flexible content field has rows of data
-              if( have_rows('price-information') ):
-               // loop through the rows of data
-              while ( have_rows('price-information') ) : the_row(); 
-
-              ?>
-             <p>
-             <?php the_sub_field('information');?>
-             </p>
+            <p>Pricing is in USD. Includes all features on every device, plus full support &amp; setup. <br>
+"With Coachseek, I'm saving over two and a half hours on admin every single day." Carl Tinsley, Football Kidz NZ</p>
            </div>
            <div class="pricing--home-list-suitplan row" style="border-radius:8px;">
-              <h5><?php the_sub_field('help');?></h5>
-              <?php the_sub_field('help-information');?>
-               <?php 
-
-                  endwhile;
-
-                  else :
-
-                      // no layouts found
-
-                  endif;
-
-              ?>       
+              <h5>SAVE 17% WITH OUR ANNUAL PLANS</h5>
+              <p>Commit to a year, and we’ll only charge you for 10 months.</p>
            </div>
          </div>
         </div>
+        <?php
+           elseif( get_row_layout() == 'uk' ): 
 
-       
+                ?>
+            <div class="section fullpage--testimonial-pricing">
+                <div class="pricing--home-list">
+                <h2>Pricing plan to suit any team</h2>
+                 <div class="row">
+                    <div class="col-3-12">  
+                          <div class="pricing--home-list-price">
+                            <h5>Solo</h5>
+                            <h2>£15&nbsp;<span>/mo</span></h2>
+                          </div>
+                          <div class="pricing--home-list-coach">
+                            <p>1 coach</p>
+                            <a style="border-radius:8px;" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free Trial</a>
+                          </div>
+                    </div> 
+                    <div class="col-3-12">
+                      <div class="pricing--home-list-price">
+                        <h5>Standard&nbsp; <span>Popular!</span></h5>
+                        <h2>£25&nbsp;<span>/mo</span></h2>
+                      </div>
+                      <div class="pricing--home-list-coach">
+                         <p>Up to 5 coaches</p>
+                        <a style="border-radius:8px;"  href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free Trial</a>
+                      </div>
+                    </div>
+                    <div class="col-3-12">  
+                          <div class="pricing--home-list-price">
+                            <h5>Pro</h5>
+                            <h2>£40&nbsp;<span>/mo</span></h2>
+                          </div>
+                          <div class="pricing--home-list-coach">
+                            <p>Up to 10 coaches</p>
+                            <a style="border-radius:8px;" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free Trial</a>
+                          </div>
+                    </div> 
+                     <div class="col-3-12">
+                      <div class="pricing--home-list-price">
+                          <h5>Unlimited</h5>
+                          <h2>POA</h2>
+                        </div>
+                        <div class="pricing--home-list-coach">
+                          <p class="unlimited">Unlimited number of coaches</p>
+                          <a style="border-radius:8px;"  class="unlimited" href="#demo" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Request a Demo</a>
+                      </div>
+                    </div>      
+                 </div>
+                 <div class="pricing--home-list-desc row">
+                  <p>Pricing is in UK. Includes all features on every device, plus full support &amp; setup. <br>
+      "With Coachseek, I'm saving over two and a half hours on admin every single day." Carl Tinsley, Football Kidz NZ</p>
+                 </div>
+                 <div class="pricing--home-list-suitplan row" style="border-radius:8px;">
+                    <h5>SAVE 17% WITH OUR ANNUAL PLANS</h5>
+                    <p>Commit to a year, and we’ll only charge you for 10 months.</p>
+                 </div>
+               </div>
+              </div>
+
+                <?php
+                elseif( get_row_layout() == 'nz' ): 
+                ?>
+                <div class="section fullpage--testimonial-pricing">
+                <div class="pricing--home-list">
+                <h2>Pricing plan to suit any team</h2>
+                 <div class="row">
+                    <div class="col-3-12">  
+                          <div class="pricing--home-list-price">
+                            <h5>Solo</h5>
+                            <h2>$30&nbsp;<span>/mo</span></h2>
+                          </div>
+                          <div class="pricing--home-list-coach">
+                            <p>1 coach</p>
+                            <a style="border-radius:8px;" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free Trial</a>
+                          </div>
+                    </div> 
+                    <div class="col-3-12">
+                      <div class="pricing--home-list-price">
+                        <h5>Standard&nbsp; <span>Popular!</span></h5>
+                        <h2>$50&nbsp;<span>/mo</span></h2>
+                      </div>
+                      <div class="pricing--home-list-coach">
+                        <p>Up to 5 coaches</p>
+                        <a style="border-radius:8px;"  href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free Trial</a>
+                      </div>
+                    </div>
+                    <div class="col-3-12">  
+                          <div class="pricing--home-list-price">
+                            <h5>Pro</h5>
+                            <h2>$85&nbsp;<span>/mo</span></h2>
+                          </div>
+                          <div class="pricing--home-list-coach">
+                            <p>Up to 10 coaches</p>
+                            <a style="border-radius:8px;" href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Free Trial</a>
+                          </div>
+                    </div> 
+                     <div class="col-3-12">
+                      <div class="pricing--home-list-price">
+                          <h5>Unlimited</h5>
+                          <h2>POA</h2>
+                        </div>
+                        <div class="pricing--home-list-coach">
+                          <p class="unlimited">Unlimited number of coaches</p>
+                          <a style="border-radius:8px;"  class="unlimited" href="#demo" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'Pricing'});">Request a Demo</a>
+                      </div>
+                    </div>      
+                 </div>
+                 <div class="pricing--home-list-desc row">
+                  <p>Pricing is in NZ. Includes all features on every device, plus full support &amp; setup. <br>
+      "With Coachseek, I'm saving over two and a half hours on admin every single day." Carl Tinsley, Football Kidz NZ</p>
+                 </div>
+                 <div class="pricing--home-list-suitplan row" style="border-radius:8px;">
+                    <h5>SAVE 17% WITH OUR ANNUAL PLANS</h5>
+                    <p>Commit to a year, and we’ll only charge you for 10 months.</p>
+                 </div>
+               </div>
+              </div>
+
+                <?php
+
+                endif;
+
+            endwhile;
+
+        else :
+
+            // no layouts found
+
+        endif;
+
+        ?>
+               
         <div class="section fullpage--footer">
           <div class="row">
             <h3><?php echo the_field('footer-title'); ?></h3>
