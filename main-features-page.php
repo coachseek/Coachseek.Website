@@ -29,6 +29,25 @@ Template Name: Main Features Page Template
 		<?php if ( isset( $mokaine['custom-ios-icon57']['url'] ) && $mokaine['custom-ios-icon57']['url'] != '' ) : ?>
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $mokaine['custom-ios-icon57']['url']; ?>" />
 		<?php endif; ?>
+    <?php 
+    $Path=$_SERVER['REQUEST_URI'];
+    if($_POST){
+      $to = "coachseeknz@gmail.com,samyin1990@gmail.com,r3i1i0s4l9j4e9m4@coachseeknz.slack.com"; // this is your Email address
+      $from = $_POST['email']; // this is the sender's Email address
+      $firstname = $_POST['firstname'];
+      $lastname = $_POST['lastname'];
+      $phone = $_POST['phone'];
+      $business = $_POST['business'];
+      $subject = "Demo Request from ". $Path." page";
+      $subject2 = "Copy of your Demo request submission";
+      $message = $firstname . " " . $lastname . " from Business: ".$business . " request a demo," . "\n\n" . "Business name is: ". $_POST['business']."\n\n". " email address is : ". $from . "\n\n" . " phone number is :" . $phone;
+      $message2 = "Here is a copy of your request " . $firstname . "\n\n" . $message;
+      $headers = "From:" . $from;
+      $headers2 = "From: noreply@coachseek.com";
+      mail($to,$subject,$message,$headers);
+      mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    }
+  ?>
        
    
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css?ver=<?php $theme_version = wp_get_theme(); echo $theme_version->Version; ?>" type="text/css" media="screen" />
@@ -38,36 +57,6 @@ Template Name: Main Features Page Template
 
     <body>
     <div class="container">
-         <?php 
-              $Path=$_SERVER['REQUEST_URI'];
-              if(isset($_POST['submit'])){
-                  $to = "coachseeknz@gmail.com,samyin1990@gmail.com,r3i1i0s4l9j4e9m4@coachseeknz.slack.com"; // this is your Email address
-                  $from = $_POST['email']; // this is the sender's Email address
-                  $firstname = $_POST['firstname'];
-                  $lastname = $_POST['lastname'];
-                  $phone = $_POST['phone'];
-                  $subject = "Demo Request from ". $Path." page";
-                  $subject2 = "Copy of your Demo request submission";
-                  $message = $firstname . " ".$lastname . " Request a demo," . "\n\n" . "Business name is: ". $_POST['business']."\n\n". "phone number is : ".$phone ."\n\n". " email address is : ". $from;
-                  $message2 = "Here is a copy of your request " . $firstname . "\n\n" . $message;
-                  $headers = "From:" . $from;
-                  $headers2 = "From:" . $to;
-                  mail($to,$subject,$message,$headers);
-                  mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-                  echo "<p class='feedback' style='background:#00A578;text-align:center; color:white; font-size:14px;'>Your Demo request has been sent, see you soon!</p>";
-                  ?>
-                  <style type="text/css">
-
-                    div.tnz-header-row{
-                      display:none !important;
-                    }</style>
-                  <?php
-             
-                  $URI='http://www.coachseek.com'.$Path;
-                  // You can also use header('Location: thank_you.php'); to redirect to another page.
-                  header( "Refresh:3; url=$URI", true, 303);
-                  }
-              ?>
           <header>
             <div class="row--full">
                <div class="col-3-12 ">
@@ -106,7 +95,7 @@ Template Name: Main Features Page Template
      <div id="demo" class="modalDialog">
                 <div>
                     <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
-                      <form method="post" name="form1" action="">     
+                      <form id="footer-demo-request-form" method="post" name="footer-demo-request-form" action="">     
                         <div class="row">
                         <div class="row--full">
                       
@@ -120,8 +109,6 @@ Template Name: Main Features Page Template
                           <div class="col-6-12">
                              <input type="text" name="lastname" placeholder="Last name" required></div>
                           </div>
-
-                         
                         </div>
                         <div class="row--full">
                           <div class="row--full right "><input type="email" name="email" placeholder="Email address" required></div>
@@ -129,8 +116,14 @@ Template Name: Main Features Page Template
                         </div>
                       </div>
                       <div class="row--full" style="text-align:center;">
-                        <button id="submit" type="submit" name="submit">Let's Talk</button>
+                        <button id="landing-demo-request-submit" type="submit" name="submit">Let's Talk &nbsp;<span class="loading-submit"><i class="fa fa-spinner fa-pulse"></i></button>
                       </div>
+                      <p class="landing-demo-post-error" style="color:red;text-align:center;">
+                        Your submission could not be processed, Please try later again!
+                      </p>
+                      <p class="landing-demo-post-success" style="color:green;text-align:center;">
+                        Your submission has been received, We will touch you soon!
+                      </p>
                     </form>
    
 
@@ -498,7 +491,44 @@ Template Name: Main Features Page Template
     </div>
     
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
+    <script>
+      $('.loading-submit').hide();
+      $('.landing-demo-post-success').hide();
+      $('.landing-demo-post-error').hide();
+
+      $('#landing-demo-request-submit').click(function(e) {
+        e.preventDefault();
+        $('.loading-submit').show();
+        /* Act on the event */
+         var data = {
+          firstname: $("input[name='firstname']").val(),
+          email: $("input[name='email']").val(),
+          lastname: $("input[name='lastname']").val(),
+          phone: $("input[name='phone']").val(),
+          business: $("input[name='business']").val()
+        };
+        if($("#footer-demo-request-form").valid()){
+          $.ajax({
+              type: "POST",
+              // url: "<?php echo get_stylesheet_directory_uri();?>/landing-email.php",
+              data: data,
+              success: function(){
+                  $('.loading-submit').hide();
+                  $('.landing-demo-post-success').show();
+              },
+              error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                  // alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                  $('.landing-demo-post-error').show();
+              }  
+          });
+        }else{
+          $('.loading-submit').hide();
+        }
+      });
+
+    </script>
     <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

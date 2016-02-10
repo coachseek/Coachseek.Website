@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: ajax Page Template
+Template Name: ebook Page Template
 * Version: 1.0
 */
 ?>

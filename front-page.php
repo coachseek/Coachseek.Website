@@ -38,33 +38,6 @@
         </div>
       </div>
        <div class="container bluehost">
-            <?php 
-              if(isset($_POST['submit'])){
-                  $to = "coachseeknz@gmail.com,samyin1990@gmail.com,r3i1i0s4l9j4e9m4@coachseeknz.slack.com"; // this is your Email address
-                  $from = $_POST['email']; // this is the sender's Email address
-                  $firstname = $_POST['firstname'];
-                  $lastname = $_POST['lastname'];
-                  $phone = $_POST['phone'];
-                  $subject = "Demo Request from landing page";
-                  $subject2 = "Copy of your Demo request submission";
-                  $message = $firstname . " ".$lastname . " Request a demo," . "\n\n" . "Business name is: ". $_POST['business']."\n\n". "phone number is : ".$phone ."\n\n". " email address is : ". $from;
-                  $message2 = "Here is a copy of your request " . $firstname . "\n\n" . $message;
-                  $headers = "From:" . $from;
-                  $headers2 = "From:" . $to;
-                  mail($to,$subject,$message,$headers);
-                  mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-                  echo "<p class='feedback' style='background:#00A578;text-align:center; color:white; font-size:14px;'>Your Demo request has been sent, see you soon!</p>";
-                  ?>
-                  <style type="text/css">
-
-                    div.tnz-header-row{
-                      display:none !important;
-                    }</style>
-                  <?php
-                  // You can also use header('Location: thank_you.php'); to redirect to another page.
-                  header( "Refresh:4; url=http://www.coachseek.com", true, 303);
-                  }
-              ?>
         <header>
             <div class="row--full">
                <div class="col-3-12 ">
@@ -103,7 +76,7 @@
      <div id="demo" class="modalDialog">
                 <div>
                     <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
-                      <form method="post" name="form1" action="">     
+                      <form id="footer-demo-request-form" method="post" name="footer-demo-request-form" action="">     
                         <div class="row">
                         <div class="row--full">
                       
@@ -126,8 +99,14 @@
                         </div>
                       </div>
                       <div class="row--full" style="text-align:center;">
-                        <button id="submit" type="submit" name="submit">Let's Talk</button>
+                        <button id="landing-demo-request-submit" type="submit" name="submit">Let's Talk &nbsp;<span class="loading-submit"><i class="fa fa-spinner fa-pulse"></i></button>
                       </div>
+                      <p class="landing-demo-post-error" style="color:red;text-align:center;">
+                        Your submission could not be processed, Please try later again!
+                      </p>
+                      <p class="landing-demo-post-success" style="color:green;text-align:center;">
+                        Your submission has been received, We will touch you soon!
+                      </p>
                     </form>
    
 
@@ -283,25 +262,59 @@
     
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
     <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script>
-      var iframe = document.getElementById('landing--home-iframe');
+      // var iframe = document.getElementById('landing--home-iframe');
 
-      // $f == Froogaloop
-      var player = $f(iframe);
+      // // $f == Froogaloop
+      // var player = $f(iframe);
 
-      // bind events
-      var playButton = document.getElementById("landing--home-play");
-      playButton.addEventListener("click", function() {
-        player.api("play");
+      // // bind events
+      // var playButton = document.getElementById("landing--home-play");
+      // playButton.addEventListener("click", function() {
+      //   player.api("play");
+      // });
+
+      // var pauseButton = document.getElementById("close-video");
+      // pauseButton.addEventListener("click", function() {
+      //   player.api("pause");
+      // });
+
+      $('.loading-submit').hide();
+      $('.landing-demo-post-success').hide();
+      $('.landing-demo-post-error').hide();
+
+      $('#landing-demo-request-submit').click(function(e) {
+        e.preventDefault();
+        $('.loading-submit').show();
+        /* Act on the event */
+         var data = {
+          firstname: $("input[name='firstname']").val(),
+          email: $("input[name='email']").val(),
+          lastname: $("input[name='lastname']").val(),
+          phone: $("input[name='phone']").val(),
+          business: $("input[name='business']").val()
+        };
+        if($("#footer-demo-request-form").valid()){
+          $.ajax({
+              type: "POST",
+              url: "<?php echo get_stylesheet_directory_uri();?>/landing-email.php",
+              data: data,
+              success: function(){
+                  $('.loading-submit').hide();
+                  $('.landing-demo-post-success').show();
+              },
+              error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                  // alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                  $('.landing-demo-post-error').show();
+              }  
+          });
+        }else{
+          $('.loading-submit').hide();
+        }
       });
-
-      var pauseButton = document.getElementById("close-video");
-      pauseButton.addEventListener("click", function() {
-        player.api("pause");
-      });
-
     </script>
     <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
