@@ -145,7 +145,7 @@
         if($("#footer-demo-request-form").valid()){
           $.ajax({
               type: "POST",
-              url: "<?php echo get_stylesheet_directory_uri();?>/adwords-email.php",
+              // url: "<?php echo get_stylesheet_directory_uri();?>/adwords-email.php",
               data: data,
               success: function(){
                   $('.loading-submit').hide();

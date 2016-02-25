@@ -107,12 +107,26 @@ body {
     }
     .col-4-12{
         @include column(12/12);  
+        &.push-4 {
+           @include unshift();
+         
+        }
+        &.pull-4 {
+            @include unshift();  
+        }
     }
     .col-9-12 {
         @include column(12/12);
     }
     .col-8-12 {
         @include column(12/12);
+        &.push-8 {
+           @include unshift();
+         
+        }
+        &.pull-8 {
+            @include unshift();  
+        }
     }
     .col-7-12{
          @include column(12/12);  
@@ -184,6 +198,38 @@ body {
             &.pull-7 {
                 @include column(7/12);
                 @include shift(-5/12);
+             
+            }
+ 
+    }
+    .col-8-12{
+         
+            &.push-8 {
+
+                @include column(8/12);
+                @include shift(4/12);
+             
+            }
+
+            &.pull-8 {
+                @include column(8/12);
+                @include shift(-4/12);
+             
+            }
+ 
+    } 
+    .col-4-12{
+         
+            &.push-4 {
+
+                @include column(4/12);
+                @include shift(8/12);
+             
+            }
+
+            &.pull-4 {
+                @include column(4/12);
+                @include shift(-8/12);
              
             }
  

@@ -51,3 +51,10 @@ ul{
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
