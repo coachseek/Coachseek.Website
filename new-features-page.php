@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Adwords Page Template
+Template Name: New Features Page Template
 * Version: 1.0
 */
 ?>
@@ -143,7 +143,7 @@ Template Name: Adwords Page Template
       ?>
 
       <div id="fullpage">
-      <?php
+       <?php
         // check if the flexible content field has rows of data
         if( have_rows('home') ):
              // loop through the rows of data
@@ -224,7 +224,24 @@ Template Name: Adwords Page Template
                     </div>
                   </div>
                 </div>
+            
                 <?php
+                  elseif( get_row_layout() == 'old-features-home' ): 
+                ?>
+                  <div class="mainfea--home-bg" style="background: url('<?php the_sub_field('header-image'); ?>') center center no-repeat; background-size: cover;">
+                    <div class="landing-home-bg-overlap"></div>
+                     <div class="row--full">
+                         <h1><?php the_sub_field('title'); ?></h1>
+                         <p><?php the_sub_field('description'); ?></p>
+                          <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'FeaturesAndSolutions-top'}); ">Try for free</a>
+                          <a href="#demo" class="white" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'FeaturesAndSolutions-top'}); ">Request a Demo</a>
+                  
+                     </div>
+                 </div>
+
+                <?php
+                
+
                 endif;
 
             endwhile;
@@ -236,6 +253,7 @@ Template Name: Adwords Page Template
         endif;
 
         ?>
+
 
 
         <?php
@@ -253,7 +271,6 @@ Template Name: Adwords Page Template
                       <a class="angle-left" href=""><i class="fa fa-angle-left"></i></a>
                       <a class="angle-right" href=""><i class="fa fa-angle-right"></i></a>
                       <div class="fullpage--testimonial-slides">
-
                         <?php
 
                           // check if the repeater field has rows of data
@@ -334,65 +351,205 @@ Template Name: Adwords Page Template
       endif;
 
       ?>
-
-
-
-
-
-
+      
         <?php
 
         // check if the flexible content field has rows of data
-        if( have_rows('features') ):
+        if( have_rows('new-features') ):
 
              // loop through the rows of data
-            while ( have_rows('features') ) : the_row();
+            while ( have_rows('new-features') ) : the_row();
+                if( get_row_layout() == 'new-features-left' ):
+                    ?>    
+                  <div class="section fullpage--features left">
+                  <?php
 
-              if( get_row_layout() == 'features' ):
+                    // check if the flexible content field has rows of data
+                    if( have_rows('new-features-layout') ):
 
-              ?>
-              <div class="section fullpage--features">
-                  <div class="fullpage--features-bg laptop">
-                  </div>
-                  <div class="fullpage--features-slides">
-                    <?php
-                    // check if the repeater field has rows of data
-                    if( have_rows('features-slides') ):
-                      // loop through the rows of data
-                        while ( have_rows('features-slides') ) : the_row();
+                         // loop through the rows of data
+                        while ( have_rows('new-features-layout') ) : the_row();
+
+                            if( get_row_layout() == 'new-features-layout-laptop' ):
+
                             ?>
-                          <div class="item">
-                            <div class="row--full">
-                              <div class="col-4-12">
-                                <i class="fa <?php the_sub_field('features-slides-icon');?> <?php the_sub_field('features-slides-color');?>"></i>
-                                <h3><?php the_sub_field('features-slides-title');?></h3>
-                                <p><?php the_sub_field('features-slides-description');?></p>
+                              <div class="fullpage--features-bg laptop">
                               </div>
-                              <div class="col-8-12">
-                                <div class="fullpage--feature-slides-bg laptop" style="background: url('<?php the_sub_field('features-slides-image');?>') no-repeat right center;
-                                background-size: 766px;"></div>
-                                 <img src="<?php the_sub_field('features-slides-image');?>" alt="">
-                              </div>
-                            </div>
-                          </div>
+                              <div class="fullpage--features-slides">
+                                <div class="item">
+                                  <div class="row--full">
+                                    <div class="col-4-12 push-4">
+                                      <i class="fa <?php the_sub_field('features-slides-icon');?> <?php the_sub_field('features-slides-color');?>"></i>
+                                      <h3><?php the_sub_field('features-slides-title');?></h3>
+                                      <p><?php the_sub_field('features-slides-description');?></p>
+                                      <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'new-feature'}); ">Try for free</a>
+                                    </div>
+                                    <div class="col-8-12 pull-8">
+                                      <div class="fullpage--feature-slides-bg laptop" style="background: url('<?php the_sub_field('features-slides-image');?>') no-repeat left center; background-size: 766px;"></div>
+                                       <img src="<?php the_sub_field('features-slides-image');?>" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>  
                             <?php
+
+                            elseif( get_row_layout() == 'new-features-layout-tablet' ): 
+
+                            ?>
+                              <div class="fullpage--features-bg tablet">
+                              </div>
+                              <div class="fullpage--features-slides">
+                                <div class="item">
+                                  <div class="row--full">
+                                    <div class="col-4-12 push-4">
+                                      <i class="fa <?php the_sub_field('features-slides-icon');?> <?php the_sub_field('features-slides-color');?>"></i>
+                                      <h3><?php the_sub_field('features-slides-title');?></h3>
+                                      <p><?php the_sub_field('features-slides-description');?></p>
+                                      <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'new-feature'}); ">Try for free</a>
+                                    </div>
+                                    <div class="col-8-12 pull-8">
+                                      <div class="fullpage--feature-slides-bg tablet" style="background: url('<?php the_sub_field('features-slides-image');?>') no-repeat left center;background-size: 641px;"></div>
+                                       <img src="<?php the_sub_field('features-slides-image');?>" alt="">
+                                    </div>
+                                
+                                  </div>
+                                </div>
+                              </div> 
+                             <?php
+
+                            elseif( get_row_layout() == 'new-features-layout-phone' ): 
+
+                            ?>
+                              <div class="fullpage--features-bg phone">
+                              </div>
+                              <div class="fullpage--features-slides">
+                                <div class="item">
+                                  <div class="row--full">
+                                    <div class="col-4-12 push-4">
+                                      <i class="fa <?php the_sub_field('features-slides-icon');?> <?php the_sub_field('features-slides-color');?>"></i>
+                                      <h3><?php the_sub_field('features-slides-title');?></h3>
+                                      <p><?php the_sub_field('features-slides-description');?></p>
+                                      <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'new-feature'}); ">Try for free</a>
+                                    </div>
+                                    <div class="col-8-12 pull-8">
+                                      <div class="fullpage--feature-slides-bg phone" style="background: url('<?php the_sub_field('features-slides-image');?>') no-repeat left 129px center;background-size: 240px;"></div>
+                                       <img src="<?php the_sub_field('features-slides-image');?>" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+                            <?php
+
+                            endif;
+
                         endwhile;
 
                     else :
 
-                        // no rows found
+                        // no layouts found
 
                     endif;
 
                     ?>
-
-                  </div>
-                 
+               
                 </div>
               <?php
+                endif;
+                 if( get_row_layout() == 'new-features-right' ):
+                ?>
+                <div class="section fullpage--features">
+                  <?php
 
-              endif;
+                    // check if the flexible content field has rows of data
+                    if( have_rows('new-features-layout') ):
 
+                         // loop through the rows of data
+                        while ( have_rows('new-features-layout') ) : the_row();
+
+                            if( get_row_layout() == 'new-features-layout-laptop' ):
+
+                            ?>
+                             <div class="fullpage--features-bg laptop">
+                              </div>
+                              <div class="fullpage--features-slides">
+                                <div class="item">
+                                  <div class="row--full">
+                                    <div class="col-4-12">
+                                      <i class="fa <?php the_sub_field('features-slides-icon');?> <?php the_sub_field('features-slides-color');?>"></i>
+                                      <h3><?php the_sub_field('features-slides-title');?></h3>
+                                      <p><?php the_sub_field('features-slides-description');?></p>
+                                      <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'new-feature'}); ">Try for free</a>
+                                    </div>
+                                    <div class="col-8-12">
+                                      <div class="fullpage--feature-slides-bg laptop" style="background: url('<?php the_sub_field('features-slides-image');?>') no-repeat right center;background-size: 766px;"></div>
+                                       <img src="<?php the_sub_field('features-slides-image');?>" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            <?php
+
+                            elseif( get_row_layout() == 'new-features-layout-tablet' ): 
+
+                            ?>
+                              <div class="fullpage--features-bg tablet">
+                              </div>
+                              <div class="fullpage--features-slides">
+                                <div class="item">
+                                  <div class="row--full">
+                                    <div class="col-4-12">
+                                      <i class="fa <?php the_sub_field('features-slides-icon');?> <?php the_sub_field('features-slides-color');?>"></i>
+                                      <h3><?php the_sub_field('features-slides-title');?></h3>
+                                      <p><?php the_sub_field('features-slides-description');?></p>
+                                      <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'new-feature'}); ">Try for free</a>
+                                    </div>
+                                    <div class="col-8-12">
+                                      <div class="fullpage--feature-slides-bg tablet" style="background: url('<?php the_sub_field('features-slides-image');?>') no-repeat right -14px center;background-size: 641px;"></div>
+                                       <img src="<?php the_sub_field('features-slides-image');?>" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                             <?php
+
+                            elseif( get_row_layout() == 'new-features-layout-phone' ): 
+
+                            ?>
+                              <div class="fullpage--features-bg phone">
+                              </div>
+                              <div class="fullpage--features-slides">
+                                <div class="item">
+                                  <div class="row--full">
+                                    <div class="col-4-12">
+                                      <i class="fa <?php the_sub_field('features-slides-icon');?> <?php the_sub_field('features-slides-color');?>"></i>
+                                      <h3><?php the_sub_field('features-slides-title');?></h3>
+                                      <p><?php the_sub_field('features-slides-description');?></p>
+                                      <a href="https://app.coachseek.com/#/new-user-setup" onClick="ga('send', 'event', { eventCategory: 'FreeTrial', eventAction: 'click', eventLabel: 'new-feature'}); ">Try for free</a>
+                                    </div>
+                                    <div class="col-8-12">
+                                      <div class="fullpage--feature-slides-bg phone" style="background: url('<?php the_sub_field('features-slides-image');?>') no-repeat right 30px center;background-size: 240px;"></div>
+                                       <img src="<?php the_sub_field('features-slides-image');?>" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            <?php
+
+                            endif;
+
+                        endwhile;
+
+                    else :
+
+                        // no layouts found
+
+                    endif;
+
+                    ?>
+                </div>
+                      
+                <?php
+                endif;              
             endwhile;
 
         else :
@@ -401,7 +558,10 @@ Template Name: Adwords Page Template
 
         endif;
 
-        ?>
+        ?>           
+
+
+
 
         <?php
 
@@ -670,6 +830,63 @@ Template Name: Adwords Page Template
             </form>
         </div>
       </div>
+         <footer>
+           <div class="row">
+               <div class="col-3-12">
+                   <ul>
+                       <li><h4>company</h4></li>
+                       <li><a href="/team">Team</a></li>
+                       <li><a href="/blog">Blog</a></li>
+                       <li><a href="/careers">Careers</a></li>
+                       <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy"> Privacy</a></li>
+                       <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
+                       <li><a href="/referrals">Refer & Earn</a></li>
+                       <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
+                   </ul>
+               </div>
+               <div class="col-3-12">
+                   <ul>
+                       <li><h4>product</h4></li>
+                       <li><a href="/features">Features</a></li>
+                       <li><a href="/customers">Testimonials</a></li>
+                       <li><a href="/pricing">Pricing</a></li>
+                       <li><a href="/faq">FAQ's</a></li>
+                       <li><a href="http://support.coachseek.com/" target="_blank">Support</a></li>
+                       <li><a href="/newsletter">Newsletter</a></li>
+                       <li><a href="/subscribe-paypal">Subscribe</a></li>
+                   </ul>
+               </div>
+               <div class="col-3-12">
+                   <ul>
+                        <li><h4>solutions</h4></li>
+                       <li><a href="/tennis-software">Tennis</a></li>
+                       <li><a href="/squash-software">Squash</a></li>
+                       <li><a href="/swimming-software">Swimming</a></li>
+                       <li><a href="/golf-software">Golf</a></li>
+                       <li><a href="/cricket-software">Cricket</a></li>
+                       <li><a href="/yachting-and-sailing-software">Yachting & Sailing</a></li>
+                       <li><a href="/basketball-software">Basketball</a></li>
+                       <li><a href="/fitness">Fitness</a></li>
+                       <li><a href="/running">Running</a></li>
+                       <li><a href="/equestrian">Equestrian</a></li>
+                   </ul>
+               </div>
+               <div class="col-3-12">
+                   <ul>
+                       <li><h4>contact</h4></li>
+                       <li><a href="mailto:hello@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; hello@coachseek.com</a></li>
+                       <li><a href="mailto:support@coachseek.com" target="_blank"><i class="fa fa-envelope"></i> &nbsp; support@coachseek.com</a></li>
+                         <li><a href=""><i class="fa fa-phone"></i> &nbsp; US/CAN +1-888-762-7187</a></li>
+                       <li><a href=""><i class="fa fa-phone"></i> &nbsp; UK +44 (0)20-8133-0285</a></li>
+                       <li><a href=""><i class="fa fa-phone"></i> &nbsp; AUS +61 (0)39-028-4578</a></li>
+                       <li><a href=""><i class="fa fa-phone"></i> &nbsp; NZ +64 (0)21-842-810</a></li>
+                       <li><a href="https://www.facebook.com/Coachseek" target="_blank"><i class="fa fa-facebook-f"></i> &nbsp; &nbsp; Facebook</a></li>
+                       <li><a href="https://twitter.com/coachseek" target="_blank"><i class="fa fa-twitter"></i> &nbsp; Twitter</a></li>
+                       <li><a href="https://www.linkedin.com/company/coachseek" target="_blank" ><i class="fa fa-linkedin"></i> &nbsp; &nbsp;Linkedin</a></li>
+                   </ul>
+               </div>
+           </div>
+       </footer>
     </div>
     
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/please-wait/build/please-wait.min.js"></script>

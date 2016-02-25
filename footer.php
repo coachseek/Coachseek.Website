@@ -44,14 +44,17 @@
                </div>
                <div class="col-3-12">
                    <ul>
-                       <li><h4>solutions</h4></li>
-                       <li><a href="/tennis">Tennis</a></li>
-                       <li><a href="/golf">Golf</a></li>
-                       <li><a href="/swimming">Swimming</a></li>
+                        <li><h4>solutions</h4></li>
+                       <li><a href="/tennis-software">Tennis</a></li>
+                       <li><a href="/squash-software">Squash</a></li>
+                       <li><a href="/swimming-software">Swimming</a></li>
+                       <li><a href="/golf-software">Golf</a></li>
+                       <li><a href="/cricket-software">Cricket</a></li>
+                       <li><a href="/yachting-and-sailing-software">Yachting & Sailing</a></li>
+                       <li><a href="/basketball-software">Basketball</a></li>
                        <li><a href="/fitness">Fitness</a></li>
-                       <li><a href="/equestrian">Equestrian</a></li>
                        <li><a href="/running">Running</a></li>
-                       <li><a href="/cricket">Cricket</a></li>
+                       <li><a href="/equestrian">Equestrian</a></li>
                    </ul>
                </div>
                <div class="col-3-12">

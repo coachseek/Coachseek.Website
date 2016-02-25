@@ -59,6 +59,7 @@
                         <a class="landing--header-nav-more">More &nbsp; <i class="fa fa-caret-down"></i></a>
                         <ul class="landing--header-nav-more-dropdown">
                           <li><a href="/support">Support</a></li>
+                          <li><a href="/sports-website-design-services">Website Package</a></li>
                           <li><a href="/webinar-cut-the-admin-and-grow-your-business">Webinar</a></li>
                           <li><a href="/blog">Blog</a></li>
                           <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
@@ -130,57 +131,133 @@
            </div>
        </div>
        
-       <div class="landing--home-desc">
-             <h3><?php the_field('landing-home-desc'); ?></h3>
-             <?php
 
-              // check if the flexible content field has rows of data
-              if( have_rows('features') ):
-                   // loop through the rows of data
-                  while ( have_rows('features') ) : the_row();
-                  if( get_row_layout() == 'circle-row' ): 
-                   ?>                     
-                <div class="row--full">
-                <?php  if( have_rows('circle-row') ):
-                      while ( have_rows('circle-row') ) : the_row(); ?>
-                 <div class="col-3-12">
-                    <div class="landing--home-circle">
-                        <img src="<?php the_sub_field('image');?>" alt="">
-                     </div>
-                     <h5><?php the_sub_field('title');?></h5>
-                     <p><?php the_sub_field('description');?></p>
-                 </div>
-                 
-                 <?
-                  endwhile;
+        <?php
 
-                  endif;
-                  endif;
-                 ?>
+        // check if the flexible content field has rows of data
+        if( have_rows('features') ):
 
-               </div>
-              <?php 
+             // loop through the rows of data
+            while ( have_rows('features') ) : the_row();
 
-              endwhile;
-              else :
-                  // no layouts found
-              endif;
+              if( get_row_layout() == 'features' ):
+
               ?>
+              <div class="section fullpage--features">
+      
+                  <div class="fullpage--features-bg laptop">
+                  </div>
+                  <div class="fullpage--features-slides">
+                    
+                    <?php
+                    // check if the repeater field has rows of data
+                    if( have_rows('features-slides') ):
+                      // loop through the rows of data
+                        while ( have_rows('features-slides') ) : the_row();
+                            ?>
+                          <div class="item">
+                            <div class="row--full">
+                              <div class="col-4-12">
+                                <i class="fa <?php the_sub_field('features-slides-icon');?> <?php the_sub_field('features-slides-color');?>"></i>
+                                <h3><?php the_sub_field('features-slides-title');?></h3>
+                                <p><?php the_sub_field('features-slides-description');?></p>
+                              </div>
+                              <div class="col-8-12">
+                                <div class="fullpage--feature-slides-bg laptop" style="background: url('<?php the_sub_field('features-slides-image');?>') no-repeat right center;
+                                background-size: 766px;"></div>
+                                <img src="<?php the_sub_field('features-slides-image');?>" alt="">
+
+                              </div>
+                            </div>
+                          </div>
+                            <?php
+                        endwhile;
+
+                    else :
+
+                        // no rows found
+
+                    endif;
+
+                    ?>
+
+                  </div>
+                 
+                </div>
+              <?php
+
+              endif;
+
+            endwhile;
+
+        else :
+
+            // no layouts found
+
+        endif;
+
+        ?>
 
         
-           <div class="row--full">
-               <a href="/features">See more</a>
-           </div>
-       </div>
-      <?php if( get_field('quote-image') ): ?>
-       <div class="landing--home-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
-       <?php endif; ?>
-           <div class="landing--home-overlap"></div>
-           <div class="row--full">
-               <h3><?php the_field('quote-title'); ?></h3>
-               <p><?php the_field('quote-name'); ?></p>
-           </div>
-       </div>
+      <?php
+
+        // check if the flexible content field has rows of data
+        if( have_rows('testimonial') ):
+
+             // loop through the rows of data
+            while ( have_rows('testimonial') ) : the_row();
+
+              if( get_row_layout() == 'testimonial' ):
+                ?>
+                  <div class="section fullpage--testimonial">
+                   <div class="container">
+                      <a class="angle-left" href=""><i class="fa fa-angle-left"></i></a>
+                      <a class="angle-right" href=""><i class="fa fa-angle-right"></i></a>
+                      <div class="fullpage--testimonial-slides">
+
+                        <?php
+
+                          // check if the repeater field has rows of data
+                          if( have_rows('testimonial-slides') ):
+
+                            // loop through the rows of data
+                              while ( have_rows('testimonial-slides') ) : the_row();
+                                  ?>
+                                  <div class="item row--full">
+                                    <div class="col-6-12 <?php echo the_sub_field('testimonial-slides-color'); ?>">
+                                      <h3><?php echo the_sub_field('testimonial-slides-quote'); ?></h3>
+                                      <p><?php echo the_sub_field('testimonial-slides-name'); ?></p>
+                                      <a class="button <?php echo the_sub_field('testimonial-slides-color'); ?>" href="<?php echo the_sub_field('testimonial-slides-link'); ?>">Read more</a>
+                                    </div>
+                                    <div class="col-6-12" style="background: url('<?php echo the_sub_field('testimonial-slides-image'); ?>') no-repeat center top; background-size:cover;"></div>
+                                  </div>
+                                  <?php
+                              endwhile;
+
+                          else :
+
+                              // no rows found
+
+                          endif;
+
+                          ?>
+                      </div>
+                  </div>
+                </div>
+
+                <?php
+
+              endif;
+
+            endwhile;
+
+        else :
+
+            // no layouts found
+
+        endif;
+
+        ?>
 
        <div class="landing--home-tryfree">
          <div class="row--full">
@@ -232,13 +309,16 @@
                <div class="col-3-12">
                    <ul>
                        <li><h4>solutions</h4></li>
-                       <li><a href="/tennis">Tennis</a></li>
-                       <li><a href="/golf">Golf</a></li>
-                       <li><a href="/swimming">Swimming</a></li>
+                       <li><a href="/tennis-software">Tennis</a></li>
+                       <li><a href="/squash-software">Squash</a></li>
+                       <li><a href="/swimming-software">Swimming</a></li>
+                       <li><a href="/golf-software">Golf</a></li>
+                       <li><a href="/cricket-software">Cricket</a></li>
+                       <li><a href="/yachting-and-sailing-software">Yachting & Sailing</a></li>
+                       <li><a href="/basketball-software">Basketball</a></li>
                        <li><a href="/fitness">Fitness</a></li>
-                       <li><a href="/equestrian">Equestrian</a></li>
                        <li><a href="/running">Running</a></li>
-                       <li><a href="/cricket">Cricket</a></li>
+                       <li><a href="/equestrian">Equestrian</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -261,9 +341,20 @@
 
     
     </div>
+    <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/please-wait/build/please-wait.min.js"></script>
+    <script type="text/javascript">
+      var loading_screen = pleaseWait({
+        logo: "<?php echo get_stylesheet_directory_uri();?>/images/coachseek-logo.png",
+        backgroundColor: '#fefefe',
+        loadingHtml: "<p class='loading-message' style='color:#00A478;text-transform:uppercase;text-shadow: 1px 1px 3px #bbb;'>Discover the best way to manage your coaching business</p> <div class='sk-double-bounce'><div class='sk-child sk-double-bounce1'></div><div class='sk-child sk-double-bounce2'></div></div>"
+      });
+    </script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri();?>/js/adwords_script.js"></script>
     <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script>
       // var iframe = document.getElementById('landing--home-iframe');

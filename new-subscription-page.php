@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Referrals Page Template
+Template Name: New Subscription Page Template
 * Version: 1.0
 */
 ?>
@@ -33,12 +33,14 @@ Template Name: Referrals Page Template
    
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/styles.css?ver=<?php $theme_version = wp_get_theme(); echo $theme_version->Version; ?>" type="text/css" media="screen" />
 
-    </head>
-  
-    <body>
+      
 
-    <div class="container">
-      <header>
+         
+    </head>
+
+    <body>
+       <div class="container"> 
+          <header>
             <div class="row--full">
                <div class="col-3-12 ">
                  <div class="landing--header-logo">
@@ -53,7 +55,7 @@ Template Name: Referrals Page Template
                    </div>
                      <ul class="landing--header-nav-list">
                        <li><a href="/features">Features</a></li>
-                      <li><a href="/customers" >Testimonials</a></li>
+                       <li><a href="/customers" >Testimonials</a></li>
                        <li><a href="/pricing">Pricing</a></li>
                        <li class="landing--header-nav-dropdown">
                         <a class="landing--header-nav-more">More &nbsp; <i class="fa fa-caret-down"></i></a>
@@ -73,194 +75,39 @@ Template Name: Referrals Page Template
                </div>               
             </div>
       </header>
-      <?php if( get_field('header-image') ): ?>
-       <div class="mainfea--home-bg" style="height:initial;padding-top:100px;padding-bottom:150px;background: url('<?php the_field('header-image'); ?>') center center no-repeat; background-size: cover;">
+   
+       <div class="landing--home-bg" style="height:429px; background: url('<?php echo get_stylesheet_directory_uri();?>/images/overlap-black.png') center center; background-size: cover; z-index:0!important;">
+   
+         <?php if( get_field('header-image') ): ?>
+          <div class="landing--home-bg-overlap" style="background: url('<?php the_field('header-image'); ?>') center center no-repeat;position: absolute;width: 100%;height: 100%; opacity:0.5!important;z-index:2!important;background-size: cover;"></div>
           <?php endif; ?>
-          <div class="landing-home-bg-overlap" style="top: 0;"></div>
+
            <div class="row--full">
-               <h1 style="padding-top:50px;color:white;"><?php the_field('faqs-header-title'); ?></h1>
-               <p style="font-size:18px;"><?php the_field('faqs-header-description'); ?></p>
-             
+               <h1 style="letter-spacing: 0px;"><?php the_field('title'); ?></h1>
+               <p class="subtitle" style="padding-top:25px;"><?php the_field('description'); ?></p>
+           
+           </div>
+           <div class="row--full">  
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="FUM72FM8FG9NS">
+              <table style="margin:0 auto;">
+              <tr><td><input type="hidden" name="on0" value="Payment Options">Payment Options</td></tr><tr><td><select name="os0">
+                  <option value="Solo Coach Plan (1 coach)">Solo Coach Plan (1 coach) : $20.00 USD - monthly</option>
+                  <option value="Team Coach Plan (Upto 5 coaches)">Team Coach Plan (Upto 5 coaches) : $35.00 USD - monthly</option>
+                  <option value="Pro Coach Plan (Upto 10 coaches)">Pro Coach Plan (Upto 10 coaches) : $60.00 USD - monthly</option>
+                  <option value="Annual Solo Coach Plan">Annual Solo Coach Plan : $200.00 USD - yearly</option>
+                  <option value="Annual Team Coach Plan">Annual Team Coach Plan : $350.00 USD - yearly</option>
+                  <option value="Annual Pro Coach Plan">Annual Pro Coach Plan : $600.00 USD - yearly</option>
+              </select> </td></tr>
+              </table>
+              <input style="margin-top:20px;" type="hidden" name="currency_code" value="USD">
+              <input style="margin-top:20px;"  type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+              <img style="margin-top:20px;"  alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+              </form>
            </div>
        </div>
-
-       <div class="landing--home-desc tnz-desc referrals-feature">
-
-             <h3><?php the_field('referrals-title'); ?></h3>
-             <p><?php the_field('referrals-description'); ?></p>
-             <?php
-
-              // check if the flexible content field has rows of data
-              if( have_rows('features') ):
-
-                   // loop through the rows of data
-                  while ( have_rows('features') ) : the_row();
-                  if( get_row_layout() == 'circle-row' ): 
-                   ?>                     
-                <div class="row--full">
-                <?php  if( have_rows('circle-row') ):
-                      while ( have_rows('circle-row') ) : the_row(); ?>
-                 <div class="col-4-12">
-                    <div class="landing--home-circle">
-                        <img style="border-radius: 200px;" src="<?php the_sub_field('image');?>" alt="">
-                     </div>
-                     <h5><?php the_sub_field('title');?></h5>
-                     <p style="width:90%;text-align:center;"><?php the_sub_field('description');?></p>
-                 </div>
-                 
-                 <?
-                  endwhile;
-
-                  endif;
-                  endif;
-                 ?>
-
-               </div>
-              <?php 
-
-              endwhile;
-              else :
-                  // no layouts found
-              endif;
-              ?>
-
-       </div>
-
-      <?php if( get_field('quote-image') ): ?>
-       <div class="landing--home-quote tnz-quote referral-quote" style="background: url('<?php the_field('quote-image'); ?>') center center no-repeat; background-size: cover;">
-       <?php endif; ?>
-           <div class="landing--home-overlap"></div>
-           <div class="row--full" style="padding-left:0px;">
-               <h3 style="width:100%;text-align:center;"><?php the_field('quote-title'); ?></h3>
-               <a style="text-align: center;display: block;margin: 0 auto;padding: 20px 60px;font-size: 18px;" href="mailto:?cc=referrals@coachseek.com&subject=Your invite to Coachseek&body=Hi there!%0D%0A%0D%0AJust getting touch as I wanted to introduce you to Coachseek, a powerful scheduling and online booking tool built for sports coaches. %0D%0AI'm using it for my coaching business, and reckon it could help you too.%0D%0AThe team at Coachseek have a 14 day Free Trial you can sign up so you can give it a go!%0D%0ACheck it out at http://www.coachseek.com/%0D%0A%0D%0ATalk soon!" target="_blank">Introduce Your Friends</a>
-  
-           </div>
-       </div>
-
-      <div class="referral--faqs">
-        <div class="row--full"><h1>Referral FAQs</h1></div>
-        <?php
-
-        // check if the flexible content field has rows of data
-        if( have_rows('faqs') ):
-
-          // loop through the rows of data
-          while ( have_rows('faqs') ) : the_row();
-
-            if( get_row_layout() == 'faqs-row' ):
-        ?>
-
-        <div class="row--full">
-          <?php
-
-          // check if the repeater field has rows of data
-          if( have_rows('faqs-column') ):
-
-            // loop through the rows of data
-              while ( have_rows('faqs-column') ) : the_row();
-
-                  // display a sub field value
-                  ?>
-                  <div class="col-4-12">
-                    <h3 class="referral--faqs-title"><?php  the_sub_field('faqs-title'); ?></h3>
-                    <p class="referral--faqs-description"><?php  the_sub_field('faqs-description'); ?></p>
-                  </div>
-
-                  <?php
-
-              endwhile;
-
-          else :
-
-              // no rows found
-
-          endif;
-
-          ?>
-    
-        </div>
-        <?php
-            endif;
-
-          endwhile;
-
-        else :
-
-            // no layouts found
-
-        endif;
-
-        ?>
-        <div class="referral--faqs-contactus row--full">
-          <h3><?php the_field('faqs-contactus'); ?></h3>
-        </div>
-
-      </div>
-
-      <div class="pricing--home-list tnz-pricing referral--testimonials">
-       <?php
-
-        // check if the flexible content field has rows of data
-        if( have_rows('testimonials') ):
-
-          // loop through the rows of data
-          while ( have_rows('testimonials') ) : the_row();
-
-            if( get_row_layout() == 'testimonials-row' ):
-        ?>
-        <div class="row--full">
-        <?php
-
-          // check if the repeater field has rows of data
-          if( have_rows('testimonials-column') ):
-
-            // loop through the rows of data
-              while ( have_rows('testimonials-column') ) : the_row();
-
-                  // display a sub field value
-                  ?>
-          <div class="col-4-12">
-
-            <div class="col-3-12">
-              <img src="<?php the_sub_field('testimonials-image');?>" alt="">
-            </div>
-            <div class="col-9-12">      
-              <p class="referral--testimonials-words"><?php the_sub_field('testimonials-words'); ?></p>
-              <h3 class="referral--testimonials-name"><?php the_sub_field('testimonials-name'); ?></h3>
-              <p class="referral--testimonials-title"><?php the_sub_field('testimonials-title'); ?></p>
-            </div>
-
-          </div>
-                <?php
-
-              endwhile;
-
-          else :
-
-              // no rows found
-
-          endif;
-
-          ?>
-          
-        </div>
-        <?php
-            endif;
-
-          endwhile;
-
-        else :
-
-            // no layouts found
-
-        endif;
-
-        ?>
-
-      </div>
-    
-
-
+       
        <footer>
            <div class="row">
                <div class="col-3-12">
@@ -269,10 +116,10 @@ Template Name: Referrals Page Template
                        <li><a href="/team">Team</a></li>
                        <li><a href="/blog">Blog</a></li>
                        <li><a href="/careers">Careers</a></li>
-                       <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
-                       <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
-                       <li><a href="/referrals">Refer & Earn</a></li>
-                       <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
+                        <li><a href="/website-terms">Terms &</a> <a href="/privacy-policy">Privacy</a></li>
+                        <li><a href="/top-50-influential-sports-coaches-for-2015">Top 50 Coaches for 2015</a></li>
+                        <li><a href="/referrals">Refer & Earn</a></li>
+                        <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
@@ -318,13 +165,12 @@ Template Name: Referrals Page Template
                </div>
            </div>
        </footer>
-      
+       
+
     
     </div>
     <script src="<?php echo get_stylesheet_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
-  
-
     <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -335,8 +181,7 @@ Template Name: Referrals Page Template
      ga('send', 'pageview');
 
     </script>
-
-
+     
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5FP99N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -346,8 +191,7 @@ Template Name: Referrals Page Template
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FP99N');</script>
     <!-- End Google Tag Manager -->
-        
+         
       <?php wp_footer(); ?>
-
     </body>
 </html>

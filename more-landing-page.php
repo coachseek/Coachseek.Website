@@ -79,6 +79,7 @@ Template Name: More Landing Page Template
                         <a class="landing--header-nav-more">More &nbsp; <i class="fa fa-caret-down"></i></a>
                         <ul class="landing--header-nav-more-dropdown">
                           <li><a href="/support">Support</a></li>
+                          <li><a href="/sports-website-design-services">Website Package</a></li>
                           <li><a href="/webinar-cut-the-admin-and-grow-your-business">Webinar</a></li>
                           <li><a href="/blog">Blog</a></li>
                           <li><a href="/sports-coaching-survival-guide">Ebook</a></li>
@@ -463,14 +464,17 @@ Template Name: More Landing Page Template
                </div>
                <div class="col-3-12">
                    <ul>
-                       <li><h4>solutions</h4></li>
-                       <li><a href="/tennis">Tennis</a></li>
-                       <li><a href="/golf">Golf</a></li>
-                       <li><a href="/swimming">Swimming</a></li>
+                        <li><h4>solutions</h4></li>
+                       <li><a href="/tennis-software">Tennis</a></li>
+                       <li><a href="/squash-software">Squash</a></li>
+                       <li><a href="/swimming-software">Swimming</a></li>
+                       <li><a href="/golf-software">Golf</a></li>
+                       <li><a href="/cricket-software">Cricket</a></li>
+                       <li><a href="/yachting-and-sailing-software">Yachting & Sailing</a></li>
+                       <li><a href="/basketball-software">Basketball</a></li>
                        <li><a href="/fitness">Fitness</a></li>
-                       <li><a href="/equestrian">Equestrian</a></li>
                        <li><a href="/running">Running</a></li>
-                       <li><a href="/cricket">Cricket</a></li>
+                       <li><a href="/equestrian">Equestrian</a></li>
                    </ul>
                </div>
                <div class="col-3-12">
